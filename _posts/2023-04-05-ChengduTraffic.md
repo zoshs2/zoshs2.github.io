@@ -3,7 +3,6 @@ title: "중국 청두시 도로망 및 속도 데이터 분석"
 date: 2023-04-05 17:32:23 +0900
 categories: [Open-Data, EDA]
 tags: [python, network, traffic, visualization, eda, china]
-use_math: true
 math: true
 ---
 
