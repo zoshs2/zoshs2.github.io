@@ -275,19 +275,16 @@ plt.show()
 
 ```python
 print(DataContents[1])
-```
 
     speed[601]_[0].csv
-
+```
 
 ```python
 origin_mega = pd.read_csv(os.path.join(DataPath, DataContents[1]))
 
 # 150개의 시점(time periods) * 5943개의 도로링크 = 891,450개의 rows
 print(origin_mega)
-```
 
-```python
                  Period  Link      Speed
     0       03:00-03:02     1  31.769048
     1       03:00-03:02     2  49.450000
