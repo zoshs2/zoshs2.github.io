@@ -35,7 +35,7 @@ from tqdm import tqdm
 ## Data Acquisition
 -  **Figshare**: 그림, 데이터셋, 이미지 및 비디오 등을 포함한 연구 결과를 보존하고 공유하는 온라인 오픈 액세스 레포지토리
 -  터미널 상에선, 아래 command line을 통해 데이터셋을 다운받을 수 있다.
-```
+```bash
 >>> wget https://figshare.com/ndownloader/articles/7140209/versions/4  # 4(.zip) file download
 >>> unzip 4 -d <dir_name_after_unzip>
 ```
