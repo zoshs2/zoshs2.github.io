@@ -249,9 +249,9 @@ plt.show()
 
 
 
-    
+<br>    
 ![png](/assets/img/post/megacity/megacity_7_1.png)
-    
+<br>
 
 
 ### Network visualization
