@@ -302,7 +302,8 @@ print(origin_mega)
     891449  12:58-13:00  5943  16.480000
     
     [891450 rows x 3 columns]
-
+<br>
+<br>
 
 ### Personal renewal idea
 데이터셋 하나로 전부 다루고 싶어서 개인적으로 해보는 전처리 (다시 말해서, 따라할 필요없음)
