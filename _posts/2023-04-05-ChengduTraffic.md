@@ -742,7 +742,9 @@ else:
 - Converts 'Link Travel Speed' to 'Link quality (q)'.
 
 <br>
-$$q_{ij}(t) = \frac{v_{ij}(t)}{v^{95th}_{ij}}$$
+<div>
+$${q_{ij}(t) = \frac{v_{ij}(t)}{v^{95th}_{ij}}}$$
+</div>
 <br>
 
 ```python
