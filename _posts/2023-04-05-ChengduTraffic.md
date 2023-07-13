@@ -740,10 +740,10 @@ else:
 ### Employing 'Percolation Approach'
 - Based on [Li, Daqing, et al. "Percolation transition in dynamical traffic network with evolving critical bottlenecks." Proceedings of the National Academy of Sciences 112.3 (2015)]
 - Converts 'Link Travel Speed' to 'Link quality (q)'.
-```math
-q_{ij}(t) = \frac{v_{ij}(t)}{v^{95th}_{ij}}
-```
 
+<br>
+$$q_{ij}(t) = \frac{v_{ij}(t)}{v^{95th}_{ij}}$$
+<br>
 
 ```python
 grouped_mega = mega_dataset.groupby(by=['mon_date', 'Link'])
