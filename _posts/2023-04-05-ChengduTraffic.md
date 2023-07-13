@@ -102,9 +102,7 @@ road_network = pd.read_csv(os.path.join(DataPath, DataContents[0]))
 road_network.head(5)
 ```
 
-
-
-
+<br>
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -179,7 +177,8 @@ road_network.head(5)
   </tbody>
 </table>
 </div>
-
+<br>
+<br>
 
 ### Geographical visualization
 
