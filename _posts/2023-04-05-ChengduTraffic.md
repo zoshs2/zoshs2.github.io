@@ -303,6 +303,7 @@ print(origin_mega)
 
 ### Personal renewal idea
 데이터셋 하나로 전부 다루고 싶어서 개인적으로 해보는 전처리 (다시 말해서, 따라할 필요없음)
+
 - 날짜 컬럼 추가 (dtype: int64). 
   - ex) 1 June -> 601
 - 요일 컬럼 추가 (dtype: str). 
