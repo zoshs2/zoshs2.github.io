@@ -3,6 +3,7 @@ title: "중국 청두시 도로망 및 속도 데이터 분석"
 date: 2023-04-05 17:32:23 +0900
 categories: [Open-Data, EDA]
 tags: [python, network, traffic, visualization, eda, china]
+use_math: true
 ---
 
 # 들어가며
@@ -740,6 +741,7 @@ else:
 ### Employing 'Percolation Approach'
 - Based on [Li, Daqing, et al. "Percolation transition in dynamical traffic network with evolving critical bottlenecks." Proceedings of the National Academy of Sciences 112.3 (2015)]
 - Converts 'Link Travel Speed' to 'Link quality (q)'.
+
 <br>
 <div class="cmath">
 `q_{ij}(t) = \frac{v_{ij}(t)}{v^{95th}_{ij}}`
