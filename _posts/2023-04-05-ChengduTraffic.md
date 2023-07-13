@@ -280,7 +280,6 @@ print(DataContents[1])
     speed[601]_[0].csv
 
 
-
 ```python
 origin_mega = pd.read_csv(os.path.join(DataPath, DataContents[1]))
 
@@ -304,67 +303,5 @@ print(origin_mega)
     [891450 rows x 3 columns]
 <br>
 <br>
+아나 왜 안돼
 
-### Personal renewal idea
-데이터셋 하나로 전부 다루고 싶어서 개인적으로 해보는 전처리 (다시 말해서, 따라할 필요없음)
-1) 날짜 컬럼 추가 (dtype: int64). 
-   - ex) 1 June -> 601
-2) 요일 컬럼 추가 (dtype: str). 
-   - ex) 1 June -> 'Mon'
-3) 기존의 'Period' 컬럼 이름을 'time'으로 변경, 그리고 시작 시점을 기준으로 단순화 (dtype: int64). 
-   - ex) 03:00 ~ 03:02 >> 300
-4) time 컬럼 기반, 시간대 컬럼 추가 (dtype: str). 
-   - ex) 300 ~ 458 time: 'Dawn', 800 ~ 958: 'Morn', 1200 ~ 1358: 'Noon', 1700 ~ 1858: 'Even', 2100 ~ 2258: 'Night'
-5) 하루 기준, 시간 순서 컬럼 추가 (dtype: int64). (논문 내 'time periods'에 해당하는 값)
-   - ex) 'time' 컬럼의 {300, 302, 304, ..., 2354, 2356, 2358} 에 대응하는 {1,2,3, ..., 298, 299, 300}
-6) 45일 간의 모든 데이터 하나의 .pkl로 저장 (~ 3.3 GB)
-
-* Checkpoints during this renewal
-  - Checkpoint_1: check if the size of each dataset is 891,450.
-  - Checkpoint_2: check if the number of road links is 5,943.
-  - Checkpoint_3: check if each of 5,943 road links has 150 time moments.
-
-
-```python
-assign_horizon = lambda t: 'Dawn' if 300 <= t < 500 else \
-         'Morn' if 800 <= t < 1000 else \
-         'Noon' if 1200 <= t < 1400 else \
-         'Even' if 1700 <= t < 1900 else \
-         'Night' if 2100 <= t < 2300 else \
-         'wtf'
-         
-time_seq = [[],[]]
-for i in range(2):
-    for seq in range(1+(i*150), 151+(i*150)):
-        for _ in range(5943):
-            time_seq[i].append(seq)
-
-mega_dataset = pd.DataFrame()
-for filename in tqdm(DataContents[1:]):
-    ZeroOne = int(filename.split(']')[1].split('[')[1])
-    mon_date = [int(filename.split(']')[0].split('[')[1])]
-    ymd = f"2015{mon_date[0]:04d}"
-    day = [calendar.day_name[datetime.strptime(ymd, '%Y%m%d').weekday()][:3]]
-    one_mega = pd.read_csv(os.path.join(DataPath, filename))
-    if (one_mega.shape[0]!=891450) | (one_mega.groupby('Link').ngroups!=5943): # Checkpoint_1 + Checkpoint_2
-        error_msg = f"Strange dataset detected: {filename}"
-        print(error_msg)
-        print(''.ljust(len(error_msg), '-'))
-        continue
-
-    one_mega['mon_date'] = pd.Series(mon_date*891450)
-    one_mega['day'] = pd.Series(day*891450)
-    one_mega['time'] = one_mega['Period'].apply(lambda x: int(''.join(x.split('-')[0].split(':'))))
-    one_mega['Period'] = one_mega['time'].apply(assign_horizon)
-    if not np.array_equal(one_mega.value_counts('time').values, [5943]*150): # Checkpoint_3
-        error_msg = f"Not all links have 150 time_moments: {filename}"
-        print(error_msg)
-        print(''.ljust(len(error_msg), '-'))
-        continue
-
-    one_mega = one_mega.sort_values(by='time').reset_index(drop=True)
-    one_mega['time_seq'] = pd.Series(time_seq[ZeroOne])
-    mega_dataset = pd.concat([mega_dataset, one_mega], ignore_index=True)
-
-mega_dataset.to_pickle("ygkwon_megacity_dataset_20150601_to_0715.pkl")
-```
