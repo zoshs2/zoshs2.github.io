@@ -178,7 +178,6 @@ road_network.head(5)
 </table>
 </div>
 <br>
-<br>
 
 ### Geographical visualization
 
