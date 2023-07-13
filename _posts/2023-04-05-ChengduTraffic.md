@@ -261,8 +261,9 @@ ax.axis('off')
 plt.show()
 ```
 
+<br>
 ![png](/assets/img/post/megacity/megacity_10_0.png)
-    
+<br> 
 
 ## Link Travel Speed
 "speed[date]_[i].csv"
@@ -515,6 +516,7 @@ mega_dataset
 <p>80230500 rows × 7 columns</p>
 </div>
 <br>
+<br>
 
 ### Daily analysis
 - 2015년 6월 1일, 평일
@@ -540,9 +542,9 @@ plt.show()
     Minimum speed: 4.2, Maximum speed: 117.98
     Average speed: 29.466771318855514
 
-    
+<br>
 ![png](/assets/img/post/megacity/megacity_20_1.png)    
-
+<br>
 
 ```python
 cmap = mpl.colors.LinearSegmentedColormap.from_list("", ["red", "yellow", "green", "blue"])
@@ -621,11 +623,9 @@ plt.show()
 
     /home/ygkwon/megacity/megacity_gitlab/EdgeColor_megaroad_network.png
 
-
-
-    
+<br>    
 ![png](/assets/img/post/megacity/megacity_23_1.png)
-    
+<br> 
 
 
 ### An circadian change for spatial distribution of link travel speed
@@ -833,9 +833,10 @@ axs[1].set_xlabel("Time", fontsize=18)
 fig.autofmt_xdate()
 plt.show()
 ```
-    
+<br> 
 ![png](/assets/img/post/megacity/megacity_32_0.png)
-    
+<br>
+
 ## Take-Home Message and Discussion
 - 중국 청두시의 도로망에 대해 총 45일 간의 통행속도 데이터셋을 들여다 보았다.
 - figshare 온라인 공유 저장소에서 데이터셋을 배포하고 있다. (본 작업은 개인 workspace에 해당 데이터를 내려받아 사용)
