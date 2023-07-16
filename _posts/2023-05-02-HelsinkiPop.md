@@ -37,8 +37,6 @@ import matplotlib as mpl
    * _sun.csv: Sundays only 
    * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
 
-* 2017년 10월 말부터 2018년 1월 초 사이 
-
 ```python
 dataset/
 ├── [2.5M]  HMA_Dynamic_population_24H_sat.csv
