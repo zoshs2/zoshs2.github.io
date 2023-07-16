@@ -36,6 +36,7 @@ import matplotlib as mpl
   * _sat.csv: Saturdays only
   * _sun.csv: Sundays only
   * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
+* 나한테 왜그래 진짜
 
 ```python
 dataset/
