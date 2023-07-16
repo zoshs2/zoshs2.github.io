@@ -26,12 +26,13 @@ import matplotlib as mpl
 ```
 
 ## Data Acquisition
-- 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다.
+* 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다.
 ```bash
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 * mo 내려받은 데이터의 종류는 아래와 같다
+  * 아니 대체 왜그래
 
 ```python
 dataset/
