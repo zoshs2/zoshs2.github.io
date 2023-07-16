@@ -32,6 +32,8 @@ import matplotlib as mpl
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
+
+
 <br><br>
 
 - 내려받은 데이터의 종류는 아래와 같다.
@@ -40,6 +42,8 @@ import matplotlib as mpl
   - 개인적인 연구 경험 상으로도 금요일의 패턴은 일반 평일도 아니고, 주말도 아닌 그만의 독특한 패턴을 자주 보인다. 그래서 아마 비슷한 이유로 본 연구팀도 금요일은 배제시켜 평일을 구성한 듯 하다.
 - 평일, 토요일, 일요일별 집계된 데이터셋은 1시간 단위로 기록되어 있다.
 <br><br>
+
+
 
 ```python
 dataset/
