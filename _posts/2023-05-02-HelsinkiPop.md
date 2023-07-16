@@ -29,7 +29,8 @@ import matplotlib as mpl
 - 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다.
 ```bash
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
->>> unzip <downloaded_file> -d <dir_name_after_unzip>
+>>> unzip <downloaded_file> -d <dir_name_after_unzip> 
+
 ```
 <br><br>
 
