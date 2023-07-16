@@ -32,7 +32,7 @@ import matplotlib as mpl
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 
-- 내려받은 데이터의 종류는 아래와 같다.
+- What is wrong with u plz
 
 ```python
 dataset/
