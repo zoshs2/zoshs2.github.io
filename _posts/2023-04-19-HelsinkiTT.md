@@ -76,6 +76,7 @@ MetropAccess_YKR_grid/
 ```
 
 - 13,231개의 모든 YKR Grid들에 대한 GIS 데이터이다.
+
 ```python
 geojson_df = gpd.read_file("/home/ygkwon/helsinki/helsinki_traveltime/dataset/MetropAccess_YKR_grid")
 geojson_df['centroid'] = geojson_df.representative_point()
@@ -175,6 +176,7 @@ cx.add_basemap(ax, crs=geojson_df.crs.to_string(), zoom=12, source=cx.providers.
 
 ### Interactive figure with folium
 - Interactive output을 담을 수 없어 소스 코드로 남겨 놓는다.
+
 ```python
 geo_epsg_4326 = geojson_df.to_crs(epsg=4326)  # folium의 default epsg는 4326 (lon, lat)
 geo_epsg_4326['centroid'] = geo_epsg_4326.representative_point()
