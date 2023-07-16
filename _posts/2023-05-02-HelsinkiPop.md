@@ -29,6 +29,8 @@ import matplotlib as mpl
 - 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다.
 - 내려받은 데이터의 종류는 아래와 같다.
 - 2017년 10월 말부터 2018년 1월 초 사이 대략 2달 반 동안의 raw dataset를 기반으로 집계 및 처리한 데이터
+
+
 ```bash
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
