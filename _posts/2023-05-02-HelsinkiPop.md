@@ -32,6 +32,8 @@ import matplotlib as mpl
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 
+- 내려받은 데이터의 종류는 아래와 같다.
+
 ```python
 dataset/
 ├── [2.5M]  HMA_Dynamic_population_24H_sat.csv
