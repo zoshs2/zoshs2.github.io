@@ -32,10 +32,12 @@ import matplotlib as mpl
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 * 내려받은 데이터의 종류는 아래와 같다.
-   * _workdays.csv: Monday ~ Thursday 
-   * _sat.csv: Saturdays only 
-   * _sun.csv: Sundays only 
-   * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
+  * _workdays.csv: Monday ~ Thursday 
+  * _sat.csv: Saturdays only 
+  * _sun.csv: Sundays only 
+  * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
+* 아나 왜그래 자꾸
+<br><br>
 
 ```python
 dataset/
@@ -50,9 +52,9 @@ dataset/
 DataPath = '/home/ygkwon/helsinki/Helsinki_dynpop_matrix'
 DataContents = [file for file in os.listdir(DataPath)]
 print(DataContents)
-
-    ['target_zones_grid250m_EPSG3067.geojson', 'HMA_Dynamic_population_24H_workdays.csv', 'HMA_Dynamic_population_24H_sat.csv', 'HMA_Dynamic_population_24H_sun.csv', 'README.txt', '.README.txt.swp']
 ```
+    ['target_zones_grid250m_EPSG3067.geojson', 'HMA_Dynamic_population_24H_workdays.csv', 'HMA_Dynamic_population_24H_sat.csv', 'HMA_Dynamic_population_24H_sun.csv', 'README.txt', '.README.txt.swp']
+
 
 ## Geojson of Helsinki
 "target_zones_grid250m_EPSG3067.geojson"
