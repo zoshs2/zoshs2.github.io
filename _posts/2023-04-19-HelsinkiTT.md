@@ -42,9 +42,8 @@ from collections import defaultdict
 - YKR Grid는 핀란드 정부기관이 통계 조사를 위해 250m by 250m 크기의 셀로 핀란드를 나눈 지질학적 격자다. (그래서 본 연구팀에선 statistical grid라고도 한다.)
   - 핀란드의 수도, 헬싱키를 포괄하는 YKR Grid는 총 13,231개이다.
   - 각각의 YKR Grid는 **YKR_ID**로 구분된다.
-<br><br>
-
 - 연도별 데이터셋을 들여다 보면 아래와 같은 동일한 구조로 나눠져 있다.
+
 ```python
 2018/                   # 2018년 데이터 (4.4 GB)
 ├── 5785xxx
@@ -85,7 +84,6 @@ geojson_df['centroid'] = geojson_df.representative_point()
 geojson_df.head()
 ```
 
-<br>
 <br>
 <div>
 <table border="1" class="dataframe">
@@ -144,7 +142,6 @@ geojson_df.head()
 </table>
 </div>
 <br>
-<br>
 
 ```python
 # 좌표계 정의 방식과 투영법 등에 대한 메타 정보
@@ -178,7 +175,7 @@ cx.add_basemap(ax, crs=geojson_df.crs.to_string(), zoom=12, source=cx.providers.
 
 ### Interactive figure with folium
 - Interactive output을 담을 수 없어 소스 코드로 남겨 놓는다.
-<br>
+<br><br>
 
 ```python
 geo_epsg_4326 = geojson_df.to_crs(epsg=4326)  # folium의 default epsg는 4326 (lon, lat)
@@ -196,12 +193,11 @@ for _, r in tqdm(geo_epsg_4326.iterrows()):
 
 fig.add_child(fm)
 ```
-<br>
+
 
 ## Travel Time dataset
 - 시간에 관련된 값들은 전부 minute 단위이고, 거리에 관련된 단위는 전부 meter 단위다.
 - 여기서 통행시간과 거리의 값들은 empirical raw dataset, numerical calculation(with approximation), assumption 등을 통해 추산된 값들이다.
-<br>
 
 - Attributes
   - **from_id**: 출발지 YKR_ID (origin)
