@@ -64,6 +64,8 @@ from collections import defaultdict
 - 각 sub-directory 안에 있는 .txt 파일들의 갯수를 모두 세어보면, 역시 당연하게도 13,231개 이다.
 
 ## Shapefiles of Helsinki
+- 13,231개의 모든 YKR Grid들에 대한 GIS 데이터이다.
+
 ```python
 MetropAccess_YKR_grid/
 ├── MetropAccess_YKR_grid_EurefFIN.dbf
@@ -75,8 +77,6 @@ MetropAccess_YKR_grid/
 └── MetropAccess_YKR_grid_EurefFIN.shx
 ```
 
-- 13,231개의 모든 YKR Grid들에 대한 GIS 데이터이다.
-
 ```python
 geojson_df = gpd.read_file("/home/ygkwon/helsinki/helsinki_traveltime/dataset/MetropAccess_YKR_grid")
 geojson_df['centroid'] = geojson_df.representative_point()
@@ -85,6 +85,7 @@ geojson_df['centroid'] = geojson_df.representative_point()
 geojson_df.head()
 ```
 
+<br>
 <br>
 <div>
 <table border="1" class="dataframe">
@@ -143,6 +144,7 @@ geojson_df.head()
 </table>
 </div>
 <br>
+<br>
 
 ```python
 # 좌표계 정의 방식과 투영법 등에 대한 메타 정보
@@ -176,6 +178,7 @@ cx.add_basemap(ax, crs=geojson_df.crs.to_string(), zoom=12, source=cx.providers.
 
 ### Interactive figure with folium
 - Interactive output을 담을 수 없어 소스 코드로 남겨 놓는다.
+<br>
 
 ```python
 geo_epsg_4326 = geojson_df.to_crs(epsg=4326)  # folium의 default epsg는 4326 (lon, lat)
@@ -193,6 +196,7 @@ for _, r in tqdm(geo_epsg_4326.iterrows()):
 
 fig.add_child(fm)
 ```
+<br>
 
 ## Travel Time dataset
 - 시간에 관련된 값들은 전부 minute 단위이고, 거리에 관련된 단위는 전부 meter 단위다.
