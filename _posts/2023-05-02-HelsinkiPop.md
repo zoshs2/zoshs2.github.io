@@ -26,13 +26,13 @@ import matplotlib as mpl
 ```
 
 ## Data Acquisition
-- 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다.
+- 터미널에서 wget URL을 통해 데이터셋을 다운받을 수 있다. (뭔데)
 ```bash
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 
-- 내려받은 데이터의 종류는 아래와 같다.
+- MONDE 내려받은 데이터의 종류는 아래와 같다.
   - 해당 연구팀은 데이터 처리 및 집계 과정에서 금요일은 포함하지 않았다.
   - _workdays.csv: Monday ~ Thu
   - _sat.csv: 토요일만 집계
