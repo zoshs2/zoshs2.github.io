@@ -20,7 +20,7 @@ timezone: Asia/Seoul
 
 title: Pale Blue Dot # the main title
 
-tagline: Be humble and always be learning # it will display as the sub-title
+tagline: Humble and always be learning # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   yungi kwon
@@ -80,7 +80,7 @@ theme_mode: dark # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/avatar/france_yungi.jpeg
+avatar: /assets/img/avatar/earth_from_the_moon_pbs.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
