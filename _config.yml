@@ -18,9 +18,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Yungi Kwon # the main title
+title: Pale Blue Dot # the main title
 
-tagline: 안녕하세요. # it will display as the sub-title
+tagline: Be humble and always be learning # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   yungi kwon
