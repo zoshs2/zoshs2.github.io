@@ -32,10 +32,10 @@ import matplotlib as mpl
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
 * 내려받은 데이터의 종류는 아래와 같다.
-  * _workdays.csv: Monday ~ Thursday
-  * _sat.csv: Saturdays only
-  * _sun.csv: Sundays only
-  * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
+  * \_workdays.csv: Monday ~ Thursday
+  * \_sat.csv: Saturdays only
+  * \_sun.csv: Sundays only
+  * \.geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
 * 나한테 왜그래 진짜
 
 ```python
