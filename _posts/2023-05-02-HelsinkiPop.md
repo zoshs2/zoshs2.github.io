@@ -31,12 +31,8 @@ import matplotlib as mpl
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
 ```
-* 내려받은 데이터의 종류는 아래와 같다.
-  * \_workdays.csv: Monday ~ Thursday
-  * \_sat.csv: Saturdays only
-  * \_sun.csv: Sundays only
-  * \.geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
-* 나한테 왜그래 진짜
+* 내려받은 데이터의 종류는 아래와 같다. 
+  * _workdays.csv: Monday ~ Thursday 
 
 ```python
 dataset/
