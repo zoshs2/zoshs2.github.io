@@ -30,7 +30,7 @@ import matplotlib as mpl
 ```bash
 >>> wget https://zenodo.org/record/4726996/files/Helsinki_dynpop_matrix.zip?download=1
 >>> unzip <downloaded_file> -d <dir_name_after_unzip>
-```    
+```
 
 - What is wrong with u plz   
 
