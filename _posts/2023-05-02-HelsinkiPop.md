@@ -43,6 +43,7 @@ dataset/
 ├── [3.1K]  README.txt
 └── [4.8M]  target_zones_grid250m_EPSG3067.geojson
 ```
+<br>
 
 - 2017년 10월 말 ~ 2018년 1월 초 사이 대략 2달 반 동안의 raw dataset를 기반으로 집계(aggregate) 및 처리한 데이터이다.
   - _workdays.csv: Monday ~ Thu (해당 연구팀은 데이터 처리 및 집계 과정에서 '금요일'은 포함하지 않았다.)
@@ -50,6 +51,7 @@ dataset/
   - _sun.csv: 일요일
   - .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
 - 평일/토요일/일요일별 집계된 데이터셋은 1시간 단위로 기록되어 있다.
+<br>
 
 ```python
 DataPath = '/home/ygkwon/helsinki/Helsinki_dynpop_matrix'
