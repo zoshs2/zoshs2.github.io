@@ -34,7 +34,7 @@ import matplotlib as mpl
 * 내려받은 데이터의 종류는 아래와 같다.
    * _workdays.csv: Monday ~ Thursday 
    * _sat.csv: Saturdays only 
-   * _sun.csv: Sundays only
+   * _sun.csv: Sundays only 
    * .geojson: Helsinki를 포괄하는 13,231개의 250m by 250m 크기의 그리드셀 지리정보
 * 2017년 10월 말부터 2018년 1월 초 사이 
 
