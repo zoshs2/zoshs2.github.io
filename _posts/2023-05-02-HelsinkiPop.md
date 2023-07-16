@@ -33,7 +33,7 @@ import matplotlib as mpl
 ```
 * 내려받은 데이터의 종류는 아래와 같다. 
   * _workdays.csv: Monday ~ Thursday 
-  * _sat.csv: Saturdays only 
+  * _sat.csv: Saturdays only
 
 ```python
 dataset/
