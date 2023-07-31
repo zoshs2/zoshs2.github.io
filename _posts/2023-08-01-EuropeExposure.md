@@ -27,6 +27,7 @@ math: true
 
 **References** 
 <br>
+
 1. [Paprotny, D., & Mengel, M. (2023). Population, land use and economic exposure estimates for Europe at 100 m resolution from 1870 to 2020. Scientific Data, 10(1), 372.](https://www.nature.com/articles/s41597-023-02282-0){:target="_blank"} <br>
 2. Paprotny, D. (2023). Pan-European exposure maps and uncertainty estimates from HANZE v2.0 model, 1870-2020. <br>
 3. Paprotny, D. (2023). HANZE v2.0 exposure model.
