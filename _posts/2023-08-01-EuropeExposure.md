@@ -17,7 +17,7 @@ math: true
 예컨대 특정 지역에 대해 거주하는 인구수나 경제적 생산가치, 유형적 재산\(부동산, 인프라 등\)의 크기 등을 고려했을 때, 노출된 규모가 크다면 우리들은 해당 지역의 재해 대책 마련에 대한 예산을 더욱 투입하여 재난 피해를 최소화해야할 것이다. 즉 다시 말해, 재난 위험에 노출된 사회경제적인 요소 수준이 어느 정도인지 정확한 진단들을 보유하고 있어야 한다는 이야기다. 이러한 요소들을 Socio-economic Exposures라고 부른다.
 <br>
 
-반면, 기후적 영향이 실제 인간 사회 속 재난 리스크로 발현되는 데에 직접적인 영향 또는 잠재적인 가능성을 부여하는 **Hazard 위험요소** 들을 파악해둬야 한다. 태풍, 호우, 대설 등 자연재해의 종류별로 다르겠지만, 집중호우\(폭우\) 같은 강수로 인한 피해의 경우는 **토지의 특성**이 심대한 기여를 한다.
+반면, 기후적 영향이 실제 인간 사회 속 재난 리스크로 발현되는 데에 직접적인 영향 또는 잠재적인 가능성을 부여하는 **Hazard 위험요소** 들을 파악해둬야 한다. 태풍, 호우, 대설 등 자연재해의 종류별로 다르겠지만, 집중호우\(폭우\)같은 강수로 인한 피해의 경우는 **토지의 특성**이 심대한 기여를 한다.
 <br>
 
 토지의 특성도 여러 가지 측면에서 기술할 수 있겠지만, 대표적으로 **토지의 다짐도**를 떠올려 볼 수 있다.
@@ -27,7 +27,6 @@ math: true
 
 **References** 
 <br>
-
 1. [Paprotny, D., & Mengel, M. (2023). Population, land use and economic exposure estimates for Europe at 100 m resolution from 1870 to 2020. Scientific Data, 10(1), 372.](https://www.nature.com/articles/s41597-023-02282-0){:target="_blank"} <br>
 2. Paprotny, D. (2023). Pan-European exposure maps and uncertainty estimates from HANZE v2.0 model, 1870-2020. <br>
 3. Paprotny, D. (2023). HANZE v2.0 exposure model.
