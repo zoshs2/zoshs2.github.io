@@ -8,7 +8,7 @@ math: true
 
 # 들어가며
 
-테스트
+지금까지 많은 연구들은 기후적 요소(climatic driver; 기온/강수/습도/구름/바람)의 변화들이 우리 인간 사회에 끼치는 영향들을 '재해로 인한 경제적 손실' 같은 지표로 정량화하고 이에 대응해왔다. 
 
 <br>
 
@@ -62,7 +62,7 @@ os.environ['GDAL_PAM_ENABLED'] = 'NO'
 * * *
 데이터셋 종류
 * Raster Dataset (.tif; temporal coverage: 1870년 ~ 2020년)
-  * CLC: land cover/use dataset - [CLC](https://land.copernicus.eu/pan-european/corine-land-cover)라는 토지이용 분류법으로 특정 grid가 어느 토지목적 및 용도인지 기록한 데이터.
+  * CLC: land cover/use dataset - [CLC](https://land.copernicus.eu/pan-european/corine-land-cover){:target="_blank"}라는 토지이용 분류법으로 특정 grid가 어느 토지목적 및 용도인지 기록한 데이터.
   * Imperviousness density(%): 해당 지역 및 토지의 불침투성(imperviousness)을 수치화한 데이터. (e.g. 불침투성이 높은 지역은 우천시 비가 토양에 스며들지않고 표면에 쌓여서 범람이나 홍수 피해의 위험이 있다.)
   * GDP: 해당 grid의 GDP 수준이 어느 정도 되는지 기록한 데이터. (2020년 기준 Euro 단위)
   * Fixed Asset(FA): 해당 grid 내에 유형적 재산(부동산 및 건물 등)의 규모가 어느 정도인지 기록한 데이터. (2020년 기준 Euro 단위)
