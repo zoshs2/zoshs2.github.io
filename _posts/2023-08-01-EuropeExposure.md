@@ -8,14 +8,33 @@ math: true
 
 # 들어가며
 
-지금까지 많은 연구들은 기후적 요소\(climatic driver; 기온, 강수, 습도, 구름, 바람\)의 변화들이 우리 인간 사회에 끼치는 영향들을 "**재해로 인한 경제적 손실**" 같은 지표로 정량화하고 이에 대응해왔다. 
+지금까지 많은 연구들은 기후적 요소\(climatic driver; 기온, 강수, 습도, 구름, 바람\)의 변화들이 우리 인간 사회에 끼치는 영향들을 "**재해로 인한 경제적 손실**" 같은 지표로 정량화하고 이에 대응해왔다.
+<br>
+
+하지만 자연 재해 리스크에 대한 더욱 정확한 이해와 대응력을 갖추기 위해서는, 비기후적 요소(non-climatic driver)들의 변화 역시 함께 주시하고 파악하여 계산과 대응에 반영할 필요가 있다. 
+<br>
+
+예컨대 특정 지역에 대해, ***거주하는 인구수나 경제적 생산가치 / 유형적 재산(부동산 건물, 인프라 등)의 크기*** 등을 고려했을 때, 노출된 규모가 크다면 우리들은 해당 지역의 재해 대책 마련에 대한 예산을 더욱 투입하여 재난 피해를 최소화해야할 것이다. 즉 다시 말해, **재난 위험에 노출된 사회경제적인 요소** 수준이 어느 정도인지 정확한 진단들을 보유하고 있어야 한다는 이야기다. 이러한 요소들을 **Socio-economic Exposures**라고 부른다.
+<br>
+
+반면, 기후적 영향이 실제 인간 사회 속 재난 리스크로 발현되는 데에 직접적인 영향 또는 잠재적인 가능성을 부여하는 **Hazard; 위험요소** 들을 파악해둬야 한다. 태풍/호우/대설 등 자연재해의 종류별로 다르겠지만, 집중호우(폭우) 같은 강수로 인한 피해의 경우는 **토지의 특성**이 심대한 기여를 한다. 
+<br>
+
+토지의 특성도 여러 가지 측면에서 기술할 수 있겠지만, 대표적으로 **토지의 다짐도**(soil compaction; soil sealing degree)를 떠올려 볼 수 있다. 토지는 토지 이용의 목적에 따라 절토/성토/정지/포장되어 그 형질이 변화된다. 이러한 과정에 따라 토지 속 공극비가 조절되고 토지의 압축성이 변화한다. 만약 압축성이 작은 토지 위에 비가 내려 빗물이 쌓인다면, 물은 토양에 흡수되어 지하수를 통해 바다로 배출될 것이다. 하지만 압축성이 큰 토지 형질의 경우, 빗물은 흡수되기보단 토지 위에 그대로 쌓이는 비중이 많아져 **홍수 피해**(**floods**)란 재난 리스크를 유발하게 된다. 즉, 이 경우 토지의 다짐도 수준이 floods' hazard(위험요소)로 인식된다는 이야기다. 그리고 보통 도시나 개발 지역의 토지 다짐도 수준이 높다. 
+<br>
+
+정리하자면, 과거 역사적 재난의 크기와 또는 그로 인한 경험적 피해 규모들로 오늘 날의 기후 변화로 인한 영향을 평가하고 가늠하는 것은 한계가 있다. 왜냐하면, 시대가 흐르면서 함께 변화하는 socio-economic exposure 요소들과 토지 형질 따위의 환경의 변화 때문이다. 즉, 앞서 언급한 사회경제적 요소들이 특정 지역에 얼마나 노출되어 있는지 / 토지의 특징은 어떠한지 함께 고려해야, 가까운 미래의 우리 사회에 끼칠 기후적 영향들을 제대로 파악하고 대응할 수 있는 것이다. 
+<br>
+
+이러한 취지로 이번에 읽어본 논문의 연구팀은 지난 2018년에 Hanze v1.0 모델을 시작으로 올 2023년 6월 Hanze v2.0 모델을 소개하는 논문을 내었고, Hanze v2.0 모델에서 추출된 1870년 ~ 2020년 사이 유럽 내 socio-economic exposures와 토지 이용 및 특징(Land Cover/use and Soil sealing degree)에 관한 데이터들을 오픈 배포하였다. 데이터셋들의 validation 과정과 결과는 본문을 참조하면 된다. 이제 데이터셋들을 하나하나 열어 살펴보자.
+
 <br><br>
 
 # Hanze v2.0 European Exposure Estimates
 
 **References** 
 <br>
-1. [Paprotny, D., & Mengel, M. (2023). Population, land use and economic exposure estimates for Europe at 100 m resolution from 1870 to 2020. Scientific Data, 10(1), 372.](https://www.nature.com/articles/s41597-023-02282-0) <br>
+1. [Paprotny, D., & Mengel, M. (2023). Population, land use and economic exposure estimates for Europe at 100 m resolution from 1870 to 2020. Scientific Data, 10(1), 372.](https://www.nature.com/articles/s41597-023-02282-0){:target="_blank"} <br>
 2. Paprotny, D. (2023). Pan-European exposure maps and uncertainty estimates from HANZE v2.0 model, 1870-2020. <br>
 3. Paprotny, D. (2023). HANZE v2.0 exposure model.
 
@@ -41,7 +60,7 @@ os.environ['GDAL_PAM_ENABLED'] = 'NO'
 <br>
 
 ## osgeo.gdal installation
-일반적으론 ***conda install -c conda-forge gdal*** 또는 ***pip install GDAL*** 로 간편하게 설치할 수 있다고 하는데, 내 경우엔 **solving environment** 에서 stuck (being hung forever...) 되는 현상이 발생했고 후자의 방법에선 bashrc와 libgdal config를 다시 잘 설정하라는 성가신 요구가 주어졌다. 그래서 찾은 대안이 [mamba](https://github.com/mamba-org/mamba) 라는 아나콘다(Anaconda.com) 팀에서 conda를 **c++ 버전**으로 re-implementation한 새로운 패키지 매니저를 이용하는 것이다. 사실 앞서 이야기한 [solving environment forever](https://stackoverflow.com/search?q=conda+solving+forever&s=1fa326fa-447e-4fb1-aab5-fa84bf74908f) 외에도 고질적인 문제들이 많았는데 그런 것들을 이번 **mamba**에선 잘 (특히 속도 및 안정성면에서) 개선했다고 한다. 그리고 무엇보다 그냥 기존 conda "command line"에 conda대신 mamba만 바꿔 넣으면 되는 식이라 (= high backward compatibility) 원래 conda를 쓰던 사용자면 더욱이 안 쓸 이유가 없는 것 같다. 
+일반적으론 ***conda install -c conda-forge gdal*** 또는 ***pip install GDAL*** 로 간편하게 설치할 수 있다고 하는데, 내 경우엔 **solving environment** 에서 stuck (being hung forever...) 되는 현상이 발생했고 후자의 방법에선 bashrc와 libgdal config를 다시 잘 설정하라는 성가신 요구가 주어졌다. 그래서 찾은 대안이 [mamba](https://github.com/mamba-org/mamba){:target="_blank"} 라는 아나콘다(Anaconda.com) 팀에서 conda를 **c++ 버전**으로 re-implementation한 새로운 패키지 매니저를 이용하는 것이다. 사실 앞서 이야기한 [solving environment forever](https://stackoverflow.com/search?q=conda+solving+forever&s=1fa326fa-447e-4fb1-aab5-fa84bf74908f){:target="_blank"} 외에도 고질적인 문제들이 많았는데 그런 것들을 이번 **mamba**에선 잘 (특히 속도 및 안정성면에서) 개선했다고 한다. 그리고 무엇보다 그냥 기존 conda "command line"에 conda대신 mamba만 바꿔 넣으면 되는 식이라 (= high backward compatibility) 원래 conda를 쓰던 사용자면 더욱이 안 쓸 이유가 없는 것 같다. 
 * * *
 아무튼 아래대로 진행하면 GDAL python package를 문제없이 내 conda env에다가 설치할 수 있다. 
 
@@ -53,8 +72,8 @@ os.environ['GDAL_PAM_ENABLED'] = 'NO'
 <br>
 
 ## Data Acquisition and Data Tree
-전체 데이터셋은 [May 2, 2023 Zenodo](https://zenodo.org/record/7885990) 링크에서 내려받을 수 있다. 압축 파일들의 크기를 제외하면 본 데이터셋 전체 크기는 약 **30GB** 정도 된다. <br>
-데이터의 Spatial Coverage는 유럽 내 [NUT3 지역](https://ko.wikipedia.org/wiki/%ED%86%B5%EA%B3%84%EC%A7%80%EC%97%AD%EB%8B%A8%EC%9C%84%EB%AA%85%EB%AA%85%EB%B2%95)들이다. <br>
+전체 데이터셋은 [May 2, 2023 Zenodo](https://zenodo.org/record/7885990){:target="_blank"} 링크에서 내려받을 수 있다. 압축 파일들의 크기를 제외하면 본 데이터셋 전체 크기는 약 **30GB** 정도 된다. <br>
+데이터의 Spatial Coverage는 유럽 내 [NUT3 지역](https://ko.wikipedia.org/wiki/%ED%86%B5%EA%B3%84%EC%A7%80%EC%97%AD%EB%8B%A8%EC%9C%84%EB%AA%85%EB%AA%85%EB%B2%95){:target="_blank"}들이다. <br>
 * * *
 **NUTS**: Nomenclature of Units for Territorial Statistics (통계지역단위명명법). NUTS는 유럽연합(EU)에서 최초로 정의했고, 주로 유럽연합 회원국들에서 사용하는 범유럽 내 행정지역 구분단위이다. <br>
 총 3-level hierarchy (NUTS1, NUTS2, NUTS3) 를 가지고 있고, 숫자가 클 수록 구역들을 더욱 세밀하게 구분한 것이라고 보면 된다.
