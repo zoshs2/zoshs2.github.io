@@ -20,6 +20,7 @@ math: true
 반면, 기후적 영향이 실제 인간 사회 속 재난 리스크로 발현되는 데에 직접적인 영향 또는 잠재적인 가능성을 부여하는 **Hazard; 위험요소** 들을 파악해둬야 한다. 태풍/호우/대설 등 자연재해의 종류별로 다르겠지만, 집중호우(폭우) 같은 강수로 인한 피해의 경우는 **토지의 특성**이 심대한 기여를 한다.
 * * *
 
+<br><br>
 토지의 특성도 여러 가지 측면에서 기술할 수 있겠지만, 대표적으로 **토지의 다짐도**(soil compaction; soil sealing degree)를 떠올려 볼 수 있다. 토지는 토지 이용의 목적에 따라 절토/성토/정지/포장되어 그 형질이 변화된다. 이러한 과정에 따라 토지 속 공극비가 조절되고 토지의 압축성이 변화한다. 만약 압축성이 작은 토지 위에 비가 내려 빗물이 쌓인다면, 물은 토양에 흡수되어 지하수를 통해 바다로 배출될 것이다. 하지만 압축성이 큰 토지 형질의 경우, 빗물은 흡수되기보단 토지 위에 그대로 쌓이는 비중이 많아져 **홍수 피해**(**floods**)란 재난 리스크를 유발하게 된다. 즉, 이 경우 토지의 다짐도 수준이 floods' hazard(위험요소)로 인식된다는 이야기다. 그리고 보통 도시나 개발 지역의 토지 다짐도 수준이 높다.
 * * *
 
@@ -33,7 +34,6 @@ math: true
 
 **References** 
 <br>
-
 1. [Paprotny, D., & Mengel, M. (2023). Population, land use and economic exposure estimates for Europe at 100 m resolution from 1870 to 2020. Scientific Data, 10(1), 372.](https://www.nature.com/articles/s41597-023-02282-0){:target="_blank"} <br>
 2. Paprotny, D. (2023). Pan-European exposure maps and uncertainty estimates from HANZE v2.0 model, 1870-2020. <br>
 3. Paprotny, D. (2023). HANZE v2.0 exposure model.
