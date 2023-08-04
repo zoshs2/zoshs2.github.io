@@ -3,7 +3,6 @@ title: "Hazard and Socio-economic Exposure Estimates 1870 ~ 2020 (Hanze v2.0)"
 date: 2023-08-01 01:41:35 +0900
 categories: [Open-Data, EDA]
 tags: [python, population, fixed asset, GDP, land cover, land use, CLC, imperviousness, visualization, eda, EU, europe, flood, hazard, risk, tif]
-math: true
 ---
 
 # 들어가며
