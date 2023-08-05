@@ -607,7 +607,7 @@ i {
 
 /* overwrite bootstrap muted */
 .text-muted {
-  color: var(--text-muted-color) !important;
+  color: #999; /* default: var(--text-muted-color) !important; */
 }
 
 /* Overwrite bootstrap tooltip */
