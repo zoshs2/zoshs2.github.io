@@ -761,7 +761,7 @@ $btn-mb: 0.5rem;
 
   .site-subtitle {
     font-size: 95%;
-    color: var(--sidebar-muted-color);
+    color: #999 /* default var(--sidebar-muted-color); */
     margin-top: 0.25rem;
     word-spacing: 1px;
     -webkit-user-select: none;
