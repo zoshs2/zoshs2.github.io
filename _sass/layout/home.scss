@@ -63,7 +63,8 @@
       }
 
       .post-meta {
-        @extend %muted;
+        /* @extend %muted; */
+        color: red;
 
         i {
           &:not(:first-child) {
