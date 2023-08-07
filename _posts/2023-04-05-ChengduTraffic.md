@@ -89,7 +89,7 @@ dataset/
 
 
 ```python
-DataPath = '/home/ygkwon/megacity/dataset'
+DataPath = '/home/megacity/dataset'
 DataContents = os.listdir(DataPath)
 print(DataContents[0])
 ```
@@ -364,11 +364,11 @@ for filename in tqdm(DataContents[1:]):
     one_mega['time_seq'] = pd.Series(time_seq[ZeroOne])
     mega_dataset = pd.concat([mega_dataset, one_mega], ignore_index=True)
 
-mega_dataset.to_pickle("ygkwon_megacity_dataset_20150601_to_0715.pkl")
+mega_dataset.to_pickle("my_megacity_dataset_20150601_to_0715.pkl")
 ```
 
 ### One Megacity Dataset
-"ygkwon_megacity_dataset_20150601_to_0715.pkl"
+"my_megacity_dataset_20150601_to_0715.pkl"
 - Attributee:
   - **Period**: 시간대 (Dawn, Morn, Noon, Even, Night)
   - **Link**: 도로링크
@@ -380,8 +380,8 @@ mega_dataset.to_pickle("ygkwon_megacity_dataset_20150601_to_0715.pkl")
 
 
 ```python
-mega_dataset = "ygkwon_megacity_dataset_20150601_to_0715.pkl"
-mega_dataset = pd.read_pickle(os.path.join('/home/ygkwon/megacity/', mega_dataset))
+mega_dataset = "my_megacity_dataset_20150601_to_0715.pkl"
+mega_dataset = pd.read_pickle(os.path.join('/home/megacity/', mega_dataset))
 mega_dataset
 ```
 
@@ -626,7 +626,7 @@ fig.suptitle(fig_title, fontsize=15, y=0.9)
 plt.show()
 
 
-    /home/ygkwon/megacity/megacity_gitlab/EdgeColor_megaroad_network.png
+    /home/megacity/megacity_gitlab/EdgeColor_megaroad_network.png
 ```
 
 
@@ -653,7 +653,7 @@ for one_period in ['Dawn', 'Noon', 'Even', 'Night']:
             period = period + 'ing' if period == 'Morn' else period
             agraph_obj = create_meganet_agraph(road_network)
 
-        snap_filename = save_edgecolor_agraph(agraph_obj, snap_oneper_aday, cmap=cmap, norm=norm, prefix=f'{i}_', savepath='/home/ygkwon/megacity/debris_img')
+        snap_filename = save_edgecolor_agraph(agraph_obj, snap_oneper_aday, cmap=cmap, norm=norm, prefix=f'{i}_', savepath='/home/megacity/debris_img')
         
         fig, ax = plt.subplots(facecolor='w', figsize=(10,10))
         
@@ -671,7 +671,7 @@ for one_period in ['Dawn', 'Noon', 'Even', 'Night']:
         fig_title = f"{hour_min} in Chengdu, China ({year_mon_date}, {period})\nLink Travel Speed on road network"
         fig.suptitle(fig_title, fontsize=15, y=0.9)
 
-        new_savepath = "/home/ygkwon/megacity/main_img"
+        new_savepath = "/home/megacity/main_img"
         new_savefile = f"{i}_{year_mon_date}_{snap_oneper_aday['Period'].values[0]}_travelspeed.png"
         plt.savefig(os.path.join(new_savepath, new_savefile), dpi=200, pad_inches=.2, bbox_inches='tight')
         plt.close()
@@ -680,7 +680,7 @@ for one_period in ['Dawn', 'Noon', 'Even', 'Night']:
 
 ```python
 # 5-periods Convergence and Text on 'img' read by cv2.imread()
-img_folder = '/home/ygkwon/megacity/main_img'
+img_folder = '/home/megacity/main_img'
 
 font = cv2.FONT_HERSHEY_COMPLEX # font
 fontScale = 2.5 # fontScale
@@ -759,7 +759,7 @@ for mondate in tqdm(concat_mega['mon_date'].unique()):
 
 ```python
 # Percolation 결과는 별도의 작업 공간에서 계산 후 가져옴.
-qcfcPath = '/home/ygkwon/megacity/qcfc'
+qcfcPath = '/home/megacity/qcfc'
 qcfc_DataContents = os.listdir(qcfcPath)
 qcfc_dataset = pd.DataFrame()
 qcfc_rand_dataset = pd.DataFrame()

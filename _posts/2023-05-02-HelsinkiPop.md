@@ -52,7 +52,7 @@ dataset/
 ```
 
 ```python
-DataPath = '/home/ygkwon/helsinki/Helsinki_dynpop_matrix'
+DataPath = '/home/helsinki/Helsinki_dynpop_matrix'
 DataContents = [file for file in os.listdir(DataPath)]
 print(DataContents)
 ```

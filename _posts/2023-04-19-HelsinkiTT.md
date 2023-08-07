@@ -77,7 +77,7 @@ MetropAccess_YKR_grid/
 ```
 
 ```python
-geojson_df = gpd.read_file("/home/ygkwon/helsinki/helsinki_traveltime/dataset/MetropAccess_YKR_grid")
+geojson_df = gpd.read_file("/home/helsinki/helsinki_traveltime/dataset/MetropAccess_YKR_grid")
 geojson_df['centroid'] = geojson_df.representative_point()
 
 # Totally, 13231 rows x 5 columns
@@ -216,7 +216,7 @@ fig.add_child(fm)
 
 ```python
 # 2013년
-DataPath = '/home/ygkwon/helsinki/helsinki_traveltime/dataset/2013'
+DataPath = '/home/helsinki/helsinki_traveltime/dataset/2013'
 DirContents = [folder for folder in os.listdir(DataPath) if not os.path.isfile(os.path.join(DataPath, folder))]
 OneFoldContents = os.listdir(os.path.join(DataPath, DirContents[0]))
 one_data = pd.read_csv(os.path.join(DataPath, DirContents[0], OneFoldContents[0]), sep=';')
@@ -381,7 +381,7 @@ one_data
 
 ```python
 # 2015년
-DataPath = '/home/ygkwon/helsinki/helsinki_traveltime/dataset/2015'
+DataPath = '/home/helsinki/helsinki_traveltime/dataset/2015'
 DirContents = [folder for folder in os.listdir(DataPath) if not os.path.isfile(os.path.join(DataPath, folder))]
 OneFoldContents = os.listdir(os.path.join(DataPath, DirContents[0]))
 one_data = pd.read_csv(os.path.join(DataPath, DirContents[0], OneFoldContents[0]), sep=';')
@@ -606,7 +606,7 @@ one_data
 
 ```python
 # 2018년
-DataPath = '/home/ygkwon/helsinki/helsinki_traveltime/dataset/2018'
+DataPath = '/home/helsinki/helsinki_traveltime/dataset/2018'
 DirContents = [folder for folder in os.listdir(DataPath) if not os.path.isfile(os.path.join(DataPath, folder))]
 OneFoldContents = os.listdir(os.path.join(DataPath, DirContents[0]))
 one_data = pd.read_csv(os.path.join(DataPath, DirContents[0], OneFoldContents[0]), sep=';')
@@ -902,7 +902,7 @@ one_data
 
 
 ```python
-DataPath = '/home/ygkwon/helsinki/helsinki_traveltime/dataset/'
+DataPath = '/home/helsinki/helsinki_traveltime/dataset/'
 parent_dirs = [file for file in os.listdir(DataPath) if not os.path.isfile(os.path.join(DataPath, file)) and file in ['2015', '2018']]
 print(parent_dirs)
 
@@ -942,9 +942,9 @@ for parent_idx, parent in tqdm(enumerate(parent_dirs)):
 
 
 ```python
-base_id_list = np.loadtxt('/home/ygkwon/helsinki/BASE_ID_LIST.txt')
-car_r_t_matrix = np.load('/home/ygkwon/helsinki/car_r_t_matrix_2018+2015.npy')
-pt_r_t_matrix = np.load('/home/ygkwon/helsinki/pt_r_t_matrix_2018+2015.npy')
+base_id_list = np.loadtxt('/home/helsinki/BASE_ID_LIST.txt')
+car_r_t_matrix = np.load('/home/helsinki/car_r_t_matrix_2018+2015.npy')
+pt_r_t_matrix = np.load('/home/helsinki/pt_r_t_matrix_2018+2015.npy')
 ```
 
 
