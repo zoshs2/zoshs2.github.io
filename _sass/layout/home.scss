@@ -63,8 +63,8 @@
       }
 
       .post-meta {
-        /* @extend %muted; */
-        color: red;
+        /* @extend %muted; */ /* 상속 해제 */ 
+        color: white;
 
         i {
           &:not(:first-child) {
