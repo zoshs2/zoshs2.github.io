@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zoshs2.github.io/
