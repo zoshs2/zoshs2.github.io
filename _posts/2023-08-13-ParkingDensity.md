@@ -1,12 +1,12 @@
 ---
-title: "Car traffic and parking density maps from Uber Movement Dataset"
+title: "Car traffic and parking density maps from Uber Movement travel times"
 date: 2023-08-13 22:04:50 +0900
 categories: [Open-Data, EDA]
 tags: [python, traffic, parking, uber, uber movement, visualization, eda, LA, paris, london, melbourne, mumbai, sydney, gif, travel time]
 math: true
 ---
 
-# Car traffic and Parking density maps from Uber Movement travel time dataset
+# 들어가며
 오늘 살펴볼 내용은 [Uber Movement Team](https://movement.uber.com/?lang=en-US){:target="_blank"}에서 공개 오픈 중인 (Traffic) <u>Travel Time 데이터셋들을 기반으로</u> 산출한 전 세계 **34개 도시**의 주차 밀집도 및 운행 활성도(?) 데이터를 들여다 볼 것이다. 
 <br>
 
