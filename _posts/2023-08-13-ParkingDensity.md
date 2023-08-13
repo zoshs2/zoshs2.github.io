@@ -10,8 +10,7 @@ math: true
 오늘 살펴볼 내용은 [Uber Movement Team](https://movement.uber.com/?lang=en-US){:target="_blank"}에서 공개 오픈 중인 (Traffic) <u>Travel Time 데이터셋들을 기반으로</u> 산출한 전 세계 **34개 도시**의 주차 밀집도 및 운행 활성도(?) 데이터를 들여다 볼 것이다. 
 <br>
 
-여담으로, Uber에선 공익 차원의 도시교통 연구 증진 목적으로 자사 측 기기의 운행 기록들을 <u>가공</u>하여 양질의 데이터셋을 정기적으로 공개 배포하고 있다. <br>
-가공 방식에 대해서도 Uber Movement Team에서 공유하고 있으니 궁금하다면 참조하길 바란다. (아래 References 참고)
+여담으로, Uber에선 공익 차원의 도시교통 연구 증진 목적으로 자사 측 기기의 운행 기록들을 <u>가공</u>하여 양질의 데이터셋을 정기적으로 공개 배포하고 있다. 가공 방식에 대해서도 Uber Movement Team에서 공유하고 있으니 궁금하다면 참조하길 바란다. (아래 References 참고)
 
 ![png](/assets/img/post/parking_density/uber_movement.png)
 *Introduction by Uber Movement; Credit: https://movement.uber.com*
@@ -56,7 +55,7 @@ math: true
 <br>
 
 그리고, 요일 단위 집계(Day of Week)를 제외하고는, 집계를 할 때 평일만 모아서 집계했는지 / 주말만 모아서 집계했는지 / 평일주말 모두 합쳐서 집계했는지에 따라 각각 'OnlyWeekdays', 'OnlyWeekends', 'All' 이름이 붙어있다. <u>데이터 내부의 Data Structure에는 차이가 없으며</u>, 데이터 값이 어떤 집계 기준으로 산출된 것인지 다를 뿐이다. (찍먹 수준도 안되는) 여기 서두에선 (2), (5), (7) 유형의 데이터들만 한번 들여다 본다.
-<br><br>
+<br>
 
 > **_NOTE:_** 가만보면 일별 단위는 없는 것 같은데, 2020년 1분기(3개월)에만 일별(hourly resolution) 데이터가 함께 있다. (* 데이터 꽤 큼. ~ 1.5 GB)
 
@@ -99,7 +98,9 @@ DataContents = [file for file in os.listdir(DataPath)]
 Origin(sourceid)과 Destination(dstid) 컬럼 이후의 또 다른 공통 컬럼들로는 **mean_travel_time/standard_deviation_travel_time**과 **geometric_mean_travel_time/geometric_standard_deviation_travel_time**이 있다. <br><br>
 **mean_travel_time**은, 집계된 데이터 분포 상, 일반적인 산술평균(arithmetic mean)을 사용해 얻은 평균 통행시간값이고, <br>
 **geometric_mean_travel_time**은 기하평균(geometric mean) 계산을 통해 얻은 평균 통행시간값이다. <br>
-> **_NOTE:_** 오늘 살펴볼 데이터의 연구팀은 mean_travel_time 산술평균 통행시간을 기준으로 모델을 적용하여 parking density & traffic activity 데이터를 추출했다고 한다. <br>
+> **_NOTE:_** 오늘 살펴볼 데이터의 연구팀은 mean_travel_time 산술평균 통행시간을 기준으로 모델을 적용하여 parking density & traffic activity 데이터를 추출했다고 한다. 
+<br>
+
 * * *
 Hourly / Monthly / Weekly Aggregation마다 컬럼 내용이 다른 한 가지가 있는데, 그 해석은 다음과 같다. 
 * HourlyAggregate의 **'hod'** 컬럼: hour of a day의 약자; [0, 1, 2, ..., 23]까지 24개의 integer값이 들어있고, 시간을 의미한다.
@@ -1325,8 +1326,7 @@ geojson_df
 <br>
 
 ## Rescaling data range
-Parking density 값에 따라 Scatter size를 다르게 부여할 것이다. Parking density 값 자체가 작기 때문에 표현이 어렵기 때문이다. <br>
-주어진 데이터 분포를 기반으로, 아래 식에 따라 rescaling을 진행했다.
+Parking density 값에 따라 Scatter size를 다르게 부여할 것이다. Parking density 값 자체가 작기 때문에 표현이 어렵기 때문이다. 주어진 데이터 분포를 기반으로, 아래 식에 따라 rescaling을 진행했다.
 $$\Large x' = (s_{max} - s_{min})\times\left(\frac{x-x_{min}}{x_{max}-x_{min}}\right)^{1.5} + s_{min}$$
 
 $ s_{min} $과 $ s_{max} $는 각각 내가 원하는 scattter size의 최소 및 최대 크기를 나타낸다. 따라서 임의로 조정 가능한 hyper-parameter들이다. 그리고 $ x_{min} $과 $ x_{max} $ 는 데이터 분포 상의 최소 및 최대값이다. 분모 term은 단순 min-max normalization으로서 [0, 1] range를 갖게 되고, 나머지 term들에 의해 최종적으로 $ x $값은 [$ s_{min} $, $ s_{max} $] range로 normalize 된다.
