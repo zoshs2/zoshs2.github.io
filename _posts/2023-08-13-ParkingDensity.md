@@ -93,7 +93,7 @@ DataContents = [file for file in os.listdir(DataPath)]
 ['london-lsoa-2020-1-OnlyWeekdays-HourlyAggregate.csv', 'london-lsoa-2018-2-OnlyWeekdays-MonthlyAggregate.csv', 'london-lsoa-2018-2-WeeklyAggregate.csv']
 ```
 
-기본적으로 Travel Times 데이터들은 모두, 유형에 관계없이, OD(Origin to Destination)에 관한 컬럼정보로 구성되어 있다. 시작노드지역(sourceid)에서 종료노드지역(dstid) 방향으로 운행할 때의 평균 통행시간이 기록되어 있다. 노드 ID는 Uber Movement 팀에서 자체 넘버링한 Sequential ID(0부터 N까지)를 쓰는 듯 하다. ID에 대한 지리정보 데이터는 Uber Movement 홈페이지에서 내려받을 수 있다. (아래 [GeoJson Files](#regional-id-and-geojson-files){:target="_blank"} 내용 참고)
+기본적으로 Travel Times 데이터들은 모두, 유형에 관계없이, OD(Origin to Destination)에 관한 컬럼정보로 구성되어 있다. 시작노드지역(sourceid)에서 종료노드지역(dstid) 방향으로 운행할 때의 평균 통행시간이 기록되어 있다. 노드 ID는 Uber Movement 팀에서 자체 넘버링한 Sequential ID(0부터 N까지)를 쓰는 듯 하다. ID에 대한 지리정보 데이터는 Uber Movement 홈페이지에서 내려받을 수 있다. (아래 [GeoJson Files](#regional-id-and-geojson-files) 내용 참고)
 * * *
 Origin(sourceid)과 Destination(dstid) 컬럼 이후의 또 다른 공통 컬럼들로는 **mean_travel_time/standard_deviation_travel_time**과 **geometric_mean_travel_time/geometric_standard_deviation_travel_time**이 있다. <br><br>
 **mean_travel_time**은, 집계된 데이터 분포 상, 일반적인 산술평균(arithmetic mean)을 사용해 얻은 평균 통행시간값이고, <br>
