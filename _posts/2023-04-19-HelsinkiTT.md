@@ -4,6 +4,8 @@ date: 2023-04-19 20:48:52 +0900
 categories: [Open-Data, EDA]
 tags: [python, network, travel time, visualization, eda, finland, helsinki]
 math: true
+image: /assets/img/post/helsinki_tt/preview_img_helsinkiTT.png
+pin: true
 ---
 
 # 들어가며
