@@ -562,6 +562,11 @@ WeeklyAgg
 
 
 # Parking density maps and Traffic activity rhythms
+데이터 파일들은 아래 [Harvard Dataverse](https://dataverse.harvard.edu/){:target="_blank"} URL에 들어가 다운받을 수 있다.
+```
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8HAJFE
+```
+<br>
 
 ## Unzip all zip files
 배포되는 zip 파일들을 macosx 기반에서 압축된 듯 하다. 이 경우 __MACOSX 디렉토리(내부에는 _.DS_Store 파일들)가 Mac Finder(윈도우 OS의 탐색기 같은) 호환 용도로 함께 포함되어 있다. 본래 데이터만 활용해도 되니 압축해제 과정에서 삭제하도록 하자.
