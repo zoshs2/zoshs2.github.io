@@ -953,13 +953,16 @@ iio.imwrite(os.path.join(os.getcwd(), gif_fname), img_set, fps=20, loop=0)
 ```
 
 ### Constrained Floating Car LIVE
-![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/Constrained_FCD_Xuancheng_Live_20200904-min.gif)
+
+
+<img src="/assets/img/post/xuancheng_traffic/Constrained_FCD_Xuancheng_Live_20200904-min.gif" alt="GIF" style="width: 800px;"/>
 
 <br>
+
 확실히 많이 나아졌다. Good!! <br>
 하지만 도로망 전체 폴리곤에 인접하기만 하면 포함시키기 때문에, 경로추종은 장담할 수 없다.
 
-<br><br>
+<br>
 
 ## loop
 **loop 데이터**는 Inductive Loop Detector(유도식 루프 감지기)로 수집 및 집계된 도로속도 데이터이다. 쉬안청에서만 볼 수 있는 그런 특별한 장비는 아니고, 우리 일상에서도 쉽게 볼 수 있는 센서다. 도로에서 일상적으로 흔히 볼 수 있는 **고정식 과속 단속 카메라** 가 그 예시이다. 고정식 과속 단속 카메라 전방에는 아래 그림과 같이 두 개의 센서가 일정한 간격으로 바닥에 설치되어 있는데, 이 두 구간을 차량이 지나갈 때 소요한 시간을 거리와 계산하여 일정 속도 이상의 과속이 인지되면, 플래시와 함께 카메라가 찰칵! 해당 차량을 찍게 되는 원리이다. 이후 LPR(License Plate Recognition; 차량 번호판 인식)을 통해 차량 번호를 인식하고, 식별한 차량에 대한 소유주를 DB에서 찾아 **행운의 편지**를 자택에 보내주는 것이다.
@@ -2246,8 +2249,9 @@ kepMap = KeplerGl(height=500, show_docs=False)
 kepMap.add_data(aday_lp_merged)
 kepMap.save_to_html(file_name='Xuancheng_fullLoop_keplerMap.html')
 ```
+<br>
 
-![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/KeplerGL_TimePlayBack_XuanchengFull-min.gif)
+<img src="/assets/img/post/xuancheng_traffic/KeplerGL_TimePlayBack_XuanchengFull-min.gif" alt="GIF" style="width: 800px;"/>
 
 <br>
 
