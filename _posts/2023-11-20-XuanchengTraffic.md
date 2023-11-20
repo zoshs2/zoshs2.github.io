@@ -759,7 +759,7 @@ iio.imwrite(os.path.join(os.getcwd(), gif_fname), img_set, fps=20, loop=0)
 
 ### Floating Car LIVE by GIF visualization
 
-![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/FCD_Xuancheng_Live_20200904-min.gif)
+<img src="https://github.com/zoshs2/open_debris/blob/main/FCD_Xuancheng_Live_20200904-min.gif" alt="GIF" style="width: 500px;"/>
 
 <br>
 근데 수집당시 GPS 오차때문인지, 위치가 튀는 데이터 포인트들이 꽤 보인다. <br>
