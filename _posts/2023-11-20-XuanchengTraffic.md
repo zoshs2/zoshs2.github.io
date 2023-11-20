@@ -67,7 +67,7 @@ print(DataContents)
 
 <br>
 
-## road_network_segment_level.csv
+## road_network_segment_level
 쉬안청 도로망(네트워크) 데이터이다. 보다시피 csv 파일로 Geometry Object (LINESTRING)가 텍스트 형태로 저장되어 있어서 shapely 라이브러리를 이용해 형변환이 필요하다. 
 * Attribute Columns
   * **cid**: 고유 도로링크 아이디. '\<Upstream Node ID\>_\<Downstream Node ID\>' 형태로 기입되어 있다.
@@ -358,7 +358,7 @@ KeplerGL 공식 문서상 EPSG:3857(WGS-84) Projected Coordinate System만 지�
 
 <br>
 
-## fcd.csv
+## fcd
 Floating Car Data (FCD)로, 총 500대 상업용 차량(commercial vehicle라고 논문에서 표현)들의 이동 궤적경로를 추적한 데이터다.
 * Attribute Columns
   * **cid**: 차량의 고유 아이디
@@ -958,7 +958,7 @@ iio.imwrite(os.path.join(os.getcwd(), gif_fname), img_set, fps=20, loop=0)
 
 <br><br>
 
-## loop.csv
+## loop
 **loop 데이터**는 Inductive Loop Detector(유도식 루프 감지기)로 수집 및 집계된 도로속도 데이터이다. 쉬안청에서만 볼 수 있는 그런 특별한 장비는 아니고, 우리 일상에서도 쉽게 볼 수 있는 센서다. 도로에서 일상적으로 흔히 볼 수 있는 **고정식 과속 단속 카메라** 가 그 예시이다. 고정식 과속 단속 카메라 전방에는 아래 그림과 같이 두 개의 센서가 일정한 간격으로 바닥에 설치되어 있는데, 이 두 구간을 차량이 지나갈 때 소요한 시간을 거리와 계산하여 일정 속도 이상의 과속이 인지되면, 플래시와 함께 카메라가 찰칵! 해당 차량을 찍게 되는 원리이다. 이후 LPR(License Plate Recognition; 차량 번호판 인식)을 통해 차량 번호를 인식하고, 식별한 차량에 대한 소유주를 DB에서 찾아 **행운의 편지**를 자택에 보내주는 것이다.
 
 <table><tr>
