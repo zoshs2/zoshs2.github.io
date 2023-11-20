@@ -15,13 +15,16 @@ math: true
 * * *
 * Searching Keywords: travel speed, traffic velocity, road network, road segment
 * Searching Websites: [figshare.org](https://figshare.com/){:target="_blank"}, [zenodo.org](https://zenodo.org/){:target="_blank"}, [Scientific Data - Nature](https://www.nature.com/sdata/){:target="_blank"}
+
 * * *
 
 ### References <!-- omit in toc -->
 * [Xuancheng Dataset in figshare.org](https://figshare.com/articles/dataset/Resampled_Traffic_Flow_Data_of_Xuancheng_City/18700553){:target="_blank"}
 * [Relevant Original Post in figshare.org](https://figshare.com/collections/City-Scale_Holographic_Traffic_Flow_Data_based_on_Vehicular_Trajectory_Resampling/5796776){:target="_blank"}
 * [Xuancheng Data Paper in Scientific Data](https://www.nature.com/articles/s41597-022-01850-0){:target="_blank"}
+
 * * *
+
 <br>
 
 ```python
@@ -2251,6 +2254,10 @@ kepMap.save_to_html(file_name='Xuancheng_fullLoop_keplerMap.html')
 ## Conclusions
 중국 쉬안청시의 도로망, 차량 GPS, 도로속도 데이터를 살펴보았다. 간단한 toy model 로 돌리기에 충분한 사이즈의 부담없는 데이터라 꽤 만족스런 줍줍이었다. 다만 GPS 위치의 outlier, 도로속도의 outlier/missing value/duplicates들에 대한 데이터 전처리 작업에 신중을 기해야 할 데이터이다. 
 
+<br>
+
 이번 활동에서는 사실 **KeplerGL**을 활용한 시각화를 한번 도전해보는 것에 중점을 뒀었는데, 이에 대한 간단한 소감으론, 활용이 간편하고 시각적으로 매력적이다. Pandas.DataFrame | GeoPandas.GeoDataFrame 하고도 호환이 잘되서, 전처리된 데이터프레임을 바로바로 이식시켜 확인해보기 편하다. Plotly, Folium 과 같은 interactive 파이썬 라이브러리를 이용할 땐 이것저것 사소한 파라미터들을 일일이 다 코딩해줘야 하지만, KeplerGL은 UI로 되어있어서 마우스 버튼 클릭들만으로 설정하고 실시간 확인이 바로바로 가능하다. 다만, 그런 맥락에서 **사용자의 자유도가 많이 떨어진다**는 느낌을 받았다. 그리고 무엇보다, 커뮤니티에서 이미 많이 나온 이슈같은데, add_data한 데이터프레임의 크기가 커질수록, 추출된 Kepler HTML의 Operating 속도가 상당히 느려진다. 이런 점이 좀 아쉽다. 하지만 OpenCV, imageio 등의 라이브러리 사용없이도 손쉽게 Time-series Video(KeplerGL-Time Playback), 3D 공간 시각화를 구현해주는 건 여전히 매력적인 부분이다.
+
+<br>
 
 ***fin***
