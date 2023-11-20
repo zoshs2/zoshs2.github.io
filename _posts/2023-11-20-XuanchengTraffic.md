@@ -759,7 +759,7 @@ iio.imwrite(os.path.join(os.getcwd(), gif_fname), img_set, fps=20, loop=0)
 
 ### Floating Car LIVE by GIF visualization
 
-![gif](/assets/img/post/xuancheng_traffic/FCD_Xuancheng_Live_20200904-min.gif)
+![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/FCD_Xuancheng_Live_20200904-min.gif)
 
 <br>
 근데 수집당시 GPS 오차때문인지, 위치가 튀는 데이터 포인트들이 꽤 보인다. <br>
@@ -953,7 +953,7 @@ iio.imwrite(os.path.join(os.getcwd(), gif_fname), img_set, fps=20, loop=0)
 ```
 
 ### Constrained Floating Car LIVE
-![gif](/assets/img/post/xuancheng_traffic/Constrained_FCD_Xuancheng_Live_20200904-min.gif)
+![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/Constrained_FCD_Xuancheng_Live_20200904-min.gif)
 
 <br>
 확실히 많이 나아졌다. Good!! <br>
@@ -2247,7 +2247,7 @@ kepMap.add_data(aday_lp_merged)
 kepMap.save_to_html(file_name='Xuancheng_fullLoop_keplerMap.html')
 ```
 
-![gif](/assets/img/post/xuancheng_traffic/KeplerGL_TimePlayBack_XuanchengFull-min.gif)
+![gif](https://github.com/zoshs2/zoshs2.github.io/tree/main/assets/img/post/xuancheng_traffic/KeplerGL_TimePlayBack_XuanchengFull-min.gif)
 
 <br>
 
