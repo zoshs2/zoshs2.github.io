@@ -366,7 +366,7 @@ Floating Car Data (FCD)로, 총 500대 상업용 차량(commercial vehicle라고
   * **time**: 10초 단위로 기록된 time-stamp (2020년 9월 1일부터 30일까지; ***9월 5일 토요일 하루는 빠져있다.***)
   * **lon** / **lat**: 경/위도 상세정보
   * **spd** / **turn**: 해당 차량의 속도 / 직진, 우좌회전, 유턴 등에 관한 상태정보
-  * **dis** / **roadid**: Downsteam Node ID까지 남은 거리(meter) / 현재 위치한 도로링크 아이디 (앞선 [도로 네트워크](#road-network-segment-level-csv)절 참고)
+  * **dis** / **roadid**: Downsteam Node ID까지 남은 거리(meter) / 현재 위치한 도로링크 아이디 (앞선 도로 네트워크절 참고)
 
 <br>
 
