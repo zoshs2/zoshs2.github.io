@@ -4,10 +4,9 @@ date: 2023-12-29 19:07:20 +0900
 categories: [Open-Data, EDA]
 tags: [python, traffic, trajectory, road speed, visualization, eda, network, paper, china, jinan, shenzhen]
 math: true
-toc: true
 ---
 
-# Vehicle Trajectory Dataset for Jinan and Shenzhen, China
+# Introduction
 본 글은 중국 [Jinan시](https://ko.wikipedia.org/wiki/%EC%A7%80%EB%82%9C%EC%8B%9C){:target="_blank"}와 [Shenzhen시](https://ko.wikipedia.org/wiki/%EC%84%A0%EC%A0%84%EC%8B%9C){:target="_blank"}에 대한 차량 궤적 데이터(Vehicle trajectory Dataset)를 살펴본 내용이다. 해당 데이터는 2023년 10월 [Scientific Data 저널](https://www.nature.com/sdata/){:target="_blank"}의 Data Description 논문과 함께 올라온 따끈따끈한 데이터이다.
 
 ## Referernce <!-- omit in toc -->
@@ -61,14 +60,14 @@ GeoJSON 파일이면 gpd.read_file(json.dumps(json.load(GeoJSON.json))) 이면 �
 
 * * *
 ### 데이터 컬럼 설명 <!-- omit in toc -->
-* **edge_\<jinan | shenzhen\>.csv**
+* **edge_jinan | shenzhen.csv**
   * Origin, Destination: 시작노드, 종료노드
   * Class: 도로종류; Open Street Map(OSM)에서 명시된 도로정보를 참조해 썼다고 한다.
   * Geometry: road segment의 Coordinate point(longitude, latitude)가 -로 묶여 있고, LINESTRING 순서가 _를 기준으로 분리되어있다. (WGS84; EPSG-4326)
   * Length: road linesting의 meter단위 길이
 <br><br>
 
-* **node_\<jinan | shenzhen\>.csv**
+* **node_jinan | shenzhen.csv**
   * NodeID: NodeID다.
   * Longitude, Latitude: 경도, 위도 (Coordinate point; WGS84)이다.
   * HasCamera: 해당 node(intersection)에 고정식 카메라가 있는지의 여부이다. (1: 있음, 0: 없음)
@@ -273,7 +272,7 @@ jinan시는 22년 10월 17일 하루에 대한 차량 궤적 데이터만 존재
 
 * * *
 ### 데이터 컬럼 설명 <!-- omit in toc -->
-* **traj_\<jinan | shenzhen\>_\< date \>.csv**
+* **traj_\[jinan | shenzhen\]_\[date\].csv**
   * VehicleID: 차량 고유식별코드
   * TripID: 몇 번째 운행(trip)에 대한 기록인지를 나타내는 인덱스 (동일한 VehicleID, 즉 동일한 하나의 차량은 하루 중 여러 개 운행(trip)기록들이 존재할 수 있다.)
   * Points: 운행에 대한 Trajectory가 기록되어 있다. 관측 포인트는 NodeID-Time로 기록되어 있고, 이들은 서로 _(underscore)로 구분되어있다.
