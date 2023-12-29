@@ -29,3 +29,7 @@ gem "jekyll-sitemap"
 if RUBY_PLATFORM =~ /linux-musl/
   gem "jekyll-sass-converter", "~> 2.0"
 end
+
+group :jekyll_plugins do
+  gem "jekyll-toc"
+end
