@@ -9,7 +9,7 @@ math: true
 # Introduction
 본 글은 중국 [Jinan시](https://ko.wikipedia.org/wiki/%EC%A7%80%EB%82%9C%EC%8B%9C){:target="_blank"}와 [Shenzhen시](https://ko.wikipedia.org/wiki/%EC%84%A0%EC%A0%84%EC%8B%9C){:target="_blank"}에 대한 차량 궤적 데이터(Vehicle trajectory Dataset)를 살펴본 내용이다. 해당 데이터는 2023년 10월 [Scientific Data 저널](https://www.nature.com/sdata/){:target="_blank"}의 Data Description 논문과 함께 올라온 따끈따끈한 데이터이다.
 
-## Referernce <!-- omit in toc -->
+## Referernce
 1. [Yu, Fudan, et al. "City-scale vehicle trajectory data from traffic camera videos." Scientific data 10.1 (2023)](https://doi.org/10.1038/s41597-023-02589-y){:target="_blank"}
 
 * * *
@@ -59,7 +59,7 @@ from collections import defaultdict
 GeoJSON 파일이면 gpd.read_file(json.dumps(json.load(GeoJSON.json))) 이면 되는데, CSV파일 내 string으로 특별한 규칙(?)으로 LINESTRING 정보를 나열시켜놔서 약간의 전처리가 필요하다.
 
 * * *
-### 데이터 컬럼 설명 <!-- omit in toc -->
+### 데이터 컬럼 설명
 * **edge_jinanOrshenzhen.csv**
   * Origin, Destination: 시작노드, 종료노드
   * Class: 도로종류; Open Street Map(OSM)에서 명시된 도로정보를 참조해 썼다고 한다.
@@ -271,7 +271,7 @@ plt.show()
 jinan시는 22년 10월 17일 하루에 대한 차량 궤적 데이터만 존재하고, shenzhen시는 20년 11월 4일, 21년 4월 16일-8월 24일에 대한 차량 궤적 데이터가 존재한다.
 
 * * *
-### 데이터 컬럼 설명 <!-- omit in toc -->
+### 데이터 컬럼 설명
 * **traj_jinanOrshenzhen_date.csv**
   * VehicleID: 차량 고유식별코드
   * TripID: 몇 번째 운행(trip)에 대한 기록인지를 나타내는 인덱스 (동일한 VehicleID, 즉 동일한 하나의 차량은 하루 중 여러 개 운행(trip)기록들이 존재할 수 있다.)
@@ -1044,7 +1044,7 @@ traj_dataset
 하루단위 trajectory dataset에 대해서 10분 단위로 모든 trip들을 scanning해가며 Road Speed들을 계산한다. 10분 단위로 끊어서 볼 때, 어떤 trip들과 운행정보를 대상에 포함시킬 건지 **어떤 기준**이 필요하다. 나는 이 기준을 **1/2차 필터링**으로 나눴고, 최종적으로 필터링되고 남은 trajectory 정보들을 기반으로 Road Speed를 산출했다.
 
 * * *
-### 1차 필터링 <!-- omit in toc -->
+### 1차 필터링
 time window를 [t, t']로 잡고 scanning을 한다고 보면 (나의 경우엔 t' - t = 10 min), 
 1. **t' < DepatureTime 제외**: trip이 나중시간(t')대비 더 이후에 출발했을 경우 (ex. 7:00~7:10을 보고자 하는데, 7:50에 출발한 trip은 관심대상이 아니다.)
 2. **ArrivalTime < 07:00 제외**: trip이 처음시간(t)대비 더 일찍 운행이 종료된 경우 (ex. 7:00~7:10을 보고자 하는데, 6:50에 운행이 끝났던 trip은 관심대상이 아니다.)
@@ -1054,7 +1054,7 @@ time window를 [t, t']로 잡고 scanning을 한다고 보면 (나의 경우엔 
 
 * * *
 
-### 2차 필터링 <!-- omit in toc -->
+### 2차 필터링
 앞서 1차 필터링에서 거르고 남은 trip들을 대상으로 'Trajectory'컬럼과 'ElapseTime'컬럼 기록들을 하나씩 비교 대조해가며 서칭해야 한다. 그리고 Time Window(10분단위)마다 **오버랩되는 부분**을 없애기 위해, 또 다른 기준을 세워야 한다. 나는 새로운 Point 기록이 시작된 시점을 기준으로 time window 범위안에 들어오면 관심대상에 넣기로 했다.
 
 다음 그림의 예시처럼, 새로운 Point(Node)가 **시작되는 시간**을 기준으로 대상에 포함시킨다. (Partially-in, ArrivalTime-in, DepartureTime-in trip 모두 로직은 동일함) 
