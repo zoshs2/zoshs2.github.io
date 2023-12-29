@@ -4,10 +4,10 @@ date: 2023-12-29 19:07:20 +0900
 categories: [Open-Data, EDA]
 tags: [python, traffic, trajectory, road speed, visualization, eda, network, paper, china, jinan, shenzhen]
 math: true
+toc: true
 ---
 
-# 들어가며
-**Vehicle Trajectory Dataset for Jinan and Shenzhen, China** <br>
+# Vehicle Trajectory Dataset for Jinan and Shenzhen, China
 본 글은 중국 [Jinan시](https://ko.wikipedia.org/wiki/%EC%A7%80%EB%82%9C%EC%8B%9C){:target="_blank"}와 [Shenzhen시](https://ko.wikipedia.org/wiki/%EC%84%A0%EC%A0%84%EC%8B%9C){:target="_blank"}에 대한 차량 궤적 데이터(Vehicle trajectory Dataset)를 살펴본 내용이다. 해당 데이터는 2023년 10월 [Scientific Data 저널](https://www.nature.com/sdata/){:target="_blank"}의 Data Description 논문과 함께 올라온 따끈따끈한 데이터이다.
 
 ## Referernce <!-- omit in toc -->
