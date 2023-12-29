@@ -13,7 +13,6 @@ toc: true
 ## Referernce <!-- omit in toc -->
 1. [Yu, Fudan, et al. "City-scale vehicle trajectory data from traffic camera videos." Scientific data 10.1 (2023)](https://doi.org/10.1038/s41597-023-02589-y){:target="_blank"}
 
-
 * * *
 
 ## Dataset Preview
@@ -39,9 +38,6 @@ toc: true
 6. **Final Output**
 : 이러한 복잡한 절차들을 거쳐서 중국의 두 개 도시(지난시, 선전시)에 대한 **차량 궤적 데이터셋**이 만들어졌다. 그리고 오늘 살펴볼 데이터가 이것이다. 잘 만들었는지 요리조리 한번 뜯어보자.
 
-
-<br>
-
 * * *
 <br>
 
@@ -60,26 +56,22 @@ import swifter
 from collections import defaultdict
 ```
 
-<br>
-
 ## Road Networks in Jinan and Shenzhen
 GeoJSON 파일이면 gpd.read_file(json.dumps(json.load(GeoJSON.json))) 이면 되는데, CSV파일 내 string으로 특별한 규칙(?)으로 LINESTRING 정보를 나열시켜놔서 약간의 전처리가 필요하다.
 
 * * *
 ### 데이터 컬럼 설명 <!-- omit in toc -->
-* **edge_<jinan | shenzhen>.csv**
+* **edge_\<jinan | shenzhen\>.csv**
   * Origin, Destination: 시작노드, 종료노드
   * Class: 도로종류; Open Street Map(OSM)에서 명시된 도로정보를 참조해 썼다고 한다.
   * Geometry: road segment의 Coordinate point(longitude, latitude)가 -로 묶여 있고, LINESTRING 순서가 _를 기준으로 분리되어있다. (WGS84; EPSG-4326)
   * Length: road linesting의 meter단위 길이
 <br><br>
 
-* **node_<jinan | shenzhen>.csv**
+* **node_\<jinan | shenzhen\>.csv**
   * NodeID: NodeID다.
   * Longitude, Latitude: 경도, 위도 (Coordinate point; WGS84)이다.
   * HasCamera: 해당 node(intersection)에 고정식 카메라가 있는지의 여부이다. (1: 있음, 0: 없음)
-
-<br>
 
 * * *
 
@@ -119,8 +111,6 @@ shenzhen시를 대상으로 어떻게 저장되었는지 확인해보자
 # shenzhen - edge information
 network_dataset[1][0].head()
 ```
-
-
 
 
 <div>
@@ -180,7 +170,7 @@ network_dataset[1][0].head()
 </table>
 </div>
 
-<br><br>
+<br>
 
 
 ```python
@@ -248,8 +238,6 @@ network_dataset[1][1].head()
 </table>
 </div>
 
-<br><br>
-
 * * *
 
 ### Visualization
@@ -275,11 +263,8 @@ plt.subplots_adjust(wspace=.01)
 plt.show()
 ```
 
-
     
 ![png](/assets/img/post/trafficCamera_traj/eda_csns_20231228_12_0.png)
-    
-<br>
 
 * * *
 
@@ -288,7 +273,7 @@ jinan시는 22년 10월 17일 하루에 대한 차량 궤적 데이터만 존재
 
 * * *
 ### 데이터 컬럼 설명 <!-- omit in toc -->
-* **traj_<jinan | shenzhen>_< date >.csv**
+* **traj_\<jinan | shenzhen\>_\< date \>.csv**
   * VehicleID: 차량 고유식별코드
   * TripID: 몇 번째 운행(trip)에 대한 기록인지를 나타내는 인덱스 (동일한 VehicleID, 즉 동일한 하나의 차량은 하루 중 여러 개 운행(trip)기록들이 존재할 수 있다.)
   * Points: 운행에 대한 Trajectory가 기록되어 있다. 관측 포인트는 NodeID-Time로 기록되어 있고, 이들은 서로 _(underscore)로 구분되어있다.
@@ -437,8 +422,6 @@ traj_dataset
 <p>1650253 rows × 6 columns</p>
 </div>
 
-<br>
-
 * * *
 
 ### Remodeling trajectory dataset
@@ -468,48 +451,44 @@ timestamp_col = points_col.apply(lambda x: list(map(lambda y: y.split('-')[1], x
 ```python
 # 궤적에 관한 정보
 traj_col
+
+* * * * * * * * * * * *
+
+0          11691-982-1016-1017-7169-7170-7171-214-991-103...
+1          9306-11286-11287-3820-1102-1103-1096-11620-109...
+2          1298-4491-11723-4497-4538-4540-10259-11739-453...
+3          4180-4175-4162-1236-1232-1233-1234-11706-1226-...
+4          6912-10508-4533-4540-4538-4497-11723-1298-1285...
+                                  ...                        
+1650248    11928-11914-8577-488-2777-11574-11575-9343-934...
+1650249                  11776-11498-11491-11489-11487-11776
+1650250    11895-11914-0-1-10107-3903-3904-1468-3673-1092...
+1650251                                      8981-11576-8981
+1650252                                      8981-11576-8981
+Name: Points, Length: 1650253, dtype: object
 ```
-
-
-
-
-    0          11691-982-1016-1017-7169-7170-7171-214-991-103...
-    1          9306-11286-11287-3820-1102-1103-1096-11620-109...
-    2          1298-4491-11723-4497-4538-4540-10259-11739-453...
-    3          4180-4175-4162-1236-1232-1233-1234-11706-1226-...
-    4          6912-10508-4533-4540-4538-4497-11723-1298-1285...
-                                     ...                        
-    1650248    11928-11914-8577-488-2777-11574-11575-9343-934...
-    1650249                  11776-11498-11491-11489-11487-11776
-    1650250    11895-11914-0-1-10107-3903-3904-1468-3673-1092...
-    1650251                                      8981-11576-8981
-    1650252                                      8981-11576-8981
-    Name: Points, Length: 1650253, dtype: object
-
 
 
 
 ```python
 # 시점에 관한 정보
 timestamp_col
+
+* * * * * * * * * * * *
+
+0          [47219.0, 47314.3, 47344.5, 47370.4, 47433.5, ...
+1          [32171.0, 32206.7, 32224.4, 32248.1, 32267.6, ...
+2          [30171.0, 30382.7, 30397.0, 30530.8, 30603.5, ...
+3          [33688.0, 33733.1, 33750.4, 33767.5, 33793.9, ...
+4          [39787.0, 39871.9, 39967.4, 40088.6, 40120.9, ...
+                                  ...                        
+1650248    [67501.0, 67505.1, 67511.2, 67513.1, 67513.6, ...
+1650249    [46358.0, 46460.4, 47186.3, 47641.5, 48026.8, ...
+1650250    [42050.0, 42319.5, 42721.1, 43564.2, 43656.2, ...
+1650251                          [34590.0, 34937.5, 36102.0]
+1650252                          [59141.0, 59574.3, 60862.0]
+Name: Points, Length: 1650253, dtype: object
 ```
-
-
-
-
-    0          [47219.0, 47314.3, 47344.5, 47370.4, 47433.5, ...
-    1          [32171.0, 32206.7, 32224.4, 32248.1, 32267.6, ...
-    2          [30171.0, 30382.7, 30397.0, 30530.8, 30603.5, ...
-    3          [33688.0, 33733.1, 33750.4, 33767.5, 33793.9, ...
-    4          [39787.0, 39871.9, 39967.4, 40088.6, 40120.9, ...
-                                     ...                        
-    1650248    [67501.0, 67505.1, 67511.2, 67513.1, 67513.6, ...
-    1650249    [46358.0, 46460.4, 47186.3, 47641.5, 48026.8, ...
-    1650250    [42050.0, 42319.5, 42721.1, 43564.2, 43656.2, ...
-    1650251                          [34590.0, 34937.5, 36102.0]
-    1650252                          [59141.0, 59574.3, 60862.0]
-    Name: Points, Length: 1650253, dtype: object
-
 
 
 raw dataset에서 'Duration' 컬럼 값은 '운행이 시작된 시점'과 '운행이 끝난 시점' 사이의 간격이다. 나는 임의의 trip이 어느 시간대(Time window)에 속하는 trip인지 특정하기 위해서 DepartureTime 컬럼 말고도 ArrivalTime 컬럼도 만들려고 했다. 그래서 'DepartureTime'컬럼에다가 'Duration'컬럼(trip 진행시간)을 더하는 작업을 수행하려다가... 그전에 'Points'컬럼에서 뽑아낸 '시점에 관한 정보(timestamp_col)'와 'Duration'컬럼값이 일치하는지 확인하게 된다.
@@ -1060,7 +1039,7 @@ traj_dataset
 <p>1687293 rows × 7 columns</p>
 </div>
 
-<br>
+* * *
 
 ### Converting Procedure
 하루단위 trajectory dataset에 대해서 10분 단위로 모든 trip들을 scanning해가며 Road Speed들을 계산한다. 10분 단위로 끊어서 볼 때, 어떤 trip들과 운행정보를 대상에 포함시킬 건지 **어떤 기준**이 필요하다. 나는 이 기준을 **1/2차 필터링**으로 나눴고, 최종적으로 필터링되고 남은 trajectory 정보들을 기반으로 Road Speed를 산출했다.
@@ -1085,7 +1064,6 @@ time window를 [t, t']로 잡고 scanning을 한다고 보면 (나의 경우엔 
 
 ![png](/assets/img/post/trafficCamera_traj/FilteringTimeWindow_2.png)
 
-<br>
 
 ### Sample Test
 로직대로 잘 동작할지 [8:30 ~ 8:40] time window에 관한 필터링을 해보자.
@@ -1319,8 +1297,6 @@ tw_traj_dataset.sort_values(by='DepartureTime').head()
 </table>
 </div>
 
-<br>
-
 2차 필터링에선 'Trajectory'컬럼과 'ElapseTime'컬럼을 하나씩 비교 대조해가며 time window안에 들어오는 기록인지 검사한다. 이 과정에서 Link_ID를 추출하고, ElapseTime정보와 도로망 링크길이 정보를 토대로 해당 Link_ID의 속도도 한번에 계산한다.
 
 
@@ -1445,8 +1421,6 @@ spd_road_dataset
 <p>9357 rows × 2 columns</p>
 </div>
 
-<br>
-
 8:30~8:40 time window 사이에 운행이 관찰된 도로링크 수는 9357개이다. 중국 선전시의 도로링크 수가 27410개를 충분히 커버하진 못한다. 아무래도 trajectory 관찰 장비가 도로위의 카메라에 기반하였고, 이로 인해 모든 도로링크의 동향을 파악할 순 없던 걸로 생각된다.
 * * *
 **여기까지 얻어낸 이 데이터 형태를 Road Speed for each road segment에 대한 Raw Dataset로 여기고, 10분 단위 raw dataset을 저장시키기로 한다.**
@@ -1568,8 +1542,6 @@ spd_road_dataset
 <p>8387 rows × 2 columns</p>
 </div>
 
-<br>
-
 도로링크별 속도 기록들에 대해 이상치 작업을 수행했고, 이후 1000여개의 도로링크들은 아예 제거되었다. 이제 이들을 가지고 최종 평균도로속도(RoadSpeed)를 산출한다.
 
 
@@ -1663,9 +1635,6 @@ spd_road_dataset
 <p>8387 rows × 3 columns</p>
 </div>
 
-<br>
-
-
 ```python
 fig, ax = plt.subplots(facecolor='w', figsize=(7, 5))
 spd_road_dataset['AvgSpeed'].hist(ax=ax, color='blue', bins=30, histtype='step', hatch='//////', linewidth=1.5)
@@ -1680,8 +1649,7 @@ plt.show()
 
     
 ![png](/assets/img/post/trafficCamera_traj/eda_csns_20231228_49_0.png)
-    
-<br>
+
 
 ### Extract Dataset
 
@@ -1720,8 +1688,6 @@ target_times = [(h, m) for h in range(7, 20) for m in range(0, 60, interval)] # 
 /home/ooooo/VehicleTraj_china/gitlab_share/traj_data/RoadSpeed/shenzhen/20210416/10min_interval
 ```
 
-<br>
-
 ```python
 traj_dataset = pd.read_pickle(os.path.join(BasePath, target_file))
 basetime = traj_dataset['ArrivalTime'][0]
@@ -1742,8 +1708,6 @@ for hour, minute in tqdm(target_times[1:]):
     spd_road_dataset.to_pickle(os.path.join(SavePath, filename))
 ```
 
-<br>
-
 ### Loading extracted dataset
 
 
@@ -1758,8 +1722,6 @@ print(BasePath)
 
 /home/ooooo/VehicleTraj_china/gitlab_share/traj_data/RoadSpeed/shenzhen/20210416/10min_interval
 ```
-
-<br>
 
 ```python
 RoadNetAvgSpeed = []
@@ -1862,8 +1824,6 @@ for i in tqdm(range(len(fileList)//3)):
 
 100%|██████████| 22/22 [00:15<00:00,  1.42it/s]
 ```
-
-<br>
 
 ```python
 fig, ax = plt.subplots(facecolor='w', figsize=(10, 6))
