@@ -59,7 +59,7 @@ from collections import defaultdict
 GeoJSON 파일이면 gpd.read_file(json.dumps(json.load(GeoJSON.json))) 이면 되는데, CSV파일 내 string으로 특별한 규칙(?)으로 LINESTRING 정보를 나열시켜놔서 약간의 전처리가 필요하다.
 
 * * *
-### 데이터 컬럼 설명
+### 데이터 컬럼 설명 <!-- omit in toc -->
 * **edge_jinanOrshenzhen.csv**
   * Origin, Destination: 시작노드, 종료노드
   * Class: 도로종류; Open Street Map(OSM)에서 명시된 도로정보를 참조해 썼다고 한다.
@@ -271,7 +271,7 @@ plt.show()
 jinan시는 22년 10월 17일 하루에 대한 차량 궤적 데이터만 존재하고, shenzhen시는 20년 11월 4일, 21년 4월 16일-8월 24일에 대한 차량 궤적 데이터가 존재한다.
 
 * * *
-### 데이터 컬럼 설명
+### 데이터 컬럼 설명 <!-- omit in toc -->
 * **traj_jinanOrshenzhen_date.csv**
   * VehicleID: 차량 고유식별코드
   * TripID: 몇 번째 운행(trip)에 대한 기록인지를 나타내는 인덱스 (동일한 VehicleID, 즉 동일한 하나의 차량은 하루 중 여러 개 운행(trip)기록들이 존재할 수 있다.)
