@@ -5,9 +5,9 @@
   {% endif %}
 {% endif %}
 
-{% if enable_toc %}
-  <div id="toc-wrapper" class="ps-0 pe-4 mb-5">
-    <div class="panel-heading ps-3 pt-2 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</div>
+ {% if enable_toc %}
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">{{- site.data.locales[include.lang].panel.toc -}}</h2>
     <nav id="toc"></nav>
-  </div>
+  </section>
 {% endif %}
