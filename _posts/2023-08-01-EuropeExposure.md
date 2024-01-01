@@ -4,7 +4,7 @@ date: 2023-08-01 01:41:35 +0900
 categories: [Open-Data, EDA]
 tags: [python, population, fixed asset, GDP, land cover, land use, CLC, imperviousness, visualization, eda, EU, europe, flood, hazard, risk, tif]
 math: true
-image: /assets/img/post/hanze_europe/preview_1200_630.png
+# image: /assets/img/post/hanze_europe/preview_1200_630.png
 ---
 
 # 들어가며
