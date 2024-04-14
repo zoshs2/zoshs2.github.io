@@ -6,7 +6,7 @@ tags: [PyTorch, Torch, Deep Learning, SGD, Mini-Batch, Stochastic Gradient Desce
 math: true
 ---
 
-# 모델의 훈련 방식
+# The way of training
 
 훈련 데이터(Training Dataset)를 전부 사용해서 (1회) 학습시키는 방식을 **Batch 훈련 방식**이라고 한다.
 > ***In batch gradient descent, we use all our training data in a single iteration of the algorithm.***
