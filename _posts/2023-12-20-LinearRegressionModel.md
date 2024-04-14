@@ -32,6 +32,13 @@ math: true
 
 # Linear Regression Model
 
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+```
+
 $H(x) = Wx + b$
 
 W와 b를 학습하는 모형.
