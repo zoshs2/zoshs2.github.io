@@ -1,6 +1,6 @@
 ---
 title: "[PyTorch] Linear Regression Model"
-date: 2024-04-12 17:04:50 +0900
+date: 2023-04-12 17:04:50 +0900
 categories: [DL/ML, Study]
 tags: [PyTorch, Torch, Deep Learning, Linear Regression, Python]
 math: true
