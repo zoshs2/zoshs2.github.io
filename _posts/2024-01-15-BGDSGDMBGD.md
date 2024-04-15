@@ -4,6 +4,7 @@ date: 2024-01-15 20:15:50 +0900
 categories: [DL/ML, Study]
 tags: [PyTorch, Torch, Deep Learning, SGD, Mini-Batch, Stochastic Gradient Descent, Batch, Python]
 math: true
+toc: false
 ---
 
 # Table of Contents <!-- omit in toc -->
