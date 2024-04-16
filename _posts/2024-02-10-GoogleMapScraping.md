@@ -19,7 +19,7 @@ toc: false
 
 구글맵의 정보를 본사의 동의없이 수집하여 활용해도 되는지에 대한 법적 책임은 물을 수 없다는 것이 내가 검색을 통해 (현재까진) 알고 있는 사실이다. 
 
-![png](/assets/img/post/gmap_scraping/scraping_legal_question.png)*Is scraping legal on Google Maps? Yes, absolutely. Source: https://www.lobstr.io/blog/is-scraping-google-maps-legal*
+![png](/assets/img/post/gmap_scraping/scraping_legal_question.png)*"Is scraping legal on Google Maps? Yes, absolutely." Source: https://www.lobstr.io/blog/is-scraping-google-maps-legal*
 
 내가 이해한 바로는, 법적으로 문제삼을 순 없으나 구글 측에서 IP 제재 또는 Google 계정 및 Google Cloud API 정지 등의 **기업 차원의 제재는 가할 수 있다**는 것이다. 이 프로그램을 사용하려면, 이 점을 잘 유념하여 사용하시길 바란다.
 
@@ -39,6 +39,7 @@ toc: false
 * * *
 
 ## Google Cloud Platform 에서 API Key 발급 받기
+
 먼저, 구글맵 정보를 처리하기 위해서 API 키를 얻어야 한다. 이 API키는 [Google Cloud Platform](https://cloud.google.com){:target="_blank"}에서 얻을 수 있다. 아래 사진처럼, 구글 클라우드 플랫폼(GCP) 홈페이지에 들어가면, 우측 상단에 **콘솔**이라는 버튼이 있다. 여기를 들어가준다.
 
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig1.png" width="600px" height="400px">
@@ -74,6 +75,7 @@ toc: false
 <br>
 
 ## API 키 환경변수 설정
+
 API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_profile**에서 시스템 환경변수로 설정시켜놓고 이를 사용하도록 하자.
 
 <br>
@@ -81,6 +83,7 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 <br>
 
 ## Crawling Procedure
+
 여기까지 기초적인 준비는 모두 끝났다. 앞으로 map.html, app.py, CrawlingGmapTraffic.py 이름의 3가지 스크립트 파일을 소개할 건데, 이들을 서로 유기적으로 얽혀 구글맵 실시간 교통정보 이미지를 크롤링하게 된다. 
 
 <br>
@@ -99,6 +102,7 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 이제 스크립트를 하나하나 간단히 살펴보고, 실제로 동작까지 시켜 출력된 결과물이 어떤 지 확인해보자.
 
 ## map.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -153,11 +157,13 @@ map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하
 
 > map.html 스크립트는 현재 작업 위치에서 'templates'이란 이름의 디렉토리 안에 넣어놓고 쓰기를 권장한다. 사실상 이 모든 작업의 (조심스럽게 다뤄야 할) 코어 부분이기도 하기에, 개별적으로 관리해야할 필요성이 있다고 생각되기 때문이다. 별로 동의하지 않는다면, app.py 스크립트에서 template_folder 값을 변경하고 사용하라.
 {: .prompt-tip }
+
 ```
 Flask(__name__, template_folder='templates')
 ```
 
 Google Maps을 불러오는 이 스크립트를 작성할 때, 지역 라벨 표시나 지형 표시 등의 배경을 제거하고 순수하게 Traffic Layer만 나타나도록 코드를 어떻게 작성해야하는 줄 몰라서 애를 많이 먹었다. 다른 사람들의 HTML 스크립트들을 구글링하고, 직접 따라해보고, 코드줄을 첨가해보고 또는 빼보고 같은 시행착오를 거친 결과, 아래 코드 단락을 google.map.Map() 에 추가해주고 visibility 부분을 option 변수로 달아주면 쉽게 on/off 되는 걸 알게 되었다. 
+
 ```
 styles: [{
     "stylers": [{
@@ -166,7 +172,6 @@ styles: [{
 }]
 ```
 <img src="/assets/img/post/gmap_scraping/visibility_fig1.png" width="900px" height="550px">
-<br>
 <br>
 
 만약 위치와 줌스케일을 입력했을 때, 대략 어떻게 출력될지 또는 어떻게 보일지가 궁금하다면, 위 html 스크립트를 돌려보는 아주 간단한 방법이 있다. JSFiddle 이라는 HTML, CSS, JavaScript 코드를 자유롭게 작성하고 테스트할 수 있는 웹 서비스 환경이 있는데, 코드 작성 후 즉시 결과를 확인할 수 있으며 본인의 작업물에 영향없이 사람들과 코드와 결과를 쉽게 공유할 수 있다. [여기](https://jsfiddle.net/zoshs2/93dak5zj/35/){:target="_blank"}에 들어가면 내가 사용하던 jsfiddle 테스트 코드를 볼 수 있는데, 여기서 줌 스케일과 위도, 경도를 변경하고 ctrl + enter 로 결과를 바로 확인할 수 있다.
@@ -183,6 +188,7 @@ Flask 라이브러리를 통해 map.html을 웹 형태로 렌더링시키고, �
 ```
 
 여기서 한번 정리하자면, 결국 사용할 파일 및 스크립트들의 tree 구조를 아래와 같이 구성시키면 된다.
+
 ```
 /home/myName/gmap_workspace/
 ├── CrawlingGmapTraffic.py
@@ -204,50 +210,52 @@ Flask 라이브러리를 통해 map.html을 웹 형태로 렌더링시키고, �
 
 입력해줘야할 건, (London, Paris 같은) 도시이름, (웹을 띄우고, Download URL 경로로 활용할) 포트번호, 위도 & 경도(Latitude & Longitude), 줌스케일 (Zoom)이 전부다. 
 
-* * *
 다만, 입력한 **도시이름**이 이 크롤링 작업에서 어떻게 쓰이는 지 알아둘 필요가 있다. 나는 처음 어떤 '도시이름'을 입력하든지, 해당 도시 위치의 현지 시간을 도출하도록 하고 싶었다. 일종의 timezone(영역시간대)를 얻어서, 나중의 PNG파일의 이름으로 사용해 기록해야했다. 이 과정에서 [pytz](https://pypi.org/project/pytz/){:target="_blank"}란 파이썬 유저들이 많이 사용하는 글로벌 시간대 라이브러리를 알게 되었고, 이를 내 스크립트에도 적용하게 되었다. 
-<br>
+
 <img src="/assets/img/post/gmap_scraping/crawlingGmap_fig2.png" width="800px" height="300px">
 
 여기서 유념해야할 점은, 이 방식의 한계이기도 한데,,, pytz에 리스트업이 안된 도시이름은 사용할 수 없다는 것이다. 코드에서 보다시피, pytz에서 찾을 수 없는 도시이름(영문)을 입력시 에러를 띄우고 종료되게끔 만들었다. pytz에 리스트업된 도시이름은 [여기](https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568){:target="_blank"}에 들어가 미리 살펴볼 수 있다. 수백여개의 도시가 들어 있어서 대부분 문제가 없긴 하다.
 
-* * *
-<br>
 <img src="/assets/img/post/gmap_scraping/crawlingGmap_fig3.png" width="750px" height="300px">
 
 그리고 스크립트 안에는 **trim_whitespace**라는 함수가 있는데, 이 함수는 구글맵 이미지를 캡쳐하고 저장할 때마다, 그 직후 바로 쓸모없는 부분을 잘라내고 **재저장**하는 역할을 수행한다. 이게 무슨 말이냐면, 사실 웹에 구글맵을 띄워서 이를 스크린샷으로 찍어 저장시키면 아래와 같은 **쓸모없는 하얀 여백**을 포함한 이미지가 저장된다.
-<br>
+
 <img src="/assets/img/post/gmap_scraping/trim_mission.png" width="1000px" height="500px">
 
 이런 dummy 부분은 전혀 필요없는 부분이기 때문에, 이미지를 캡쳐 및 저장 직후 trim해서 재저장하는 것이다. 그래서 처음 저장된 png파일은 trim이후 삭제된다.
 
-* * *
 현재 내가 마지막으로 설정해둔 크롤링 time interval은 **5분**으로 되어 있다. while True문 안에서 현재 시간을 계속 도출하며, 00/05/10/.../50/55분인지 체크하고 이 때마다 크롤링을 진행하게 된다. 
-<br>
+
 <img src="/assets/img/post/gmap_scraping/crawlingGmap_fig4.png" width="700px" height="250px">
 
 그리고, 첫 크롤링 시도 때는 항상 (background) visibility 'on' 으로 이미지를 한 장 더 뽑아내도록 만들었다. Real space에서 어디에 해당하는 도로 영역인지 나중에 비교할 때 사용할 수 있을 것이다.
-* * *
+
 이제 이 CrawlingGmapTraffic.py 스크립트를 터미널에서 실행시키기만 하면 된다. 
+
 ```
 > python CrawlingGmapTraffic.py -c London -p 2342 --lat=51.52 --lon=-0.145 -z 10.8
 ```
+
 적절한 위도 & 경도좌표는 [구글맵](https://www.google.co.kr/maps/?hl=ko){:target="_blank"}에서 원하는 도시를 검색해서 마우스 오른쪽 버튼을 눌러 확인할 수 있다.
-<br>
+
 <img src="/assets/img/post/gmap_scraping/crawlingGmap_fig5.png" width="700px" height="500px">
 
 > 참고로, 구글맵에서 실시간 교통정보를 제공하지 않는 도시들이 있다. 대표적으로 우리 대한민국이 그렇다. 그렇기 때문에, 실시간 교통정보 크롤링을 하고 싶은 도시가 있다면, 그전에 먼저 구글맵에 들어가 좌측하단 레이어에서 '교통정보' 레이어를 볼 수 있는 도시인지 먼저 확인하길 바란다.
 {: .prompt-warning }
 
 ## Run with Slurm Manager
+
 위 크롤링 파일을 단순히 돌리려면, 아래 커맨드를 터미널에서 사용하면 된다.
+
 ```
 > python CrawlingGmapTraffic.py -c London -p 2342 --lat=51.52 --lon=-0.145 -z 10.8
 ```
+
 그런데 만약 여러 목적 도시들을 한꺼번에 돌리고, 이들의 JOB SCHEDULE을 효율적으로 관리하고 싶다면 [Slurm](https://slurm.schedmd.com/documentation.html){:target='_blank'} 을 사용하면 된다. 
 
 
 Crawlist 파일 내용은 이런 식으로 작성하여...
+
 ```
 -c Moscow -p 2350 --lat=55.7512 --lon=37.6201 -z 13.3
 -c London -p 2341 --lat=51.52 --lon=-0.145 -z 10.8
@@ -260,7 +268,9 @@ Crawlist 파일 내용은 이런 식으로 작성하여...
 -c Istanbul -p 2348 --lat=41.042283 --lon=28.981292 -z 11.2
 -c Bangkok -p 2349 --lat=13.765897 --lon=100.576105 -z 10.6
 ```
+
 > 이 도시들은 ['23년 초 교통체증 세계 주요 도시 순위' 기사](https://biz.heraldcorp.com/view.php?ud=20230201000652){:target="_blank"}를 보고 선정했다.
+{: .prompt-info }
 
 위 10개 도시에 대한 JOB들을 한번에 개별 JOB으로 던져 작업할 수 있다.
 
