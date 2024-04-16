@@ -79,7 +79,7 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 
 ## map.html
 
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
