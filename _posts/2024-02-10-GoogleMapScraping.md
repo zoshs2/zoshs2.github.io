@@ -77,56 +77,8 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 
 이제 스크립트를 하나하나 간단히 살펴보고, 실제로 동작까지 시켜 출력된 결과물이 어떤 지 확인해보자.
 
-## map html file
+## map.html
 
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Map Page</title>
-
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.36&key={{ api_key }}&callback=initMap" async defer></script> 
-
-    <style>
-        #map {
-            height: 800px;
-            width: 800px;
-            margin: 0px;
-            padding: 0px;
-        }
-    </style>
-</head>
-<body>
-
-    <div id="map"></div>
-
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: {{ zoom }},
-                center: new google.maps.LatLng({{ lat }}, {{ lon }}),
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDoubleClickZoom: true,
-                draggable: false,
-                scrollwheel: false,
-                panControl: false,
-                disableDefaultUI: true,
-                styles: [{
-                    "stylers": [{
-                        "visibility": "{{ visible }}"
-                    }]
-                }]
-            });
-
-            var trafficLayer = new google.maps.TrafficLayer();
-            trafficLayer.setMap(map);
-        }
-    </script>
-
-</body>
-</html>
-```
+![png](/assets/img/post/gmap_scraping/screenshot_html_code_block.png)
 
 map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 
