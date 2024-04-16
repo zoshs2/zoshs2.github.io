@@ -83,12 +83,4 @@ map html 파일 안의 코드
 
 ![png](/assets/img/post/gmap_scraping/screenshot_html_code_block.png)
 
-map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 인자값들을 `{{ variable }}`로 변수 호출하여 API_KEY, 관찰하고자 하는 영역(위도 & 경도), 줌스케일, Background Layer On/Off 정보를 입력시켜 웹에 띄우게 된다.
-
-> map.html 스크립트는 현재 작업 위치에서 'templates'이란 이름의 디렉토리 안에 넣어놓고 쓰기를 권장한다. 사실상 이 모든 작업의 (조심스럽게 다뤄야 할) 코어 부분이기도 하기에, 개별적으로 관리해야할 필요성이 있다고 생각되기 때문이다. 별로 동의하지 않는다면, app.py 스크립트에서 template_folder 값을 변경하고 사용하라.
-{: .prompt-tip }
-
-```
-Flask(__name__, template_folder='templates')
-```
-
+map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 인자값들을 
