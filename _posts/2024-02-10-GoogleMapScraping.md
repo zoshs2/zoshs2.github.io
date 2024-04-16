@@ -129,5 +129,4 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 </html>
 ```
 
-map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 인자값들을 {{ variable }}로 변수 호출하여 API_KEY, 관찰하고자 하는 영역(위도 & 경도), 줌스케일, Background Layer On/Off 정보를 입력시켜 웹에 띄우게 된다.
-
+map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 
