@@ -33,7 +33,7 @@ toc: false
 
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig2.png" width="600px" height="300px">
 
-프로젝트 이름을 자유롭게 작성하여 프로젝트 생성 후, 아래 우측 그림처럼, 만들어진 프로젝트를 선택해준다. 이후, 좌측최상단 더보기탭을 눌러 <API 및 서비스> - <라이브러리>에 들어가도록 한다.
+프로젝트 이름을 자유롭게 작성하여 프로젝트 생성 후, 아래 우측 그림처럼, 만들어진 프로젝트를 선택해준다. 이후, 좌측최상단 더보기탭을 눌러 'API 및 서비스' - '라이브러리'에 들어가도록 한다.
 
 <table><tr>
 <td> <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig3.png" width="400px" height="300px" /> </td>
