@@ -19,7 +19,9 @@ toc: false
 
 구글맵의 정보를 본사의 동의없이 수집하여 활용해도 되는지에 대한 법적 책임은 물을 수 없다는 것이 내가 검색을 통해 (현재까진) 알고 있는 사실이다. 
 
-![png](/assets/img/post/gmap_scraping/scraping_legal_question.png)*"Is scraping legal on Google Maps? Yes, absolutely." Source: https://www.lobstr.io/blog/is-scraping-google-maps-legal*
+<img src="/assets/img/post/gmap_scraping/scraping_legal_question.png">
+
+**"Is scraping legal on Google Maps? Yes, absolutely." Source: https://www.lobstr.io/blog/is-scraping-google-maps-legal**
 
 내가 이해한 바로는, 법적으로 문제삼을 순 없으나 구글 측에서 IP 제재 또는 Google 계정 및 Google Cloud API 정지 등의 **기업 차원의 제재는 가할 수 있다**는 것이다. 이 프로그램을 사용하려면, 이 점을 잘 유념하여 사용하시길 바란다.
 
