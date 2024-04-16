@@ -22,39 +22,3 @@ toc: false
 ![png](/assets/img/post/gmap_scraping/scraping_legal_question.png)*"Is scraping legal on Google Maps? Yes, absolutely." Source: https://www.lobstr.io/blog/is-scraping-google-maps-legal*
 
 내가 이해한 바로는, 법적으로 문제삼을 순 없으나 구글 측에서 IP 제재 또는 Google 계정 및 Google Cloud API 정지 등의 **기업 차원의 제재는 가할 수 있다**는 것이다. 이 프로그램을 사용하려면, 이 점을 잘 유념하여 사용하시길 바란다.
-
-* * *
-
-# Table of Contents  <!-- omit in toc -->
-- [구글맵 실시간 교통정보 크롤링](#구글맵-실시간-교통정보-크롤링)
-  - [Google Cloud Platform 에서 API Key 발급 받기](#google-cloud-platform-에서-api-key-발급-받기)
-  - [API 키 환경변수 설정](#api-키-환경변수-설정)
-  - [Crawling Procedure](#crawling-procedure)
-  - [map.html](#maphtml)
-  - [app.py](#apppy)
-  - [CrawlingGmapTraffic.py](#crawlinggmaptrafficpy)
-  - [Run with Slurm Manager](#run-with-slurm-manager)
-- [Image Raw Dataset to Regularized 2D Dataset](#image-raw-dataset-to-regularized-2d-dataset)
-
-* * *
-
-## Google Cloud Platform 에서 API Key 발급 받기
-
-먼저, 구글맵 정보를 처리하기 위해서 API 키를 얻어야 한다. 이 API키는 [Google Cloud Platform](https://cloud.google.com){:target="_blank"}에서 얻을 수 있다. 아래 사진처럼, 구글 클라우드 플랫폼(GCP) 홈페이지에 들어가면, 우측 상단에 **콘솔**이라는 버튼이 있다. 여기를 들어가준다.
-
-<img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig1.png" width="600px" height="400px">
-<br>
-
-이후, 아래 그림의 (1), (2) 순서로 클릭하여 새로운 프로젝트를 생성해준다.
-
-<img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig2.png" width="600px" height="300px">
-<br>
-
-프로젝트 이름을 자유롭게 작성하여 프로젝트 생성 후, 아래 우측 그림처럼, 만들어진 프로젝트를 선택해준다. 이후, 좌측최상단 더보기탭을 눌러 <API 및 서비스> - <라이브러리>에 들어가도록 한다.
-
-<table><tr>
-<td> <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig3.png" width="400px" height="300px" /> </td>
-<td> <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig4.png" width="600px" height="300px" /> </td>
-</tr></table>
-<br>
-
