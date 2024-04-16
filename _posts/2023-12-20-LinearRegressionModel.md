@@ -795,4 +795,4 @@ $$
 
 퍼셉트론 신경망 형식으론 다음과 같이 표현할 수 있다. 
 
-![png](/assets/img/post/pytorch_linear.png)
+![png](/assets/img/post/pytorch_linear/linear_perceptron.png)
