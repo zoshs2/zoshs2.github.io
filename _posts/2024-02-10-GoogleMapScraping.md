@@ -39,7 +39,5 @@ toc: false
 
 먼저, 구글맵 정보를 처리하기 위해서 API 키를 얻어야 한다. 이 API키는 [Google Cloud Platform](https://cloud.google.com){:target="_blank"}에서 얻을 수 있다. 아래 사진처럼, 구글 클라우드 플랫폼(GCP) 홈페이지에 들어가면, 우측 상단에 **콘솔**이라는 버튼이 있다. 여기를 들어가준다.
 
-<br>
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig1.png" width="600px" height="400px">
-<br>
 
