@@ -43,36 +43,28 @@ toc: false
 라이브러리에서 "Map JavaScript API"를 눌러 '사용'을 클릭해 약관 동의 절차를 진행한다.
 
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig5.png" width="600px" height="300px">
-<br>
 
 이 때, 결제 정보 입력 과정이 있는데, 이를 입력한다고 당장 무언가가 결제되는 것이 아니니 안심하고 입력해줘도 괜찮다. 
 > 유료 서비스에 접근하거나 제한된 쿼리 수 이상을 호출하려고 할 시, 결제 청구 알람이 따로 온다고 하니 이 점만 잘 인지하고 있으면 된다.
 {: .prompt-warning }
 
-<br>
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig6.png" width="300px" height="600px">
-<br>
 
 중간에 약관이나 키제한여부(나는 '나중에'를 눌러 스킵), 사용목적설문 등 부수적인 절차를 완료하고, 대충 여기까지 오면 API 발급은 끝이다. 발급된 API 키는 다시 좌측최상단 더보기탭에서 'API 및 서비스' - '사용자 인증 정보'에 들어가, 아래 그림처럼 '키표시'를 눌러 확인할 수 있다.
 
 <img src="/assets/img/post/gmap_scraping/GCP_Step1_Fig7.png" width="800px" height="400px">
-<br>
 
 ## API 키 환경변수 설정
 
 API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_profile**에서 시스템 환경변수로 설정시켜놓고 이를 사용하도록 하자.
 
-<br>
 <img src="/assets/img/post/gmap_scraping/Step2_Fig1.png" width="600px" height="300px">
-<br>
 
 ## Crawling Procedure
 
 여기까지 기초적인 준비는 모두 끝났다. 앞으로 map.html, app.py, CrawlingGmapTraffic.py 이름의 3가지 스크립트 파일을 소개할 건데, 이들을 서로 유기적으로 얽혀 구글맵 실시간 교통정보 이미지를 크롤링하게 된다. 
 
-<br>
 <img src="/assets/img/post/gmap_scraping/Workflow.png" width="1400px" height="700px">
-<br>
 
 실시간 교통정보 데이터 수집을 위해, 떠올린 개략적 계획은 다음과 같았다.
 1. 특정 위치의 실시간 Google Traffic Layer를 웹(Web)에 띄우기.
@@ -156,7 +148,6 @@ styles: [{
 }]
 ```
 <img src="/assets/img/post/gmap_scraping/visibility_fig1.png" width="900px" height="550px">
-<br>
 
 만약 위치와 줌스케일을 입력했을 때, 대략 어떻게 출력될지 또는 어떻게 보일지가 궁금하다면, 위 html 스크립트를 돌려보는 아주 간단한 방법이 있다. JSFiddle 이라는 HTML, CSS, JavaScript 코드를 자유롭게 작성하고 테스트할 수 있는 웹 서비스 환경이 있는데, 코드 작성 후 즉시 결과를 확인할 수 있으며 본인의 작업물에 영향없이 사람들과 코드와 결과를 쉽게 공유할 수 있다. [여기](https://jsfiddle.net/zoshs2/93dak5zj/35/){:target="_blank"}에 들어가면 내가 사용하던 jsfiddle 테스트 코드를 볼 수 있는데, 여기서 줌 스케일과 위도, 경도를 변경하고 ctrl + enter 로 결과를 바로 확인할 수 있다.
 
@@ -188,9 +179,8 @@ Flask 라이브러리를 통해 map.html을 웹 형태로 렌더링시키고, �
 ## CrawlingGmapTraffic.py
 
 이 스크립트도 사실 특별할 건 없다. 크롤링을 진행할 때, 이 스크립트만 동작시키면 app.py, map.html 이 순차적으로 동작한다. 
-<br>
+
 <img src="/assets/img/post/gmap_scraping/crawlingGmap_fig1.png" width="800px" height="150px">
-<br>
 
 입력해줘야할 건, (London, Paris 같은) 도시이름, (웹을 띄우고, Download URL 경로로 활용할) 포트번호, 위도 & 경도(Latitude & Longitude), 줌스케일 (Zoom)이 전부다. 
 
@@ -237,7 +227,6 @@ Flask 라이브러리를 통해 map.html을 웹 형태로 렌더링시키고, �
 
 그런데 만약 여러 목적 도시들을 한꺼번에 돌리고, 이들의 JOB SCHEDULE을 효율적으로 관리하고 싶다면 [Slurm](https://slurm.schedmd.com/documentation.html){:target='_blank'} 을 사용하면 된다. 
 
-
 Crawlist 파일 내용은 이런 식으로 작성하여...
 
 ```
@@ -259,8 +248,8 @@ Crawlist 파일 내용은 이런 식으로 작성하여...
 위 10개 도시에 대한 JOB들을 한번에 개별 JOB으로 던져 작업할 수 있다.
 
 Slurm Command-line Tips in Terminal.
-* ```> squeue```: 현재 Slurm Job list 보여준다.
-* ```> scancel -u <user_name>```: <user_name>의 Job들을 모두 삭제한다.
+* ```squeue```: 현재 Slurm Job list 보여준다.
+* ```scancel -u 'user_name'```: 'user_name'의 Job들을 모두 삭제한다.
 
 # Image Raw Dataset to Regularized 2D Dataset
 
