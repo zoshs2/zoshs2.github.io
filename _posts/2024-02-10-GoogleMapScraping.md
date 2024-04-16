@@ -77,9 +77,9 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 
 이제 스크립트를 하나하나 간단히 살펴보고, 실제로 동작까지 시켜 출력된 결과물이 어떤 지 확인해보자.
 
-## map.html
+## map html file
 
-```python
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
