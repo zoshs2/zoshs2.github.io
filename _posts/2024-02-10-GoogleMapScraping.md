@@ -23,18 +23,6 @@ toc: false
 
 내가 이해한 바로는, 법적으로 문제삼을 순 없으나 구글 측에서 IP 제재 또는 Google 계정 및 Google Cloud API 정지 등의 **기업 차원의 제재는 가할 수 있다**는 것이다. 이 프로그램을 사용하려면, 이 점을 잘 유념하여 사용하시길 바란다.
 
-
-# Table of Contents  <!-- omit in toc -->
-- [구글맵 실시간 교통정보 크롤링](#구글맵-실시간-교통정보-크롤링)
-  - [Google Cloud Platform 에서 API Key 발급 받기](#google-cloud-platform-에서-api-key-발급-받기)
-  - [API 키 환경변수 설정](#api-키-환경변수-설정)
-  - [Crawling Procedure](#crawling-procedure)
-  - [map.html](#maphtml)
-  - [app.py](#apppy)
-  - [CrawlingGmapTraffic.py](#crawlinggmaptrafficpy)
-  - [Run with Slurm Manager](#run-with-slurm-manager)
-- [Image Raw Dataset to Regularized 2D Dataset](#image-raw-dataset-to-regularized-2d-dataset)
-
 ## Google Cloud Platform 에서 API Key 발급 받기
 
 먼저, 구글맵 정보를 처리하기 위해서 API 키를 얻어야 한다. 이 API키는 [Google Cloud Platform](https://cloud.google.com){:target="_blank"}에서 얻을 수 있다. 아래 사진처럼, 구글 클라우드 플랫폼(GCP) 홈페이지에 들어가면, 우측 상단에 **콘솔**이라는 버튼이 있다. 여기를 들어가준다.
