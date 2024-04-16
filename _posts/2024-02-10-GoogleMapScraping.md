@@ -1,7 +1,7 @@
 ---
 title: "Scrapping real-time traffic information from Google Maps"
 date: 2024-02-10 17:33:50 +0900
-categories: [etc, Scraping/Crawling]
+categories: [etc, Scraping]
 tags: [Google Maps, Python, Flask, HTML, CSS, JS, JSFiddle, Scrape, Scraping, Traffic, Slurm, Chrome]
 math: true
 toc: false
