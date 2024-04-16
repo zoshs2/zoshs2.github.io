@@ -82,5 +82,6 @@ API 키는 여러 군데에 노출시켜봤자 좋을게 없으므로, **.bash_p
 map html 파일 안의 코드
 
 ![png](/assets/img/post/gmap_scraping/screenshot_html_code_block.png)
+<br>
 
-map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 인자값들을 
+map.html 파일은 앞서 이야기했듯이 app.py 스크립트가 렌더링하게 되는 대상이다. CrawlingGmapTraffic.py 단계에서 입력받은 
