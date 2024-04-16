@@ -4,8 +4,8 @@ date: 2023-12-20 17:04:50 +0900
 categories: [DL/ML, Study]
 tags: [PyTorch, Torch, Deep Learning, Linear Regression, Python]
 math: true
+toc: false
 ---
-
 
 # Intro.
 
@@ -785,3 +785,14 @@ list(model.parameters()) # 학습 시간 이후의 학습된 파라미터 값들
      tensor([[0.9865, 0.6091, 0.4186]], requires_grad=True),
      Parameter containing:
      tensor([-0.0442], requires_grad=True)]
+
+마지막으로, 다중 선형 회귀 모델에서 다뤘던 아래 수식은
+$$
+\begin{equation}
+  H(x) = w_1x_1 + w_2x_2 + w_3x_3 + b
+\end{equation}
+$$
+
+퍼셉트론 신경망 형식으론 다음과 같이 표현할 수 있다. 
+
+![png](/assets/img/post/pytorch_linear)
