@@ -546,6 +546,7 @@ list(model.parameters())
 
 
 최종 학습된 단순 선형 회귀 모델
+
 $$
 \begin{equation}
   My Model = 2.0010x - 0.0023
@@ -664,6 +665,7 @@ list(model.parameters())
 
 
 최종 학습된 **다중 선형 회귀 모델**
+
 $$
 \begin{equation}
   My Model = 1.0176x_1 + 0.4781x_2 + 0.519x_3 - 0.1914
@@ -787,6 +789,7 @@ list(model.parameters()) # 학습 시간 이후의 학습된 파라미터 값들
      tensor([-0.0442], requires_grad=True)]
 
 마지막으로, 다중 선형 회귀 모델에서 다뤘던 아래 수식은
+
 $$
 \begin{equation}
   H(x) = w_1x_1 + w_2x_2 + w_3x_3 + b
