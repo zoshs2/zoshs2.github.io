@@ -192,7 +192,7 @@ $$
 
 $$
 \begin{equation}
-  Cost = \frac{1}{3}\sum_{i=1}^{3}{Wx_{i}+b}
+  Cost = \frac{1}{3}\sum_{i=1}^{3}\left({Wx_{i}+b-y_{i, true}}\right)^2
 \end{equation}
 $$
 
