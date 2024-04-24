@@ -95,7 +95,7 @@ for epoch in range(num_epochs):
   SGD_optim.zero_grad()
 
   ## cost function 변수의 backward()는 이제 오차를 역전파 시키는 것이다.
-  ## 이 말이 뭐냐? 옵티마이저에서 w,b를 업데이트 할 수 있도록, 현재 상태에서의 Error에 대한 w,b 기울기 모델에 전파시켜두라는 것이다.
+  ## 이 말이 뭐냐? 옵티마이저에서 w,b를 업데이트 할 수 있도록, 현재 상태에서의 Error에 대한 w,b 기울기를 모델에 전파시켜두라는 것이다.
   ## 이 단계에서 aE/aw, aE/ab이 계산됨.
   ## >> 아래서 직접 계산해본다.
   cost.backward()
