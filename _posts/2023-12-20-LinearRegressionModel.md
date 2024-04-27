@@ -185,7 +185,7 @@ $$
 
 우리가 정의했던 Cost Function은 위와 같은 수식의 Mean Squared Error(MSE)였다. $\frac{\partial E}{\partial W}$에 대한 값을 구한다는 의미는, 이렇게 사전에 정의된 Cost Function (Error Function이라고도 함)에 미분을 취해서 현재 W를 대입하여 현 위치의 기울기(gradient)를 뽑아 내겠다는 의미다.
 
-> 딥러닝 공부 시 초반에 항상 등장하는 LOSS(ERROR) vs Weight 에 대한 곡선그래프를 떠올려라. 현재 weight기준에서 어느 방향(+/-)으로 얼만큼 이동할지를 기울기로 판단한다. 
+> 딥러닝 공부 시 초반에 항상 등장하는 LOSS(ERROR) vs Weight 에 대한 곡선그래프를 떠올려라. 현재 weight기준에서 어느 방향(+,-)으로 얼만큼 이동할지를 기울기로 판단한다. 
 {: .prompt-info }
 
 우리가 3개의 학습 데이터 샘플을 가지고 학습을 했단 걸 반영한다면, $E$(또는 $Cost$) 함수는 아래와 같고, 이를 W(가중치)와 b(편향)에 대해 각각 미분해보자.
