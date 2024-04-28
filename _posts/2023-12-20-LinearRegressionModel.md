@@ -403,7 +403,7 @@ $$
 \end{equation}
 $$
 
-그런데, PyTorch에는 사실 이런 것들이 이미 구현되어 있고, 이들을 활용하는게 당연히 효율적이겠다.
+그런데, PyTorch에는 사실 이러한 것들이 이미 구현이 되어 있고, 이들을 활용하는게 당연히 효율적이겠다.
 
 ```python
 model = nn.Linear(input_dim, output_dim)
