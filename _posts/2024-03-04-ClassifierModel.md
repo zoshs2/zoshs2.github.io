@@ -8,7 +8,6 @@ toc: false
 ---
 
 # Table of Contents
-- [Table of Contents](#table-of-contents)
 - [Intro.](#intro)
 - [Cost Function for Classification Model](#cost-function-for-classification-model)
 - [Logistic Regression Model](#logistic-regression-model)
