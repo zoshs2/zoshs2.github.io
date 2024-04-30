@@ -93,7 +93,7 @@ y_train = torch.FloatTensor([[0], [0], [0], [1], [1], [1]])
 
 즉, 3개의 입력값을 가중치 $W$ 행렬과의 행렬곱을 수행하는 선형 모듈 nn.Linear(): $XW+b$, 이후 0과 1사이 출력값을 반환하는 시그모이드 모듈 nn.sigmoid(): $\sigma\left(XW+b\right)$을 nn.Sequential()로 엮어서 구현할 수 있다. (아래 그림 참고)
 
-![png]("/assets/img/post/basic_classification/logistic_scheme.png")*Figure 1*
+![png](/assets/img/post/basic_classification/logistic_scheme.png)*Figure 1*
 
 
 ```python
@@ -311,7 +311,7 @@ $$
 
 이를 신경망 그림으로 표현하자면 아래와 같다.
 
-![png]("/assets/img/post/basic_classification/softmax_scheme.png")*Figure 2*
+![png](/assets/img/post/basic_classification/softmax_scheme.png)*Figure 2*
 
 입력층과 출력층으로 구성된 모델은 4개의 입력 요소를 받는다. 이를 바탕으로 3가지 클래스에 대한 분류를 수행하는 모델을 제작하려 한다. 4개의 입력 요소와 3개의 출력 요소를 포괄하기 위해선, nn.Linear(4, 3)을 사용한다. 이후 3개의 출력 요소에 대해서 Softmax 함수를 적용하여 총 합이 1인 $p_1, p_2, p_3$ 확률값을 반환한다.
 
@@ -642,7 +642,7 @@ $$
 > nll은 Negative Log-Likelihood를 의미한다. log-likelihood 함수에 대한 상세한 설명과 관계는 건너 띄고, [이곳 블로그 링크](https://towardsdatascience.com/cross-entropy-negative-log-likelihood-and-all-that-jazz-47a95bd2e81){:target="_blank"}로 대신하겠다.
 {: .prompt-tip }
 
-![png]("/assets/img/post/basic_classification/nll_loss_torch.png")*torch.nn.NLLLoss, Source: https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#nllloss*
+![png](/assets/img/post/basic_classification/nll_loss_torch.png)*torch.nn.NLLLoss, Source: https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#nllloss*
 
 처리되는 방식만 대략적으로 설명하면, negative log probability를 의미하는 $l_n$들을 **정답 레이블 인덱스**(문서 내에서 target이라고 표현하는 부분)에 해당하는 값들만 도출해서 위 계산과정을 수행하는 것이다. 옵션 reduction은 디폴트가 mean인데, 이 의미는 클래스마다의 weight 합을 나눠서 평균내라는 의미인데, weight 디폴트는 1이라 따로 지정하지 않으면 그냥 negative log prob.들의 평균이 된다. 직접 결과들을 뽑아 보는게 더 이해가 잘 될 것이다. 아래 일련의 결과들을 보자.
 
