@@ -193,7 +193,7 @@ for epoch in range(num_epochs+1):
 
 **DataLoader**는 원하는 batch_size, shuffle 유무 등에 맞게 데이터셋을 처리해주고, iterable 형태로 준비시켜주는 유용한 클래스이다.
 
-> **shuffle** 이라는 옵션은 epoch마다 데이터를 셔플시킬 건지 설정하는 옵션이다. 매 epoch마다 동일한 순서로, 동일한 배치로 학습을 시키면 모델이 문제-답 사이의 관계보단 답의 순서에 익숙해질 수도 있다고 한다. >>> default: False
+> **shuffle** 이라는 옵션은 epoch마다 데이터를 셔플시킬건지 설정하는 옵션이다. 매 epoch마다 동일한 순서로, 동일한 배치로 학습을 시키면 모델이 문제-답 사이의 관계보단 답의 순서에 익숙해질 수도 있다고 한다. >>> default: False
 {: .prompt-info }
 
 
