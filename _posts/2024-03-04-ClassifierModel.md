@@ -842,4 +842,4 @@ for epoch in range(num_epochs + 1):
 
 # 이어지는 글
 1. [Softmax의 안정성, Log Softmax, LogSumExp Function](https://zoshs2.github.io/posts/StableSoftmax/){:target="_blank"}
-2. Softmax Regression Model로 MNIST 데이터 분류하기 (업데이트 예정)
+2. [Softmax Regression Model로 MNIST 데이터 분류하기](https://zoshs2.github.io/posts/MnistSoftmax/){:target="_blank"}
