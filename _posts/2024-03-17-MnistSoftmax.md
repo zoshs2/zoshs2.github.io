@@ -153,6 +153,7 @@ plt.show()
 # shuffle=True: 매 epoch마다 데이터셋 전체를 셔플하고 배치를 다시 구성함.
 # drop_last=True: 전체 데이터셋 크기를 배치크기로 나눴을 때, 남는 '나머지' 크기만큼의 데이터셋을 학습에 활용할지 말지 정한다.
 # >> drop_last: 이 경우 60000 % 64 = 32 개의 나머지 데이터샘플은 학습에 활용하지 않고 버린다.
+# >> drop_last 옵션의 default는 False.
 data_loader = DataLoader(dataset=mnist_train,
                           batch_size=64,
                           shuffle=True,
