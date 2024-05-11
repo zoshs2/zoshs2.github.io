@@ -47,7 +47,7 @@ toc: false
 
 ![png](/assets/img/post/gradient_descent/SGD_Confusing.png)
 
-즉, 모두 SGD optim을 쓰더라도, **전처리 과정에서** 훈련 데이터를 batch-size만큼 묶어서 훈련시키면 그게 Mini-batch Gradient Descent방식이 되는거고, 반대로 모든 훈련 데이터를 입출력으로 한번에 사용(Full-batch)하면 그게 일반적인 Batch Gradient Descent가 되는거고, 마지막으로 훈련데이터 샘플을 한개씩 모델에 순전파/역전파 시켜서 학습시키면 그게 Stochastic Gradient Descent 방식이란 소리다.
+즉, 모두 SGD optim을 쓰더라도, **전처리 과정에서** 훈련 데이터를 batch-size만큼 묶어서 훈련시키면 그게 Mini-batch Gradient Descent방식이 되는거고, 반대로 모든 훈련 데이터를 입출력으로 한번에 사용(Full-batch)하면 그게 일반적인 Batch Gradient Descent가 되는거고, 마지막으로 훈련데이터 샘플을 한 개씩 모델에 순전파/역전파 시켜서 학습시키면 그게 Stochastic Gradient Descent 방식이란 소리다.
 
 앞서 설명한 BGD/SGD/MBGD 개념대로 학습을 진행한다면, 대략 아래처럼 구현할 수 있다.
 
