@@ -41,7 +41,7 @@ toc: false
 
 ![png](/assets/img/post/gradient_descent/GD_Types.png)*"Differences Between Epoch, Batch, and Mini-batch", Source: https://www.baeldung.com/cs/epoch-vs-batch-vs-mini-batch* 
 
-그럼에도 불구하고, 우리는 BGD든 SGD든 MBGD든 딥러닝 프레임워크에서 optimizer를 선택할 때, torch.optim.SGD()을 사용한다.
+그럼에도 불구하고, 우리는 BGD든 SGD든 MBGD든 딥러닝 프레임워크에서 optimizer를 선택할 때 torch.optim.SGD()을 사용한다.
 
 개념적으로 이렇게 완전히 다른 점과 모든 훈련에서 SGD optim을 사용한다는 점이 혼란스러워 커뮤니티 글을 찾아보니,,,, 일반적으로 Keras든 PyTorch든 Gradient Descent 최적화 알고리즘을 지칭할 때엔 **'SGD'라는 용어로 통칭해 사용하는 것이 그냥 Convention, 관습**이라고 한다.
 
