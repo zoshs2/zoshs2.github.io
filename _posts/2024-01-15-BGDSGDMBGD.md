@@ -191,7 +191,7 @@ for epoch in range(num_epochs+1):
 > TensorDataset으로 묶는 데이터셋은 **torch.Tensor 타입** 이어야 한다. 만약 Tensor 타입이 아니라 다른 유형의 데이터를 사용하려면, [torch.utils.data.Dataset](https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset){:target='_blank'}를 상속하는 커스텀 데이터 클래스를 만들어 사용하는 것이 일반적인 듯 하다.
 {: .prompt-warning }
 
-**DataLoader**는 원하는 batch_size, shuffle 유무 등에 맞게 데이터셋을 처리해주고, iterable 형태로 준비시켜주는 유용한 클래스이다.
+**DataLoader**는 원하는 batch_size, shuffle (비)활성화 등에 맞게 데이터셋을 처리해주고, iterable 형태로 준비시켜주는 유용한 클래스이다.
 
 > **shuffle** 이라는 옵션은 epoch마다 데이터를 셔플시킬건지 설정하는 옵션이다. 매 epoch마다 동일한 순서로, 동일한 배치로 학습을 시키면 모델이 '문제와 답' 사이의 관계보단 답의 '순서'에 익숙해질 수도 있다고 한다. >>> default: False
 {: .prompt-info }
