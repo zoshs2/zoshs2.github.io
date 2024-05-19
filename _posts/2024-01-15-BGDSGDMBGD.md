@@ -37,7 +37,7 @@ toc: false
 
 2. Stochastic Gradient Descent(SGD): 훈련 데이터 샘플 각각에 대해서 오차 기울기를 각각 계산해서 학습시키는 것. 즉 100개 훈련 샘플이 있다면, 100번의 파라미터 학습이 이뤄진다.
 
-3. Mini-batch Gradient Descent(MBGD): 훈련 데이터 샘플을 batch-size 갯수만큼 묶어서 batch group을 구성하고, batch group 마다 평균 오차 기울기를 계산해 학습시키는 것.
+3. Mini-batch Gradient Descent(MBGD): 훈련 데이터 샘플을 batch-size 크기(갯수)만큼 묶어서 batch group을 구성하고, batch group 마다 평균 오차 기울기를 계산해 학습시키는 것.
 
 ![png](/assets/img/post/gradient_descent/GD_Types.png)*"Differences Between Epoch, Batch, and Mini-batch", Source: https://www.baeldung.com/cs/epoch-vs-batch-vs-mini-batch* 
 
