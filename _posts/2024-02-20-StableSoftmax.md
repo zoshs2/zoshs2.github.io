@@ -202,7 +202,7 @@ print(f"x_i-max(X): {X-np.max(X)}")
       -81.27151034    0.         -145.8890616  -172.52000903 -100.12450619]
 
 
-하지만 여전히 Overflow/Underflow 문제는 존재한다. LogSoftmax는 메모리 효율적이고, 계산속도가 빠르고, (0으로 나누고, np.inf로 나누는 문제가 없기에) 보다 안정적이지만, 어찌됐건 계산에 $exp(x)$가 들어가 있어 누구든 이를 마주한 순간 Overflow/Underflow의 늪에서 빠져나올 수 없다.
+하지만 여전히 Overflow/Underflow 문제는 존재한다. LogSoftmax는 메모리 효율적이고, 계산 속도가 빠르고, (0으로 나누고, np.inf로 나누는 문제가 없기에) 보다 안정적이지만, 어찌됐건 계산에 $exp(x)$가 들어가 있어 누구든 이를 마주한 순간 Overflow/Underflow의 늪에서 빠져나올 수 없다.
 
 > 참고로, Floating Point Underflow로 sum of exp결과가 log(0)이 되면 NumPy에서는 **"zero encountered in log"**라는 RuntimeWarning 경고문구가 뜬다.
 {: .prompt-warning}
