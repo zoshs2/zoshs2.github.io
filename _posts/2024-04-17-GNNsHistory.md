@@ -11,6 +11,7 @@ toc: false
 - [Intro.](#intro)
 - [Graph Neural Networks](#graph-neural-networks)
 - [1990s: Recursive Neural Network](#1990s-recursive-neural-network)
+  - [RvNN References](#rvnn-references)
 - [GNN: Graph Neural Network](#gnn-graph-neural-network)
 - [Conclusion](#conclusion)
 
@@ -61,6 +62,11 @@ Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root
 이후, 만약 문장의 감정 상태를 분석하는 모델을 만들고 싶다면, 특정 감정 상태(기쁨, 화남, 중립)에 대응하는 출력 레이블 값과 모델의 출력값 사이의 loss를 줄이는 방향으로 가중치 $W$ 값(앞선 식의 그 $W$ 맞음)을 **업데이트함으로써 모델을 학습**시키는 것이다.
 
 이렇듯 RvNN은 트리 구조 및 상향-단방향식으로 정보들을 결합시켜 나간다는 측면에서 일종의 Directed acyclic(유향 비순환; 비순환: 연결구조에서 동일한 노드로 다시 돌아올 수 있는 싸이클 구조가 없다는 의미)한 Graph model 이고, 그렇기 때문에 GNNs 분야의 시작으로 언급되기도 하는 것이다.
+
+## RvNN References
+
+1. [Sperduti, Alessandro, and Antonina Starita. "Supervised neural networks for the classification of structures." IEEE transactions on neural networks 8.3 (1997): 714-735.](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3e33eca03933caaec671e20692e79d1acc9527e1){:target="_blank"}
+2. [Frasconi, Paolo, Marco Gori, and Alessandro Sperduti. "A general framework for adaptive processing of data structures." IEEE transactions on Neural Networks 9.5 (1998): 768-786.](https://www.math.unipd.it/~sperduti/PAPERI/general-framework.pdf){:target="_blank"}
 
 # GNN: Graph Neural Network
 
