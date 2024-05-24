@@ -68,6 +68,10 @@ Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root
 1. [Sperduti, Alessandro, and Antonina Starita. "Supervised neural networks for the classification of structures." IEEE transactions on neural networks 8.3 (1997): 714-735.](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3e33eca03933caaec671e20692e79d1acc9527e1){:target="_blank"}
 2. [Frasconi, Paolo, Marco Gori, and Alessandro Sperduti. "A general framework for adaptive processing of data structures." IEEE transactions on Neural Networks 9.5 (1998): 768-786.](https://www.math.unipd.it/~sperduti/PAPERI/general-framework.pdf){:target="_blank"}
 
-# GNN: Graph Neural Network
+# 1998-2015: New era of Deep Learning
+
+GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Network (CNN; 합성곱 신경망) 이야기를 안하고 넘어갈 수가 없다. 
+
+합성곱 신경망은 
 
 # Conclusion
