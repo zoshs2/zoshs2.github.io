@@ -1,0 +1,67 @@
+---
+title: "Graph Neural Networks' Brief History"
+date: 2024-04-17 16:18:43 +0900
+categories: [DL/ML, Story]
+tags: [GNNs, Graph, Recursive, Neural, Network, RNN, RvNN, tanh, nltk, tree-structured, graph-structured, dataset, Deep Learning, Machine Learning, NLP, Language, DNN, MLP, Python]
+math: true
+toc: false
+---
+
+# Table of Contents
+- [Intro.](#intro)
+- [Graph Neural Networks](#graph-neural-networks)
+- [1990s: Recursive Neural Network](#1990s-recursive-neural-network)
+- [GNN: Graph Neural Network](#gnn-graph-neural-network)
+- [Conclusion](#conclusion)
+
+# Intro.
+
+이번 포스트에선 Graph Neural Networks(GNNs) 분야의 히스토리에 대해 살짝 정리하는 글을 남기고자 한다.
+
+사실 Graph Convolutional Network(GCN)을 구현해보려 하다가, 문득 이것이 어떤 과정을 거쳐 발전되어 왔는지가 궁금해졌기 때문이다.
+
+어떤 방법론을 공부하기 전에 그것이 발전되어 온 계보-전체적인 히스토리를 함께 이해하는 것은 도움도 되고, 창작자들이 어떤 문제를 돌파하기 위해 또는 어떤 생각으로 이 분야를 발전시켜 왔는지 답습해보는 일이 꽤 재미있기도 하다.
+
+이 글의 작성 의도도 이러한 맥락에서 기획했고, 이론적인 부분은 생략하고 ...
+
+# Graph Neural Networks
+
+그래프 신경망(Graph Neural Networks; 이하 GNNs)은 RNN, LSTM, GRU, CNN 같이 특정 모델 및 아키텍쳐만을 지칭하는 term이 아니라, 그래프(또는 네트워크) 구조를 지닌 graph-structured data에 적용하는 것을 목적에 두고 디자인된 모든 신경망 모델들을 총칭해 부르는 용어이자, 하나의 커다란 분야다.
+
+GNNs는 지금도 활발한 연구와 관련 모델들이 쏟아져 나오고 있으며, [Zhou J. et al.(2020)](https://www.sciencedirect.com/science/article/pii/S2666651021000012){:target="_blank"}의 GNNs에 대한 review paper에 따르면, 수년간의 세월동안 이뤄진 GNNs 발전형태는 이렇게나 다양하다.
+
+![png](/assets/img/post/gnns_history/GNNs.png)*Zhou J. et al. Source: Graph Neural Networks: A Review of Methods and Applications.*
+
+지금 여기서 이 모든 아키텍쳐들을 다 살펴볼 것은 물론 아니다. 대신 굵직한 것들만 대략적으로 살펴보자.
+
+# 1990s: Recursive Neural Network
+
+GNNs의 계보를 이야기할 때, 종종 1990년대 말의 Recursive Neural Network(RvNN; 재귀 신경망)에 대해 이야기하며 운을 땐다.
+
+> Recursive Neural Network는 RNN 이라고도 부르기도 하는데, 주로 언어 모델에서 사용하는 Recurrent Neural Network의 약어와 혼동이 있을 수 있어서 RvNN으로 부르는게 (개인적으로) 더 적절해 보인다. - 두 모델은 서로 다른 모델이다.
+{: .prompt-info }
+
+RvNN은 주로 트리 구조 데이터(tree-structured data)를 처리하는 데 사용되며, 각 노드는 자식노드들의 정보($h_c$)를 재귀적으로 결합(aggregate)하여 상위 부모노드를 어떻게 표현할지($h_p$) 결정하는 데 활용하게 된다. 이러한 과정을 수식으로 표현한 예를 들자면, 아래와 같은 것이다.
+
+$$
+\begin{equation}
+  h_p = \tanh{\left(W\left[h_{c1}, h_{c_2}\right]+b\right)}
+\end{equation}
+$$
+
+예컨대, RvNN은 자연어처리(NLP) 분야에서 사용할 수 있는 아주 기초적인 모델 중 하나인데, 한 문장(여기서, "That movie was cool")의 parse tree(구문 트리)를 아래와 같이 만들고,
+
+![png](/assets/img/post/gnns_history/ReNNs.png)
+
+Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root Node까지 앞서 언급한 *결합 함수식*을 활용하여 상향식(bottom-up)으로, 그리고 Root Node에 도달할 때까지 재귀적(recursive)으로, 부모노드들의 (수학적) 표현들을 도출하는 것이다.
+
+> 문장의 parse tree (구문 트리)는 파이썬 [NLTK](https://www.nltk.org/){:target="_blank"} 등과 자연어처리 라이브러리를 써서 구현할 수 있다.
+{: .prompt-tip }
+
+이후, 만약 문장의 감정 상태를 분석하는 모델을 만들고 싶다면, 특정 감정 상태(기쁨, 화남, 중립)에 대응하는 출력 레이블 값과 모델의 출력값 사이의 loss를 줄이는 방향으로 가중치 $W$ 값(앞선 식의 그 $W$ 맞음)을 **업데이트함으로써 모델을 학습**시키는 것이다.
+
+이렇듯 RvNN은 트리 구조 및 상향-단방향식으로 정보들을 결합시켜 나간다는 측면에서 일종의 Directed acyclic(유향 비순환; 비순환: 연결구조에서 동일한 노드로 다시 돌아올 수 있는 싸이클 구조가 없다는 의미)한 Graph model 이고, 그렇기 때문에 GNNs 분야의 시작으로 언급되기도 하는 것이다.
+
+# GNN: Graph Neural Network
+
+# Conclusion
