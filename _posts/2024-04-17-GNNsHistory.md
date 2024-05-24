@@ -8,11 +8,12 @@ toc: false
 ---
 
 # Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Intro.](#intro)
 - [Graph Neural Networks](#graph-neural-networks)
 - [1990s: Recursive Neural Network](#1990s-recursive-neural-network)
   - [RvNN References](#rvnn-references)
-- [GNN: Graph Neural Network](#gnn-graph-neural-network)
+- [1998-2015: New era of Deep Learning](#1998-2015-new-era-of-deep-learning)
 - [Conclusion](#conclusion)
 
 # Intro.
