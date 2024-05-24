@@ -72,6 +72,4 @@ Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root
 
 GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Network (CNN; 합성곱 신경망) 이야기를 안하고 넘어갈 수가 없다. 
 
-합성곱 신경망은 
-
 # Conclusion
