@@ -51,7 +51,7 @@ $$
 
 예컨대, RvNN은 자연어처리(NLP) 분야에서 사용할 수 있는 아주 기초적인 모델 중 하나인데, 한 문장(여기서, "That movie was cool")의 parse tree(구문 트리)를 아래와 같이 만들고,
 
-![png](/assets/img/post/gnns_history/ReNNs.png)
+![png](/assets/img/post/gnns_history/ReNNs.png)*Example of sentence's parse tree. Source: [GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-recursive-and-recurrent-neural-network/){:target="_blank"}*
 
 Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root Node까지 앞서 언급한 *결합 함수식*을 활용하여 상향식(bottom-up)으로, 그리고 Root Node에 도달할 때까지 재귀적(recursive)으로, 부모노드들의 (수학적) 표현들을 도출하는 것이다.
 
