@@ -73,7 +73,7 @@ Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root
 
 GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Network (CNN; 합성곱 신경망) 이야기를 안하고 넘어갈 수 없다. CNN 모델과 그의 방법론은 GNNs 분야의 발전 뿐 아니라 DL/ML 전체 판도에 가속을 불어넣었기 때문이다.
 
-자세한 합성곱 신경망에 대한 내용은 다른 포스트에서 다룰 예정이기에, 간단하게만 설명하자면, CNN 모델은 주로 이미지 데이터(like raster data, pixel data, grid data)를 입력받아 출력 레이블 값과의 복잡한 비선형적 관계를 표현하는데 아주 효과적인 모델이다. 'AI의 대부' 또는 '딥러닝의 대부'라 불리는 얀 르쿤(Yann LeCun)의 [LeCun et al. 1998](https://ieeexplore.ieee.org/document/726791){:target="_blank"}에서 합성곱 신경망(CNN) 구조 학습법이 처음 소개되었다. 
+합성곱 신경망에 대한 자세한 설명은 다른 포스트에서 다룰 예정이기에, 간단하게만 설명하자면, CNN 모델은 주로 이미지 데이터(like raster data, pixel data, grid data)를 입력받아 출력 레이블 값과의 복잡한 비선형적 관계를 표현하는데 아주 효과적인 모델이다. 'AI의 대부' 또는 '딥러닝의 대부'라 불리는 얀 르쿤(Yann LeCun)의 [LeCun et al. 1998](https://ieeexplore.ieee.org/document/726791){:target="_blank"}에서 합성곱 신경망(CNN) 구조 학습법이 처음 소개되었다. 
 
 > 'AI의 대부' 또는 '딥러닝의 대부'라 불리는 대표적 3인은 얀 르쿤(Yann LeCun; 현 Meta 수석 AI Scientist 및 부사장) 요슈아 벤지오(Yoshua Bengio; 현 몬트리올 대학 컴퓨터과학과 교수), 제프리 힌튼(Geoffrey Hinton; 현 토론토 대학 컴퓨터과학과 교수)이다. 
 {: .prompt-info }
