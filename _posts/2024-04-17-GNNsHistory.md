@@ -78,7 +78,7 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 > 'AI의 대부' 또는 '딥러닝의 대부'라 불리는 대표적 3인은 얀 르쿤(Yann LeCun; 현 Meta 수석 AI Scientist 및 부사장) 요슈아 벤지오(Yoshua Bengio; 현 몬트리올 대학 컴퓨터과학과 교수), 제프리 힌튼(Geoffrey Hinton; 현 토론토 대학 컴퓨터과학과 교수)이다. 
 {: .prompt-info }
 
-> 제프리 힌튼 교수는 13년 3월부터 23년 5월까지 10년간 근무하던 구글(Google)을 퇴사했다. 앞으로 대중과 학계에게 **AI의 위험성**에 대해 자유롭게 말하고 싶다는 연유로. 심지어 그는 딥러닝 연구에 대한 그의 일생 업적들을 후회한다고 말했다고 한다. [참고: 뉴욕타임즈 기사](https://www.nytimes.com/2023/05/05/podcasts/ai-google-banks.html){:target="_blank"}
+> 제프리 힌튼 교수는 13년 3월부터 23년 5월까지 10년간 근무하던 구글(Google)을 퇴사했다. 앞으로 대중과 학계에게 **AI의 위험성**에 대해 자유롭게 말하고 싶다는 연유로. 심지어 그는 딥러닝 연구에 대한 그의 지난 업적들을 후회한다고 말했다고 한다. [참고: 뉴욕타임즈 기사](https://www.nytimes.com/2023/05/05/podcasts/ai-google-banks.html){:target="_blank"}
 {: .prompt-info }
 
 # Conclusion
