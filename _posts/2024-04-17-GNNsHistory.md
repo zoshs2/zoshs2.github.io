@@ -13,7 +13,7 @@ toc: false
 - [Graph Neural Networks](#graph-neural-networks)
 - [1990s: Recursive Neural Network](#1990s-recursive-neural-network)
   - [RvNN References](#rvnn-references)
-- [1998-2015: New era of Deep Learning](#1998-2015-new-era-of-deep-learning)
+- [In 1998, CNN: New era of Deep Learning](#in-1998-cnn-new-era-of-deep-learning)
 - [Conclusion](#conclusion)
 
 # Intro.
@@ -69,7 +69,7 @@ Leaf Nodes(자식이 없는 노드; 가장 말단의 노드들)에서부터 Root
 1. [Sperduti, Alessandro, and Antonina Starita. "Supervised neural networks for the classification of structures." IEEE transactions on neural networks 8.3 (1997): 714-735.](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3e33eca03933caaec671e20692e79d1acc9527e1){:target="_blank"}
 2. [Frasconi, Paolo, Marco Gori, and Alessandro Sperduti. "A general framework for adaptive processing of data structures." IEEE transactions on Neural Networks 9.5 (1998): 768-786.](https://www.math.unipd.it/~sperduti/PAPERI/general-framework.pdf){:target="_blank"}
 
-# 1998-2015: New era of Deep Learning
+# In 1998, CNN: New era of Deep Learning
 
 GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Network (CNN; 합성곱 신경망) 이야기를 안하고 넘어갈 수 없다. CNN 모델과 그의 방법론은 GNNs 분야의 발전 뿐 아니라 DL/ML 전체 판도에 가속을 불어넣었기 때문이다.
 
@@ -85,6 +85,10 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 하지만 앞서 이야기했듯이 CNN 모델은 기본적으로 이미지(2D grids)나 텍스트(1D sequences)와 같은 Euclidean data에 특화되어 있다. Euclidean data란 것은 쉽게 말하자면, 우리가 일상적으로 이해하는 1/2/3 차원 공간 상에 정의된 일련의 데이터들을 의미하고, 더 자세히는 각 데이터 포인트가 **기술 가능한** 고정된 위치와 규칙적인 간격을 가지고 있는 일련의 데이터들을 말한다.
 
-그렇지만, 노드 & 링크, 버텍스 & 엣지라는 구성 요소들이 서로 간에 맺고 있는 연결 관계에 중점을 두고 대상을 표현하는 그래프(Graph)라는 것은 2/3차원 공간 상에 어떻게 그려 표현해도 상관없는(정해진 위치나 순서, 간격이 없는) 추상적인 non-euclidean 개체이기 때문에 CNN의 필터 스캐닝같은 개념이 처음 소개되었을 때, 바로 적용하기 어려운 실정이었다.
+그렇지만, 노드 & 링크, 버텍스 & 엣지라는 구성 요소들이 서로 간에 맺고 있는 연결 관계에 중점을 두고 대상을 표현하는 그래프(Graph)라는 것은 정해진 위치나 순서, 간격이 없는 추상적인 non-euclidean 개체이기 때문에 CNN의 필터 스캐닝같은 개념이 처음 소개되었을 때, 바로 적용하기 어려운 실정이었다. 
+
+![png](/assets/img/post/gnns_history/EuclideanData.png)*Source: Zhou, Jie, et al. (2020) "Graph neural networks: A review of methods and applications."*
+
+
 
 # Conclusion
