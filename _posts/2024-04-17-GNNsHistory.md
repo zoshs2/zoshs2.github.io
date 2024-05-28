@@ -14,6 +14,7 @@ toc: false
 - [1990s: Recursive Neural Network](#1990s-recursive-neural-network)
   - [RvNN References](#rvnn-references)
 - [In 1998, CNN: New era of Deep Learning](#in-1998-cnn-new-era-of-deep-learning)
+- [2010s: Golden era for the advancement of GNNs](#2010s-golden-era-for-the-advancement-of-gnns)
 - [Conclusion](#conclusion)
 
 # Intro.
@@ -88,6 +89,10 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 그렇지만, 노드 & 링크, 버텍스 & 엣지라는 구성 요소들이 서로 간에 맺고 있는 연결 관계에 중점을 두고 대상을 표현하는 그래프(Graph)라는 것은 정해진 위치나 순서, 간격이 없는 추상적인 non-euclidean 개체이기 때문에 CNN의 필터 스캐닝같은 개념이 처음 소개되었을 때, 바로 적용하기 어려운 실정이었다. 
 
 ![png](/assets/img/post/gnns_history/EuclideanData.png)*Source: Zhou, Jie, et al. (2020) "Graph neural networks: A review of methods and applications."*
+
+# 2010s: Golden era for the advancement of GNNs
+
+1998년 CNN 모델의 등장 이후 딥러닝의 대부라 불리는 "[얀 르쿤, 요슈아 벤지오, 제프리 힌튼(2015)](https://www.nature.com/articles/nature14539){:target="_blank"}"이 딥러닝이라는 새로운 시대의 서막을 알린 2010년 초 무렵까지, 비유클리드 범주(Non-euclidean domain)에 속하는 Graph를 어떻게 표현해야 하고, 이러한 데이터들을 입력받아야 하는 신경망 아키텍쳐는 또 어떻게 설계해야하는지 같은 문제들의 해결 방법이 제대로 정립되지 않은 채 GNNs 분야의 긴 공백기가 이어졌다. 
 
 
 
