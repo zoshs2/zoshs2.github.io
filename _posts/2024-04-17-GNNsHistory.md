@@ -96,6 +96,12 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 그래프(Graph) 데이터와 신경망 딥러닝 학습 사이에 존재하는 본질적인 문제는 결국 "비유클리드 데이터를 어떻게 표현해야 하는지"에 있었다. **비유클리드**라함은 2/3차원과 같은 직관적인 이해가 가능한 유클리드 공간을 넘어서 보다 복잡하고 고차원의 (그래서 표현이 어려운, 그래서 이해가 어렵기에 '추상적이다'라고 퉁쳐서 말하는) 공간을 일컫는다. 다시 말해, "비유클리드 데이터를 어떻게 표현해야 하는지"의 문제는 곧 "우리가 기술가능한 표현 형태 및 차원으로 어떻게 전환시킬지"에 대한 문제이며, 이러한 시도와 적용 가능한 다양한 방법들을 "임베딩(Embedding)"이라고 하는 것이다.
 
+2010년도 초에 들어서며 그래프(Graph)를 저차원 임베딩 공간으로 변환할 수 있는 획기적인 아이디어들이 제시되기 시작했다. 이 아이디어들은 큰 맥락에서 보면 그래프 구조 데이터를 처리하고 학습하는 방법이지만, 목적 및 범위에 따라 크게 두 가지 분야로 나뉜다. 바로 **Graph Representation Learning** 분야와 **Geometric Deep Learning** 분야이다. 이들은 특정 딥러닝 모델 아키텍쳐가 아니라 GNNs과 같이 또 다른 한 분야이자, GNNs의 하위 범주이다.
+
+우선, Geometric Deep Learning 분야부터 살짝 설명하자면, 
+
+Graph Representation Learning 분야의 목적은 그래프에서 **의미있는 표현**을 추출하여 임베딩 벡터로 변환하는 일에 초점이 맞추어져 있다. 그래프에 의미있는 표현은 노드(버텍스), 링크(엣지), 그들의 연결관계에 담겨 있다고 말했었다. 이들을 저차원 벡터로 임베딩하는 일련의 노력들은 노드 임베딩(word embedding[(Mikolov et al., 2013)](https://arxiv.org/pdf/1301.3781){:target="_blank"}, DeepWalk[(Perozzi et al., 2014)](https://dl.acm.org/doi/10.1145/2623330.2623732){:target="_blank"}, node2vec[(Grover and Leskovec, 2016)](https://dl.acm.org/doi/10.1145/2939672.2939754){:target="_blank"}, LINE[(Tang et al., 2015)](https://arxiv.org/abs/1503.03578){:target="_blank"}, TADW[(Yang et al., 2015)](https://www.ijcai.org/Proceedings/15/Papers/299.pdf){:target="_blank"}), 그래프 임베딩(graph2vec[(Narayanan, Annamalai, et al., 2017)](https://arxiv.org/abs/1707.05005){:target="_blank"}, SDNE[(Wang, D. et al., 2016)](https://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf){:target="_blank"})로 (굳이 나누자면) 나눠져서 2010년도 전반에 걸쳐 그래프 구조의 비유클리드 데이터를 처리하는 방법론 정립과 GNNs 분야 발전의 폭발적인 동력이 되었다.
+
 
 
 # Conclusion
