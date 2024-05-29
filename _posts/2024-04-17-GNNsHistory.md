@@ -98,9 +98,10 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 2010년도 초에 들어서며 그래프(Graph)를 저차원 임베딩 공간으로 변환할 수 있는 획기적인 아이디어들이 제시되기 시작했다. 이 아이디어들은 큰 맥락에서 보면 그래프 구조 데이터를 처리하고 학습하는 방법이지만, **목적과 초점 그리고 범위**에 따라 크게 두 가지 분야로 나뉜다. 바로 **Graph Representation Learning** 분야와 **Geometric Deep Learning** 분야이다. 이들은 특정 딥러닝 모델 아키텍쳐가 아니라 GNNs과 같이 또 다른 한 분야이자, GNNs의 하위 범주이다.
 
-**Geometric Deep Learning** 분야는 유클리드 및 비유클리드 공간 포함하는 모든 기하학적 구조의 데이터를 이해하고 학습하는 데 그 목적이 있다. 즉 그래프(Graph) 뿐 아니라, 포인트 클라우드, 리만 다양체(Riemannian manifold)와 같은 다양한 기하학적 데이터 구조를 처리하
+**Geometric Deep Learning** 분야는 유클리드 및 비유클리드 공간 포함하는 모든 기하학적 구조의 데이터를 이해하고 학습하는 데 그 목적이 있다. 다시 말해 그래프(Graph) 뿐 아니라, 포인트 클라우드, 리만 다양체(Riemannian manifold)와 같은 다양한 기하학적 데이터 구조를 처리하는 데 그 초점이 맞춰 있다고 볼 수 있다.
 
-> 포인트 클라우드(Point Cloud) 데이터는 LiDAR(Light Detection and Ranging) 센서, 
+> 포인트 클라우드(Point Cloud) 데이터는 LiDAR(Light Detection and Ranging) 센서, 3D 스캐닝, Stereo Vision 기법 (두 개의 카메라로 찍은 이미지를 비교하여 3D 정보를 추출)에서 얻어지며, 3차원 공간 상의 객체의 형상을 표현하기에 3D 좌표 (x,y,z)를 갖는다. 일반적인 2D 시각적 이미지 정보는 픽셀(또는 raster/grid)이라는 고정된 위치의 정규 격자 구조 속에 저장되는 것에 반해, 포인트 클라우드 데이터 정보는 데이터 포인트들 간의 연결성이나 정규 격자에 담겨 있지 않기 때문에 이들을 모델에 다루기 위해서는 특별한 전처리나 알고리즘이 필요하다.
+{: .prompt-info }
 
 **Graph Representation Learning** 분야의 목적은 그래프에서 **의미있는 표현**을 추출하여 임베딩 벡터로 변환하는 일에 초점이 맞추어져 있다. 그래프에 의미있는 표현은 노드(버텍스), 링크(엣지), 그들의 연결관계에 담겨 있다고 말했었다. 이들을 저차원 벡터로 임베딩하는 일련의 노력들은 노드 임베딩(word embedding[(Mikolov et al., 2013)](https://arxiv.org/pdf/1301.3781){:target="_blank"}, DeepWalk[(Perozzi et al., 2014)](https://dl.acm.org/doi/10.1145/2623330.2623732){:target="_blank"}, node2vec[(Grover and Leskovec, 2016)](https://dl.acm.org/doi/10.1145/2939672.2939754){:target="_blank"}, LINE[(Tang et al., 2015)](https://arxiv.org/abs/1503.03578){:target="_blank"}, TADW[(Yang et al., 2015)](https://www.ijcai.org/Proceedings/15/Papers/299.pdf){:target="_blank"}), 그래프 임베딩(graph2vec[(Narayanan, Annamalai, et al., 2017)](https://arxiv.org/abs/1707.05005){:target="_blank"}, SDNE[(Wang, D. et al., 2016)](https://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf){:target="_blank"})로 (굳이 나누자면) 나눠져서 2010년도 전반에 걸쳐 그래프 구조의 비유클리드 데이터를 처리하는 방법론 정립과 GNNs 분야 발전의 폭발적인 동력이 되었다.
 
