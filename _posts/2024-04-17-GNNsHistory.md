@@ -108,7 +108,9 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 # In 2015: Graph Convolutional Network
 
+GCN
 
+![png](/assets/img/post/gnns_history/GCN_Scheme.png)*Difference between Neural Network(NN) and GCN. Source: [Graph Convolutional Networks (GCN) & Pooling](https://jonathan-hui.medium.com/graph-convolutional-networks-gcn-pooling-839184205692){:target="_blank"}*
 
 $$
 \begin{equation}
