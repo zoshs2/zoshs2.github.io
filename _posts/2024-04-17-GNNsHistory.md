@@ -84,7 +84,7 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 여기서 CNN이 GNNs 분야 발전에 영향을 준 아이디어 요소는 대상(이미지)의 국소적 영역을 처리하는 필터를 사용하여 지역적인 주요 특징을 추출한다는 것과 이들을 종합하여 더욱 함축된 표현으로 높은 수준의 해석이 가능하다는 것이다.
 
-하지만 앞서 이야기했듯이 CNN 모델은 기본적으로 이미지(2D grids)나 텍스트(1D sequences)와 같은 Euclidean data에 특화되어 있다. Euclidean data란 것은 쉽게 말하자면, 우리가 일상적으로 이해하는 1/2/3 차원 공간 상에 정의된 일련의 데이터들을 의미하고, 더 자세히는 각 데이터 포인트가 **기술 가능한** 고정된 위치와 규칙적인 간격을 가지고 있는 일련의 데이터들을 말한다.
+하지만 앞서 이야기했듯이 CNN 모델은 기본적으로 이미지(2D grids)나 텍스트(1D sequences)와 같은 Euclidean data에 특화되어 있다. Euclidean data란 것은 쉽게 말하자면, 우리가 직관적으로 이해할 수 있는 1/2 차원 공간 상에 정의된 일련의 데이터들을 의미하고, 더 자세히는 각 데이터 포인트가 **기술 가능한** 고정된 위치와 규칙적인 간격을 가지고 있는 일련의 데이터들을 말한다.
 
 그렇지만, 노드 & 링크, 버텍스 & 엣지라는 구성 요소들이 서로 간에 맺고 있는 연결 관계에 중점을 두고 대상을 표현하는 그래프(Graph)라는 것은 정해진 위치나 순서, 간격이 없는 추상적인 non-euclidean 개체이기 때문에 CNN의 필터 스캐닝같은 개념이 처음 소개되었을 때, 바로 적용하기 어려운 실정이었다. 
 
@@ -94,13 +94,15 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 # 2010s: Golden era for the advancement of GNNs
 
-그래프(Graph) 데이터와 신경망 딥러닝 학습 사이에 존재하는 본질적인 문제는 결국 "비유클리드 데이터를 어떻게 표현해야 하는지"에 있었다. **비유클리드**라함은 2/3차원과 같은 직관적인 이해가 가능한 유클리드 공간을 넘어서 보다 복잡하고 고차원의 (그래서 표현이 어려운, 그래서 이해가 어렵기에 '추상적이다'라고 퉁쳐서 말하는) 공간을 일컫는다. 다시 말해, "비유클리드 데이터를 어떻게 표현해야 하는지"의 문제는 곧 "우리가 기술가능한 표현 형태 및 차원으로 어떻게 전환시킬지"에 대한 문제이며, 이러한 시도와 적용 가능한 다양한 방법들을 "임베딩(Embedding)"이라고 하는 것이다.
+그래프(Graph) 데이터와 신경망 딥러닝 학습 사이에 존재하는 본질적인 문제는 결국 "비유클리드 데이터를 어떻게 표현해야 하는지"에 있었다. **비유클리드**라함은 1/2차원과 같은 직관적인 이해가 가능한 유클리드 공간을 넘어서 보다 복잡하고 고차원의 (그래서 표현이 어려운, 그래서 이해가 어렵기에 '추상적이다'라고 퉁쳐서 말하는) 공간을 일컫는다. 다시 말해, "비유클리드 데이터를 어떻게 표현해야 하는지"의 문제는 곧 "우리가 기술가능한 표현 형태 및 차원으로 어떻게 전환시킬지"에 대한 문제이며, 이러한 시도와 적용 가능한 다양한 방법들을 "임베딩(Embedding)"이라고 하는 것이다.
 
-2010년도 초에 들어서며 그래프(Graph)를 저차원 임베딩 공간으로 변환할 수 있는 획기적인 아이디어들이 제시되기 시작했다. 이 아이디어들은 큰 맥락에서 보면 그래프 구조 데이터를 처리하고 학습하는 방법이지만, 목적 및 범위에 따라 크게 두 가지 분야로 나뉜다. 바로 **Graph Representation Learning** 분야와 **Geometric Deep Learning** 분야이다. 이들은 특정 딥러닝 모델 아키텍쳐가 아니라 GNNs과 같이 또 다른 한 분야이자, GNNs의 하위 범주이다.
+2010년도 초에 들어서며 그래프(Graph)를 저차원 임베딩 공간으로 변환할 수 있는 획기적인 아이디어들이 제시되기 시작했다. 이 아이디어들은 큰 맥락에서 보면 그래프 구조 데이터를 처리하고 학습하는 방법이지만, **목적과 초점 그리고 범위**에 따라 크게 두 가지 분야로 나뉜다. 바로 **Graph Representation Learning** 분야와 **Geometric Deep Learning** 분야이다. 이들은 특정 딥러닝 모델 아키텍쳐가 아니라 GNNs과 같이 또 다른 한 분야이자, GNNs의 하위 범주이다.
 
-우선, Geometric Deep Learning 분야부터 살짝 설명하자면, 
+**Geometric Deep Learning** 분야는 유클리드 및 비유클리드 공간 포함하는 모든 기하학적 구조의 데이터를 이해하고 학습하는 데 그 목적이 있다. 즉 그래프(Graph) 뿐 아니라, 포인트 클라우드, 리만 다양체(Riemannian manifold)와 같은 다양한 기하학적 데이터 구조를 처리하
 
-Graph Representation Learning 분야의 목적은 그래프에서 **의미있는 표현**을 추출하여 임베딩 벡터로 변환하는 일에 초점이 맞추어져 있다. 그래프에 의미있는 표현은 노드(버텍스), 링크(엣지), 그들의 연결관계에 담겨 있다고 말했었다. 이들을 저차원 벡터로 임베딩하는 일련의 노력들은 노드 임베딩(word embedding[(Mikolov et al., 2013)](https://arxiv.org/pdf/1301.3781){:target="_blank"}, DeepWalk[(Perozzi et al., 2014)](https://dl.acm.org/doi/10.1145/2623330.2623732){:target="_blank"}, node2vec[(Grover and Leskovec, 2016)](https://dl.acm.org/doi/10.1145/2939672.2939754){:target="_blank"}, LINE[(Tang et al., 2015)](https://arxiv.org/abs/1503.03578){:target="_blank"}, TADW[(Yang et al., 2015)](https://www.ijcai.org/Proceedings/15/Papers/299.pdf){:target="_blank"}), 그래프 임베딩(graph2vec[(Narayanan, Annamalai, et al., 2017)](https://arxiv.org/abs/1707.05005){:target="_blank"}, SDNE[(Wang, D. et al., 2016)](https://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf){:target="_blank"})로 (굳이 나누자면) 나눠져서 2010년도 전반에 걸쳐 그래프 구조의 비유클리드 데이터를 처리하는 방법론 정립과 GNNs 분야 발전의 폭발적인 동력이 되었다.
+> 포인트 클라우드(Point Cloud) 데이터는 LiDAR(Light Detection and Ranging) 센서, 
+
+**Graph Representation Learning** 분야의 목적은 그래프에서 **의미있는 표현**을 추출하여 임베딩 벡터로 변환하는 일에 초점이 맞추어져 있다. 그래프에 의미있는 표현은 노드(버텍스), 링크(엣지), 그들의 연결관계에 담겨 있다고 말했었다. 이들을 저차원 벡터로 임베딩하는 일련의 노력들은 노드 임베딩(word embedding[(Mikolov et al., 2013)](https://arxiv.org/pdf/1301.3781){:target="_blank"}, DeepWalk[(Perozzi et al., 2014)](https://dl.acm.org/doi/10.1145/2623330.2623732){:target="_blank"}, node2vec[(Grover and Leskovec, 2016)](https://dl.acm.org/doi/10.1145/2939672.2939754){:target="_blank"}, LINE[(Tang et al., 2015)](https://arxiv.org/abs/1503.03578){:target="_blank"}, TADW[(Yang et al., 2015)](https://www.ijcai.org/Proceedings/15/Papers/299.pdf){:target="_blank"}), 그래프 임베딩(graph2vec[(Narayanan, Annamalai, et al., 2017)](https://arxiv.org/abs/1707.05005){:target="_blank"}, SDNE[(Wang, D. et al., 2016)](https://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf){:target="_blank"})로 (굳이 나누자면) 나눠져서 2010년도 전반에 걸쳐 그래프 구조의 비유클리드 데이터를 처리하는 방법론 정립과 GNNs 분야 발전의 폭발적인 동력이 되었다.
 
 
 
