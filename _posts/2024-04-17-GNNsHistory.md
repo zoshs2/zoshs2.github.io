@@ -15,6 +15,7 @@ toc: false
   - [RvNN References](#rvnn-references)
 - [In 1998, CNN: New era of Deep Learning](#in-1998-cnn-new-era-of-deep-learning)
 - [2010s: Golden era for the advancement of GNNs](#2010s-golden-era-for-the-advancement-of-gnns)
+- [In 2015: Graph Convolutional Network](#in-2015-graph-convolutional-network)
 - [Conclusion](#conclusion)
 
 # Intro.
@@ -105,6 +106,27 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 반면, **Graph Representation Learning** 분야의 목적은 **그래프에서 의미있는 표현**을 추출하여 임베딩 벡터로 변환하는 일에 초점이 맞추어져 있다. 그래프에 의미있는 표현은 노드(버텍스), 링크(엣지), 그들의 연결관계에 담겨 있다고 말했었다. 이들을 **저차원 벡터로 임베딩**하는 일련의 노력들은 노드 임베딩(word embedding[(Mikolov et al., 2013)](https://arxiv.org/pdf/1301.3781){:target="_blank"}, DeepWalk[(Perozzi et al., 2014)](https://dl.acm.org/doi/10.1145/2623330.2623732){:target="_blank"}, node2vec[(Grover and Leskovec, 2016)](https://dl.acm.org/doi/10.1145/2939672.2939754){:target="_blank"}, LINE[(Tang et al., 2015)](https://arxiv.org/abs/1503.03578){:target="_blank"}, TADW[(Yang et al., 2015)](https://www.ijcai.org/Proceedings/15/Papers/299.pdf){:target="_blank"}), 그래프 임베딩(graph2vec[(Narayanan, Annamalai, et al., 2017)](https://arxiv.org/abs/1707.05005){:target="_blank"}, SDNE[(Wang, D. et al., 2016)](https://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf){:target="_blank"})로 (굳이 나누자면) 나눠져서 2010년도 전반에 걸쳐 그래프 구조의 데이터를 처리하는 방법론 정립과 GNNs 분야 발전의 직접적인 동력을 제공했다.
 
+# In 2015: Graph Convolutional Network
+
+
+
+$$
+\begin{equation}
+A - \lambda I = \begin{pmatrix} a & b \\ c & d \end{pmatrix} - \lambda \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} a - \lambda & b \\ c & d - \lambda \end{pmatrix}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\det(A - \lambda I) = (a - \lambda)(d - \lambda) - bc
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\lambda^2 - (a + d)\lambda + (ad - bc) = 0
+\end{equation}
+$$
 
 
 
