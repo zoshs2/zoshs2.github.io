@@ -108,7 +108,7 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 # In 2015: Graph Convolutional Network
 
-GCN
+[딥러닝 시대의 시작을 알렸던 CNN](https://www.nature.com/articles/nature14539){:target="_blank"} 모델의 아이디어를 드디어 Graph 구조 데이터에도 적용할 수 있는 획기적인 진보가 2015년에 소개되었다.
 
 $$
 \begin{equation}
