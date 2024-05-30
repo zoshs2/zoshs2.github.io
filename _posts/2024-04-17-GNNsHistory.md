@@ -110,6 +110,12 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 GCN
 
+$$
+\begin{equation}
+  \text{H} = \sigma\left(\tilde{\text{D}}^{-\frac{1}{2}}\tilde{\text{A}}\tilde{\text{D}}^{-\frac{1}{2}}\text{X}\Theta\right)
+\end{equation}
+$$
+
 ![png](/assets/img/post/gnns_history/GCN_Scheme.png)*Difference between Neural Network(NN) and GCN. Source: [Graph Convolutional Networks (GCN) & Pooling](https://jonathan-hui.medium.com/graph-convolutional-networks-gcn-pooling-839184205692){:target="_blank"}*
 
 $$
