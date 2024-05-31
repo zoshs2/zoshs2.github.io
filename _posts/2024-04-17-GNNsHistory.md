@@ -110,6 +110,8 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 
 [딥러닝 시대의 시작을 알렸던 CNN](https://www.nature.com/articles/nature14539){:target="_blank"} 모델의 아이디어를 드디어 Graph 구조 데이터에도 적용할 수 있는 획기적인 진보가 2015년에 소개되었다.
 
+CNN 모델에서, 고정된 크기의 필터를 통해 이미지를 스캐닝하면서 이미지의 작은 영역에서의 **지역적 정보**, 또는 **국소적 스케일에서의 주요 특징**들을 추출하여 고도화된 데이터 해석과 학습을 가능케 했던 방법이 그래프 구조 데이터에 대한 적용 방식으로서 재정립된 것이다.
+
 $$
 \begin{equation}
   \text{H} = \sigma\left(\tilde{\text{D}}^{-\frac{1}{2}}\tilde{\text{A}}\tilde{\text{D}}^{-\frac{1}{2}}\text{X}\Theta\right)
