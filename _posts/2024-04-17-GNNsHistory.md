@@ -113,36 +113,43 @@ GNNs 발전의 중요한 지렛대가 된 계기로서, Convolutional Neural Net
 * [Kipf, Thomas N., and Max Welling. (2016) "Semi-supervised classification with graph convolutional networks."](https://arxiv.org/abs/1609.02907){:target="_blank"}
 * [Kipf, Thomas N., and Max Welling. (2016) "Variational graph auto-encoders."](https://arxiv.org/abs/1611.07308){:target="_blank"}
 
+사실 Kipf의 Graph Convolutional Network에 대한 이야기를 더 자세히 파고 들어가면, 아이디어의 근간이 되었던 Spectral Filtering, Laplacian matrix, Eigenvalue decomposition of Laplacian matrix, Fourier Transform 등을 또 다뤄야 하지만 이 글에선 그렇게까지 깊게 다루지 않고 핵심적인 아이디어만 기록하도록 한다.
+
+![png](/assets/img/post/gnns_history/gnn_filtering.png)*"Graph Laplacian부터 Graph Fourier Transform까지", Source: https://ahjeong.tistory.com/14*
+
 * * *
 
-CNN 모델에서, 고정된 크기의 필터를 통해 이미지를 스캐닝하면서 이미지의 작은 영역에서의 **지역적 정보**, 또는 **국소적 스케일에서의 주요 특징**들을 추출하여 고도화된 데이터 해석과 학습을 가능하게 했던 방법이 그래프 구조 데이터에 대한 적용 방식으로서 재정립된 것이다.
+CNN 모델에서 핵심적으로 작용했던 아이디어는 '고정된 크기의 필터'를 통해 이미지를 스캐닝하면서, '인접'한 픽셀끼리 묶인 작은 영역에서의 **지역적 정보**, 또는 **국소적 스케일에서의 주요 특징**들을 추출한다는 점이다. 이렇게 함축시킨 정보들을 propagation 시키면서 모델의 고도화된 표현을 가능하게 했다.
+
+Kipf가 소개한 Graph Convolution Network(GCN)의 아이디어 또한 이런 CNN의 핵심적인 아이디어를 그래프 구조 데이터에 **효과적으로** 적용하도록 정립시킨 것이라 할 수 있다.
+
+사실 그래프 구조 데이터에 대한 CNN의 국소적 필터링 과정은 frequency domain에서 Laplcian matrix와 고유값(eigenvalue)과 고유벡터(eigenvectorr)를 사용하여 그래프의 구조적 특성을 분석할 수 있는 그래프 신호 처리 방식으로 Kipf의 GCN 소개 무렵에 어느정도 정립이 되어 있었다. (아래 레퍼런스 참조)
+
+* [Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. "Spectral networks and locally connected networks on graphs." In International Conference on Learning Representations (ICLR), 2014.](https://arxiv.org/abs/1312.6203){:target="_blank"}
+* [Michael Defferrard, Xavier Bresson, and Pierre Vandergheynst. "Convolutional neural networks on graphs with fast localized spectral filtering." In Advances in neural information processing systems (NIPS), 2016.](https://proceedings.neurips.cc/paper_files/paper/2016/file/04df4d434d481c5bb723be1b6df1ee65-Paper.pdf){:target="_blank"}
+
+위 방식들은 이론적으로 매우 견고하고 충분히 활용 가능한 방식이었지만, 무엇보다 spectral domain에서 고유값을 계산하거나 여기서 사용하는 Chebyshev polynomial (체비쇼프 다항식) 들을 계산하는 과정이 복잡하고 computational cost가 높다는 문제가 있었다. 
+
+Kipf는 위 저자들이 사용한 방법에다가 Chebyshev 다항식 근사와 정규화된 라플라시안 활용들을 통해 방법론을 보다 안정적이고 효과적으로 일반화시켰던 것이다. 그렇게 Kipf는 Spectral Convolution 방법론을 첨가한 GCN의 Propagation model을 아래와 같은 수식으로 정의하고 소개하게 된다.
 
 $$
 \begin{equation}
-  \text{H} = \sigma\left(\tilde{\text{D}}^{-\frac{1}{2}}\tilde{\text{A}}\tilde{\text{D}}^{-\frac{1}{2}}\text{X}\Theta\right)
+  \text{H} = \sigma\left(\tilde{\text{D}}^{-\frac{1}{2}}\tilde{\text{A}}\tilde{\text{D}}^{-\frac{1}{2}}\text{X}\text{W}\right) = \sigma\left(\tilde{\text{D}}^{-\frac{1}{2}}\left(\text{A}+\text{I}\right)\tilde{\text{D}}^{-\frac{1}{2}}\text{X}\text{W}\right)
 \end{equation}
 $$
+
+여기서 $\tilde{A}$는 그래프의 인접행렬(Adjacency matrix, $A$)에 단위행렬(Identity matrix, $I$)를 더한, 다시 말해 **Self-loop를 더한 버전의 adjacency matrix**를 의미한다. $\tilde{D}$는 각 노드의 이웃수(degree)가 diagonal elements로 있는 degree matrix인데, 마찬가지로 self-loop를 더한 버전이 degree matrix이다. 그리고 $\text{X}$는 $N$개의 노드로 구성된 그래프에 대해서 각 노드별 $C$개의 feature로 표현한 정보를 담은 $N \times C$ 행렬이다. $W$는 training parameter 행렬로, CNN 모델의 Filter 역할을 GCN에서 수행한다. 필터의 갯수를 만약 $F$개로 정하면, $W$의 차원은 $C \times F$이 될거라 예상이 가능하다. 결과적으로, 위 수식을 통해 도출되는 행렬의 차원은 $N \times F$, 노드갯수 * 필터갯수, 임을 알 수 있고 비선형 활성화함수($\sigma$) 연산까지 거쳐서 나온 최종 결과인 $\text{H}$ 행렬은 GCN 모델에서의 feature map이자 single convolution layer의 Output이 된다. 
+
+> 왜 self-loop를 포함한 버전의 degree matrix 와 adjacency matrix를 쓰냐라고 묻는다면, 다시 spectral convolution 수식 얘기부터 근사 및 치환까지의 과정을 얘기해야 한다. 다만 간단하게만 말하자면, 수식-근사 및 치환으로 결정된 수식 이후에 등장하는 Kipf의 **renormalization trick**에서 self-loop degree & adjacency matrix가 등장하게 된다. 그리고 이 renormalization trick을 사용하는 이유는 **최종 수식의 결과값**을 [0, 1]으로 bound시키기 위함이고, 더 근본적인 이유로는 exploding/vanshing gradients 문제를 완화시킴으로써 계산의 안정성을 도모하기 위함이다.
+{: .prompt-info }
+
+이제 위 수식을 통해 그래프의 구조 및 특성을 propagation 하는 convolution network을 아래 그림처럼 설계할 수 있게 되었다. 이 그림에는 기본적인 Neural Network(NN) 내에서 전파하는 연산 방식과 Kipf의 Graph Convolutional Network(GCN) 내에서 전파하는 연산 방식이 잘 표현되어 있다.  
 
 ![png](/assets/img/post/gnns_history/GCN_Scheme.png)*Difference between Neural Network(NN) and GCN. Source: [Graph Convolutional Networks (GCN) & Pooling](https://jonathan-hui.medium.com/graph-convolutional-networks-gcn-pooling-839184205692){:target="_blank"}*
 
-$$
-\begin{equation}
-A - \lambda I = \begin{pmatrix} a & b \\ c & d \end{pmatrix} - \lambda \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} a - \lambda & b \\ c & d - \lambda \end{pmatrix}
-\end{equation}
-$$
+NN에서는 어떤 단일 입력 뉴런에 최초의 값 하나($x$)가 들어오면, 학습 파라미터인 weight($W_{0}$)와 선형곱을 수행하고, 이후 마지막으로 비선형 활성화함수($\sigma$)를 곱한 output($z_{1}$)을 다음 뉴런 연산의 입력값으로 사용하는 과정이 위 그림에 나타나 있다. GCN에서는 앞서 설명한 하나의 Convolution layer에 대한 수식이 3번 연달아 수행되는 것 뿐이다. 
 
-$$
-\begin{equation}
-\det(A - \lambda I) = (a - \lambda)(d - \lambda) - bc
-\end{equation}
-$$
-
-$$
-\begin{equation}
-\lambda^2 - (a + d)\lambda + (ad - bc) = 0
-\end{equation}
-$$
-
+"므야? 왜 그림에서 GCN 수식은 다르게 생겼어요?"
 
 
 # Conclusion
