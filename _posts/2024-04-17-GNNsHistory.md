@@ -2,7 +2,7 @@
 title: "Graph Neural Networks' Brief History"
 date: 2024-04-17 16:18:43 +0900
 categories: [DL/ML, Story]
-tags: [GNNs, Graph, Recursive, Neural, Network, RNN, RvNN, tanh, nltk, tree-structured, graph-structured, dataset, Deep Learning, Machine Learning, NLP, Language, DNN, MLP, Python]
+tags: [Convolution, Graph Convolution Network, GCN, GNNs, Graph, Recursive, Neural, Network, RNN, RvNN, tanh, nltk, tree-structured, graph-structured, dataset, Deep Learning, Machine Learning, NLP, Language, DNN, MLP, Python, Zachary, karate, Kipf, Chebyshev, polynomial, node, classification, node classification, adjacency matrix, degree matrix, degree, renormalization, spectral, laplacian, vanishing, exploding, gradient, eigenvalue, eigenvector, decomposition, linear algebra, Graph Representation Learning, Geometric Deep Learning, CNN, Convolutional Neural Network]
 math: true
 toc: false
 ---
@@ -149,7 +149,23 @@ $$
 
 NN에서는 어떤 단일 입력 뉴런에 최초의 값 하나($x$)가 들어오면, 학습 파라미터인 weight($W_{0}$)와 선형곱을 수행하고, 이후 마지막으로 비선형 활성화함수($\sigma$)를 곱한 output($z_{1}$)을 다음 뉴런 연산의 입력값으로 사용하는 과정이 위 그림에 나타나 있다. GCN에서는 앞서 설명한 하나의 Convolution layer에 대한 수식이 3번 연달아 수행되는 것 뿐이다. 
 
-"므야? 왜 그림에서 GCN 수식은 다르게 생겼어요?"
+"므야? 왜 그림에서 GCN 수식은 다르게 생겼어요?"라는 말이 나올 수 있는데, 이 그림에서 $\hat{A}$는 본질적으로 Normalizaed Adjacency Matrix with self-loop로서, 즉 $\hat{A}=\tilde{D}^{-\frac{1}{2}}\left(A+I\right)\tilde{D}^{-\frac{1}{2}}$로 그림의 GCN 수식은 앞서 기술한 propagation formula와 동일한 연산을 하는 것이다.
 
+여기까지 왔으니 한번 그래프 구조 데이터에 대해서 Node classification 문제를 푼다고 했을 때, 어떻게 진행될 지 간단한 progation model를 만들어보자. **두 개의 Graph Convolution layer** 를 구성한다 보고 $N$개의 노드로 구성된 그래프를 학습시킨다고 했을 때, 아래와 같은 progation 연산이 이뤄질 거라 생각해볼 수 있다. 이 때 $\text{softmax}$ 함수는 row-wise로(행 단위로 계산) 적용된다.
+
+$$
+\begin{equation}
+  Z = \text{softmax}\left(\hat{A} * \text{ReLU}\left(\hat{A}XW^{(0)}\right)W^{(1)}\right)
+\end{equation}
+$$
+
+결과적으로, 위 식에 따르면, 마지막에 출력되는 $Z$의 차원은 그래프에 존재하는 총 노드갯수 $N$와 최종 convolution layer에서의 가중치 행렬 $W^{(1)}$이 지닌 차원에 따라 결정된다. 즉, 만약 $W^{(1)}$의 column dimension이 $F$라고 한다면, $F$ 크기(최종 가중치 행렬의 필터 갯수)가 분류(예측)하고자 하는 **클래스의 수**가 되는 것이다. 
+
+> 위 Node classification 문제의 example 은 Kipf의 GCN 논문 [Kipf, T. N., & Welling, M. (2016)](https://arxiv.org/abs/1609.02907){:target="_blank"}에서 다룬 예시를 가져온 것이다.
+{: .prompt-info }
 
 # Conclusion
+
+사실 이번 글을 처음 기획했을 때는 "수식 하나도 안쓰고, 글로만 써야지"라는 다짐과 함께 전체적인 GNNs 분야의 역사적 중요 맥락만 짚으려는 의도였지만,,, 결국 이렇게 말이 길어졌다... Kipf의 Graph Convolution Network(GCN) 이후에도 GNNs 분야의 커다란 발전을 가져다 준 GraphSAGE[(Hamilton, W., Ying, Z., & Leskovec, J. (2017))](https://arxiv.org/abs/1706.02216){:target="_blank"}, Graph Attention Networks/GAT[(Velickovic, Petar, et al. (2017))](https://arxiv.org/abs/1710.10903){:target="_blank"}, MPNN[(Gilmer, Justin, et al. (2017))](https://proceedings.mlr.press/v70/gilmer17a){:target="_blank"} 등 아직 할 이야기가 많지만, 다른 개별 post로 그 일을 미루도록 하겠다.
+
+일단, 아마 다음 글은 Kipf의 Graph Convolution Network(GCN) 모델을 PyTorch 프레임워크로 한번 구현해보고, 그래프/네트워크 데이터의 MNIST라 할 수 있는 자카리 가라데 클럽 데이터[(Zachary's karate club)](https://en.wikipedia.org/wiki/Zachary%27s_karate_club){:target="_blank"}를 가지고 먼가 해보는 글이 될 듯 하다.
