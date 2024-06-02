@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://zoshs2.github.io/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/archives/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/about/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/HelsinkiTT/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/GNNsHistory/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/MLPnDNN/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/MnistSoftmax/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/ClassifierModel/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/page2/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/page3/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/page5/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/StableSoftmax/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/BGDSGDMBGD/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/python/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/eda/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/visualization/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/deep-learning/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/network/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/pytorch/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/torch/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/machine-learning/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/china/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/dl-ml/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/story/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/study/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/open-data/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/eda/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/python/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/library/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/etc/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/categories/scraping-crawling/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/adam/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/batch/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/census/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/changchun/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/chrome/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/classifier/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/clc/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/covid-19/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/cross-entropy/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/crs/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/css/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/cuda/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/dataset/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/dnn/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/eu/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/europe/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/eval/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/evaluation/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/finland/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/fixed-asset/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/flask/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/flood/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/flow/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/folium/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gdp/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gif/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gis/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gnns/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/google-maps/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gps/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/gpu/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/graph/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/graph-structured/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/hazard/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/helsinki/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/html/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/human-mobility/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/imperviousness/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/information/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/interactive/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/jinan/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/js/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/jsfiddle/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/keplergl/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/la/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/land-cover/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/land-use/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/language/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/library/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/likelihood/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/linear-regression/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/log/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/log-likelihood/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/logisitic/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/logsoftmax/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/logsumexp/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/london/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/lse/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/melbourne/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/mini-batch/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/mlp/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/mnist/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/mobile/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/mumbai/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/neural/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/nll/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/nlp/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/nltk/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/np-unique/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/numpy/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/optimizer/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/paper/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/paris/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/parking/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/perceptron/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/population/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/recursive/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/risk/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/rnn/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/road-speed/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/rvnn/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/safegraph/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/scrape/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/scraping/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/sgd/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/shenzhen/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/slp/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/slurm/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/softmax/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/stochastic-gradient-descent/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/studying/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/sydney/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/tanh/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/temporal/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/test/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/tif/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/torchvision/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/traffic/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/train/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/trajectory/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/travel-time/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/tree-structured/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/uber/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/uber-movement/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/usa/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/world/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/xor/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/tags/xuancheng/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/GoogleMapScraping/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/TrafficCamTraj/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/LinearRegressionModel/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/XuanchengTraffic/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/ParkingDensity/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/EuropeExposure/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/USCovid/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/SafeGraphCensus/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/EUpop/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/ChangchunMobile/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/WorldPop/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/HelsinkiPop/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/ChengduTraffic/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/posts/NumpyUniqueIndex/</loc>
+  <lastmod>2024-06-02T11:41:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoshs2.github.io/page4/</loc>
+  <lastmod>2024-06-02T11:41:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
