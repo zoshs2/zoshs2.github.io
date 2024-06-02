@@ -151,7 +151,7 @@ NN에서는 어떤 단일 입력 뉴런에 최초의 값 하나($x$)가 들어�
 
 "므야? 왜 그림에서 GCN 수식은 다르게 생겼어요?"라는 말이 나올 수 있는데, 이 그림에서 $\hat{A}$는 본질적으로 Normalizaed Adjacency Matrix with self-loop로서, 즉 $\hat{A}=\tilde{D}^{-\frac{1}{2}}\left(A+I\right)\tilde{D}^{-\frac{1}{2}}$로 그림의 GCN 수식은 앞서 기술한 propagation formula와 동일한 연산을 하는 것이다.
 
-여기까지 왔으니 한번 그래프 구조 데이터에 대해서 Node classification 문제를 푼다고 했을 때, 어떻게 진행될 지 간단한 progation model를 만들어보자. **두 개의 Graph Convolution layer** 를 구성한다 보고 $N$개의 노드로 구성된 그래프를 학습시킨다고 했을 때, 아래와 같은 progation 연산이 이뤄질 거라 생각해볼 수 있다. 이 때 $\text{softmax}$ 함수는 row-wise로(행 단위로 계산) 적용된다.
+여기까지 왔으니 한번 그래프 구조 데이터에 대해서 Node classification 문제를 푼다고 했을 때, 어떻게 진행될 지 간단한 propagation model를 만들어보자. **두 개의 Graph Convolution layer** 를 구성한다 보고 $N$개의 노드로 구성된 그래프를 학습시킨다고 했을 때, 아래와 같은 propagation 연산이 이뤄질 거라 생각해볼 수 있다. 이 때 $\text{softmax}$ 함수는 row-wise로(행 단위로 계산) 적용된다.
 
 $$
 \begin{equation}
