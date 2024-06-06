@@ -166,6 +166,6 @@ $$
 
 # Conclusion
 
-사실 이번 글을 처음 기획했을 때는 "수식 하나도 안쓰고, 글로만 써야지"라는 다짐과 함께 전체적인 GNNs 분야의 역사적 중요 맥락만 짚으려는 의도였지만,,, 결국 또 이렇게 말이 길어졌다... Kipf의 Graph Convolution Network(GCN) 이후에도 GNNs 분야의 커다란 발전을 가져다 준 GraphSAGE[(Hamilton, W., Ying, Z., & Leskovec, J. (2017))](https://arxiv.org/abs/1706.02216){:target="_blank"}, Graph Attention Networks/GAT[(Velickovic, Petar, et al. (2017))](https://arxiv.org/abs/1710.10903){:target="_blank"}, MPNN[(Gilmer, Justin, et al. (2017))](https://proceedings.mlr.press/v70/gilmer17a){:target="_blank"} 등 아직 할 이야기가 많지만, 다른 개별 post로 그 일을 미루도록 하겠다.
+사실 이번 글을 처음 기획했을 때는 "수식 하나도 안쓰고, 글로만 써야지"라는 다짐과 함께 전체적인 GNNs 분야의 역사적 중요 맥락만 짚으려는 의도였지만,,, 결국 또 이렇게 말이 길어졌다. Kipf의 Graph Convolution Network(GCN) 이후에도 GNNs 분야의 커다란 발전을 가져다 준 GraphSAGE[(Hamilton, W., Ying, Z., & Leskovec, J. (2017))](https://arxiv.org/abs/1706.02216){:target="_blank"}, Graph Attention Networks/GAT[(Velickovic, Petar, et al. (2017))](https://arxiv.org/abs/1710.10903){:target="_blank"}, MPNN[(Gilmer, Justin, et al. (2017))](https://proceedings.mlr.press/v70/gilmer17a){:target="_blank"} 등 아직 할 이야기가 많지만, 다른 개별 post로 그 일을 미루도록 하겠다.
 
 일단, 아마 다음 글은 Kipf의 Graph Convolution Network(GCN) 모델을 PyTorch 프레임워크로 한번 구현해보고, 그래프/네트워크 데이터의 MNIST라 할 수 있는 자카리 가라데 클럽 데이터[(Zachary's karate club)](https://en.wikipedia.org/wiki/Zachary%27s_karate_club){:target="_blank"}를 가지고 먼가 해보는 글이 될 듯 하다.
