@@ -28,7 +28,7 @@ toc: false
 
 # Graph Neural Networks
 
-그래프 신경망(Graph Neural Networks; 이하 GNNs)은 RNN, LSTM, GRU, CNN 같이 특정 모델 및 아키텍쳐만을 지칭하는 term이 아니라, 그래프(또는 네트워크) 구조를 지닌 graph-structured data에 적용하는 것을 목적에 두고 디자인된 모든 신경망 모델들을 총칭해 부르는 용어이자, 하나의 커다란 분야다.
+그래프 신경망(Graph Neural Networks; 이하 GNNs)은 RNN, LSTM, GRU, CNN 같이 특정 모델 및 아키텍쳐를 지칭하는 term이 아니라, 그래프(또는 네트워크) 구조를 지닌 graph-structured data에 적용하는 것을 목적에 두고 디자인된 모든 신경망 모델들을 총칭해 부르는 용어이자, 하나의 커다란 분야다.
 
 GNNs는 지금도 활발한 연구와 관련 모델들이 쏟아져 나오고 있으며, [Zhou J. et al.(2020)](https://www.sciencedirect.com/science/article/pii/S2666651021000012){:target="_blank"}의 GNNs에 대한 review paper에 따르면, 수년간의 세월동안 이뤄진 GNNs 발전형태는 이렇게나 다양하다.
 
