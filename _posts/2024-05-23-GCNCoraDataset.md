@@ -79,7 +79,7 @@ cora_dataset = Planetoid(root="./cora_dataset", name='Cora')
 
 ```python
 !apt-get install tree
-!tree ./cora_dataset
+!tree
 ```
 
     Reading package lists... Done
