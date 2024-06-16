@@ -80,46 +80,6 @@ cora_dataset = Planetoid(root="./cora_dataset", name='Cora')
 
 
 ```python
->>> !apt-get install tree
->>> !tree ./cora_dataset
-
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following NEW packages will be installed:
-  tree
-0 upgraded, 1 newly installed, 0 to remove and 45 not upgraded.
-Need to get 47.9 kB of archives.
-After this operation, 116 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 tree amd64 2.0.2-1 [47.9 kB]
-Fetched 47.9 kB in 1s (83.1 kB/s)
-Selecting previously unselected package tree.
-(Reading database ... 121913 files and directories currently installed.)
-Preparing to unpack .../tree_2.0.2-1_amd64.deb ...
-Unpacking tree (2.0.2-1) ...
-Setting up tree (2.0.2-1) ...
-Processing triggers for man-db (2.10.2-1) ...
-[01;34m./cora_dataset[0m
-└── [01;34mCora[0m
-    ├── [01;34mprocessed[0m
-    │   ├── [00mdata.pt[0m
-    │   ├── [00mpre_filter.pt[0m
-    │   └── [00mpre_transform.pt[0m
-    └── [01;34mraw[0m
-        ├── [00mind.cora.allx[0m
-        ├── [00mind.cora.ally[0m
-        ├── [00mind.cora.graph[0m
-        ├── [00mind.cora.test.index[0m
-        ├── [00mind.cora.tx[0m
-        ├── [00mind.cora.ty[0m
-        ├── [00mind.cora.x[0m
-        └── [00mind.cora.y[0m
-
-3 directories, 11 files
-```
-
-
-```python
 # cora_dataset 은 graph가 하나 뿐이다. 그래서 0 indexing 한게 cora_dataset의 전부임.
 data = cora_dataset[0]
 data
