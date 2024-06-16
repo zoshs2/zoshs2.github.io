@@ -46,17 +46,6 @@ print(torch.__version__)
 !pip install -q torch-scatter -f https://data.pyg.org/whl/torch-${TORCH}.html
 !pip install -q torch-sparse -f https://data.pyg.org/whl/torch-${TORCH}.html
 !pip install -q git+https://github.com/pyg-team/pytorch_geometric.git
-
-- - -
-
-2.3.0+cu121
-[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.9/10.9 MB[0m [31m19.6 MB/s[0m eta [36m0:00:00[0m
-[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.1/5.1 MB[0m [31m21.3 MB/s[0m eta [36m0:00:00[0m
-[?25h  Installing build dependencies ... [?25l[?25hdone
-
-Getting requirements to build wheel ... [?25l[?25hdone
-Preparing metadata (pyproject.toml) ... [?25l[?25hdone
-Building wheel for torch-geometric (pyproject.toml) ... [?25l[?25hdone
 ```
 
 
@@ -193,12 +182,6 @@ my_gcn
 
 ```python
 !pip install torchinfo
-
-
-Collecting torchinfo
-Downloading torchinfo-1.8.0-py3-none-any.whl (23 kB)
-Installing collected packages: torchinfo
-Successfully installed torchinfo-1.8.0
 ```
 
 
