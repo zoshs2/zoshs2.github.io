@@ -46,16 +46,18 @@ print(torch.__version__)
 !pip install -q torch-scatter -f https://data.pyg.org/whl/torch-${TORCH}.html
 !pip install -q torch-sparse -f https://data.pyg.org/whl/torch-${TORCH}.html
 !pip install -q git+https://github.com/pyg-team/pytorch_geometric.git
+
+- - -
+
+2.3.0+cu121
+[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.9/10.9 MB[0m [31m19.6 MB/s[0m eta [36m0:00:00[0m
+[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.1/5.1 MB[0m [31m21.3 MB/s[0m eta [36m0:00:00[0m
+[?25h  Installing build dependencies ... [?25l[?25hdone
+
+Getting requirements to build wheel ... [?25l[?25hdone
+Preparing metadata (pyproject.toml) ... [?25l[?25hdone
+Building wheel for torch-geometric (pyproject.toml) ... [?25l[?25hdone
 ```
-
-    2.3.0+cu121
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.9/10.9 MB[0m [31m19.6 MB/s[0m eta [36m0:00:00[0m
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.1/5.1 MB[0m [31m21.3 MB/s[0m eta [36m0:00:00[0m
-    [?25h  Installing build dependencies ... [?25l[?25hdone
-      Getting requirements to build wheel ... [?25l[?25hdone
-      Preparing metadata (pyproject.toml) ... [?25l[?25hdone
-      Building wheel for torch-geometric (pyproject.toml) ... [?25l[?25hdone
-
 
 
 ```python
@@ -78,9 +80,8 @@ cora_dataset = Planetoid(root="./cora_dataset", name='Cora')
 
 
 ```python
-!apt-get install tree
-!tree
-```
+>>> !apt-get install tree
+>>> !tree ./cora_dataset
 
     Reading package lists... Done
     Building dependency tree... Done
@@ -115,7 +116,7 @@ cora_dataset = Planetoid(root="./cora_dataset", name='Cora')
             └── [00mind.cora.y[0m
     
     3 directories, 11 files
-
+```
 
 
 ```python
@@ -210,10 +211,8 @@ class GCNModel(nn.Module):
 ```python
 my_gcn = GCNModel(c_in=cora_dataset.num_features, c_hidden=16, c_out=cora_dataset.num_classes, num_layers=3)
 my_gcn
-```
 
-
-
+- - -
 
     GCNModel(
       (layers): ModuleList(
@@ -226,7 +225,7 @@ my_gcn
         (6): GCNConv(16, 7)
       )
     )
-
+```
 
 
 이렇게 만든 모델의 architectural profile를 보기 좋게 요약해주는 **torchinfo**라는 라이브러리가 있다. 이를 통해 trainable parameters 갯수가 얼마나 되는지, data dimension이 layer를 통과하면서 어떻게 변화하는지 한 눈에 보기 쉽게 정리해준다.
@@ -234,13 +233,13 @@ my_gcn
 
 ```python
 !pip install torchinfo
+
+
+Collecting torchinfo
+Downloading torchinfo-1.8.0-py3-none-any.whl (23 kB)
+Installing collected packages: torchinfo
+Successfully installed torchinfo-1.8.0
 ```
-
-    Collecting torchinfo
-      Downloading torchinfo-1.8.0-py3-none-any.whl (23 kB)
-    Installing collected packages: torchinfo
-    Successfully installed torchinfo-1.8.0
-
 
 
 ```python
