@@ -163,17 +163,17 @@ my_gcn
 
 - - -
 
-    GCNModel(
-      (layers): ModuleList(
-        (0): GCNConv(1433, 16)
-        (1): ReLU(inplace=True)
-        (2): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (3): GCNConv(16, 16)
-        (4): ReLU(inplace=True)
-        (5): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (6): GCNConv(16, 7)
-      )
-    )
+GCNModel(
+  (layers): ModuleList(
+    (0): GCNConv(1433, 16)
+    (1): ReLU(inplace=True)
+    (2): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): GCNConv(16, 16)
+    (4): ReLU(inplace=True)
+    (5): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): GCNConv(16, 7)
+  )
+)
 ```
 
 
@@ -227,7 +227,7 @@ summary(my_gcn, input_data=(data.x, data.edge_index))
 
 GCNConv은 우리가 c_hidden, c_out으로 output dimension이 결정되는데, 위 모델 summary에서 16, 16, 7로 되어 있는건 trainable bias parameters의 갯수를 의미한다. 그리고 GCNConv 에서 행렬곱 연산 과정에 관여하는 22928(1433 X 16), 256(16 X 16), 112(16 X 7)개의 trainablee weight parameter들이 존재한다는 의미다. (GCN Propagation formula를 다시 떠올려 보자.)
 
-그리고 이전 [Graph Convolutional Network & Message Passing 포스트](https://zoshs2.github.io/posts/GCNHandbook/){:target="_blank"}에서도 언급했듯이 message aggregation 방식을 평균으로 취하면 node-specific information이 사라지는 이슈가 있기 때문에, Sum 집계방식을 택하거나 | 애초부터 $H^{(l)}W^{(l)}$ 연산을 수행할 시 노드 자신에 대한 부분과 이웃 노드에 대한 부분으로 구분하는 연산 방식을 일반적으로 사용한다고 했었다. 그래서 여기서도 각 노드에 모인 이웃 노드들의 Message들을 Sum 한 것이고, SumAggregation이라는 의미가 그런 의미인 것이다.
+그리고 이전 [Graph Convolutional Network & Message Passing 포스트](https://zoshs2.github.io/posts/GCNHandbook/){:target="_blank"}에서도 언급했듯이 message aggregation 방식을 평균으로 취하면 node-specific information이 사라지는 이슈가 있기 때문에, Sum 집계방식을 택하거나, 애초부터 $H^{(l)}W^{(l)}$ 연산을 수행할 시 노드 자신에 대한 부분과 이웃 노드에 대한 부분으로 구분하는 연산 방식을 일반적으로 사용한다고 했었다. 그래서 여기서도 각 노드에 모인 이웃 노드들의 Message들을 Sum 한 것이고, SumAggregation이라는 의미가 그런 의미인 것이다.
 
 BatchNorm layer 부분은, **각 feature dimension에 대해** 평균($\mu_{B}$)과 분산($\sigma^{2}_{B}$)을 계산하고 정규화를 진행한다. (BatchNormalization에 대한 자세한 내용은 이 글에서 풀지 않겠다.) 이 과정에서 학습되는 파라미터가 각 feature dimension마다 2개씩 존재하는데, 정규화된 값의 스케일(scale) 조정을 위한 파라미터 $\gamma$ (감마)와 오프셋 조정을 위한 파라미터 $\beta$ (베타) 값이 그것이다.
 
