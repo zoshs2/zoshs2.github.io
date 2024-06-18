@@ -121,7 +121,7 @@ CNN 모델에서 핵심적으로 작용했던 아이디어는 '고정된 크기�
 
 Kipf가 소개한 Graph Convolution Network(GCN)의 아이디어 또한 이런 CNN의 핵심적인 아이디어를 그래프 구조 데이터에 **효과적으로** 적용하도록 정립시킨 것이라 할 수 있다.
 
-사실 그래프 구조 데이터에 대한 CNN의 국소적 필터링 과정은 frequency domain에서 Laplcian matrix와 고유값(eigenvalue)과 고유벡터(eigenvectorr)를 사용하여 그래프의 구조적 특성을 분석할 수 있는 그래프 신호 처리 방식으로 Kipf의 GCN 소개 무렵에 어느정도 정립이 되어 있었다. (아래 레퍼런스 참조)
+사실 그래프 구조 데이터에 대한 CNN의 국소적 필터링 과정은 frequency domain에서 Laplcian matrix와 고유값(eigenvalue)과 고유벡터(eigenvector)를 사용하여 그래프의 구조적 특성을 분석할 수 있는 그래프 신호 처리 방식으로 Kipf의 GCN 소개 무렵에 어느정도 정립이 되어 있었다. (아래 레퍼런스 참조)
 
 * [Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. "Spectral networks and locally connected networks on graphs." In International Conference on Learning Representations (ICLR), 2014.](https://arxiv.org/abs/1312.6203){:target="_blank"}
 * [Michael Defferrard, Xavier Bresson, and Pierre Vandergheynst. "Convolutional neural networks on graphs with fast localized spectral filtering." In Advances in neural information processing systems (NIPS), 2016.](https://proceedings.neurips.cc/paper_files/paper/2016/file/04df4d434d481c5bb723be1b6df1ee65-Paper.pdf){:target="_blank"}
