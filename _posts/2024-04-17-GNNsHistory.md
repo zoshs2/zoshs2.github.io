@@ -126,7 +126,7 @@ Kipf가 소개한 Graph Convolution Network(GCN)의 아이디어 또한 이런 C
 * [Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. "Spectral networks and locally connected networks on graphs." In International Conference on Learning Representations (ICLR), 2014.](https://arxiv.org/abs/1312.6203){:target="_blank"}
 * [Michael Defferrard, Xavier Bresson, and Pierre Vandergheynst. "Convolutional neural networks on graphs with fast localized spectral filtering." In Advances in neural information processing systems (NIPS), 2016.](https://proceedings.neurips.cc/paper_files/paper/2016/file/04df4d434d481c5bb723be1b6df1ee65-Paper.pdf){:target="_blank"}
 
-위 방식들은 이론적으로 매우 견고하고 충분히 활용 가능한 방식이었지만, 무엇보다 spectral domain에서 고유값을 계산하거나 여기서 사용하는 Chebyshev polynomial (체비쇼프 다항식) 들을 계산하는 과정이 복잡하고 computational cost가 높다는 문제가 있었다. 
+위 방식들은 이론적으로 매우 견고하고 충분히 활용 가능한 방식이었지만, 무엇보다 Spectral domain에서 고유값을 계산하거나 여기서 사용하는 Chebyshev polynomial (체비쇼프 다항식) 들을 계산하는 과정이 복잡하고 computational cost가 높다는 문제가 있었다. 
 
 Kipf는 위 저자들이 사용한 방법에다가 Chebyshev 다항식 근사와 정규화된 라플라시안 활용들을 통해 방법론을 보다 안정적이고 효과적으로 일반화시켰던 것이다. 그렇게 Kipf는 Spectral Convolution 방법론을 첨가한 GCN의 Propagation model을 아래와 같은 수식으로 정의하고 소개하게 된다.
 
