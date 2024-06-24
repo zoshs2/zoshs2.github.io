@@ -128,7 +128,7 @@ Kipf가 소개한 Graph Convolution Network(GCN)의 아이디어 또한 이런 C
 
 위 방식들은 이론적으로 매우 견고하고 충분히 활용 가능한 방식이었지만, 무엇보다 Spectral domain에서 고유값을 계산하거나 여기서 사용하는 Chebyshev polynomial (체비쇼프 다항식) 들을 계산하는 과정이 복잡하고 computational cost가 높다는 문제가 있었다. 
 
-Kipf는 위 저자들이 사용한 방법에다가 Chebyshev 다항식 근사와 정규화된 라플라시안 활용들을 통해 방법론을 보다 안정적이고 효과적으로 일반화시켰던 것이다. 그렇게 Kipf는 Spectral Convolution 방법론을 첨가한 GCN의 Propagation model을 아래와 같은 수식으로 정의하고 소개하게 된다.
+Kipf는 위 저자들이 사용한 방법에다가 Chebyshev 다항식 근사와 정규화된 라플라시안 활용들을 통해 방법론을 보다 안정적이고 효과적으로 일반화시켰던 것이다. 그렇게 Kipf는 Spectral convolution 방법론을 첨가한 GCN의 Propagation model을 아래와 같은 수식으로 정의하고 소개하게 된다.
 
 $$
 \begin{equation}
@@ -136,7 +136,7 @@ $$
 \end{equation}
 $$
 
-여기서 $\tilde{A}$는 그래프의 인접행렬(Adjacency matrix, $A$)에 단위행렬(Identity matrix, $I$)를 더한, 다시 말해 **Self-loop를 더한 버전의 adjacency matrix**를 의미한다. $\tilde{D}$는 각 노드의 이웃수(degree)가 diagonal elements로 있는 degree matrix인데, 마찬가지로 self-loop를 더한 버전이 degree matrix이다. 그리고 $\text{X}$는 $N$개의 노드로 구성된 그래프에 대해서 각 노드별 $C$개의 feature로 표현한 정보를 담은 $N \times C$ 행렬이다. $W$는 training parameter 행렬로, CNN 모델의 Filter 역할을 GCN에서 수행한다. 필터의 갯수를 만약 $F$개로 정하면, $W$의 차원은 $C \times F$이 될거라 예상이 가능하다. 결과적으로, 위 수식을 통해 도출되는 행렬의 차원은 $N \times F$, 노드갯수 * 필터갯수, 임을 알 수 있고 비선형 활성화함수($\sigma$) 연산까지 거쳐서 나온 최종 결과인 $\text{H}$ 행렬은 GCN 모델에서의 feature map이자 single convolution layer의 Output이 된다. 
+여기서 $\tilde{A}$는 그래프의 인접행렬(Adjacency matrix, $A$)에 단위행렬(Identity matrix, $I$)를 더한, 다시 말해 **Self-loop를 더한 버전의 Adjacency matrix**를 의미한다. $\tilde{D}$는 각 노드의 이웃수(degree)가 diagonal elements로 있는 degree matrix인데, 마찬가지로 self-loop를 더한 버전이 degree matrix이다. 그리고 $\text{X}$는 $N$개의 노드로 구성된 그래프에 대해서 각 노드별 $C$개의 feature로 표현한 정보를 담은 $N \times C$ 행렬이다. $W$는 training parameter 행렬로, CNN 모델의 Filter 역할을 GCN에서 수행한다. 필터의 갯수를 만약 $F$개로 정하면, $W$의 차원은 $C \times F$이 될거라 예상이 가능하다. 결과적으로, 위 수식을 통해 도출되는 행렬의 차원은 $N \times F$, 노드갯수 * 필터갯수, 임을 알 수 있고 비선형 활성화함수($\sigma$) 연산까지 거쳐서 나온 최종 결과인 $\text{H}$ 행렬은 GCN 모델에서의 feature map이자 single convolution layer의 Output이 된다. 
 
 > 왜 self-loop를 포함한 버전의 degree matrix 와 adjacency matrix를 쓰냐라고 묻는다면, 다시 spectral convolution 수식 얘기부터 근사 및 치환까지의 과정을 얘기해야 한다. 다만 간단하게만 말하자면, 수식-근사 및 치환으로 결정된 수식 이후에 등장하는 Kipf의 **renormalization trick**에서 self-loop degree & adjacency matrix가 등장하게 된다. 그리고 이 renormalization trick을 사용하는 이유는 **최종 수식의 결과값**을 [0, 1]으로 bound시키기 위함이고, 더 근본적인 이유로는 exploding/vanshing gradients 문제를 완화시킴으로써 계산의 안정성을 도모하기 위함이다.
 {: .prompt-info }
