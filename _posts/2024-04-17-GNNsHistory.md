@@ -43,7 +43,7 @@ GNNs의 계보를 이야기할 때, 종종 1990년대 말의 Recursive Neural Ne
 > Recursive Neural Network는 RNN 이라고도 부르기도 하는데, 주로 언어 모델에서 사용하는 Recurrent Neural Network의 약어와 혼동이 있을 수 있어서 RvNN으로 부르는게 (개인적으로) 더 적절해 보인다. - 두 모델은 서로 다른 모델이다.
 {: .prompt-info }
 
-RvNN은 주로 트리 구조 데이터(tree-structured data)를 처리하는 데 사용되며, 각 노드는 자식노드들의 정보($h_c$)를 재귀적으로 결합(aggregate)하여 상위 부모노드를 어떻게 표현할지($h_p$) 결정하는 데 활용하게 된다. 이러한 과정을 수식으로 표현한 예를 들자면, 아래와 같은 것이다.
+RvNN은 주로 트리구조 데이터(tree-structured data)를 처리하는 데 사용되며, 각 노드는 자식노드들의 정보($h_c$)를 재귀적으로 결합(aggregate)하여 상위 부모노드를 어떻게 표현할지($h_p$) 결정하는 데 활용하게 된다. 이러한 과정을 수식으로 표현한 예를 들자면, 아래와 같은 것이다.
 
 $$
 \begin{equation}
