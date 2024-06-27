@@ -138,7 +138,7 @@ $$
 
 여기서 $\tilde{A}$는 그래프의 인접행렬(Adjacency matrix, $A$)에 단위행렬(Identity matrix, $I$)를 더한, 다시 말해 **Self-loop를 더한 버전의 Adjacency matrix**를 의미한다. $\tilde{D}$는 각 노드의 이웃수(degree)가 diagonal elements로 있는 degree matrix인데, 마찬가지로 self-loop를 더한 버전이 degree matrix이다. 그리고 $\text{X}$는 $N$개의 노드로 구성된 그래프에 대해서 각 노드별 $C$개의 feature로 표현한 정보를 담은 $N \times C$ 행렬이다. $W$는 training parameter 행렬로, CNN 모델의 Filter 역할을 GCN에서 수행한다. 필터의 갯수를 만약 $F$개로 정하면, $W$의 차원은 $C \times F$이 될거라 예상이 가능하다. 결과적으로, 위 수식을 통해 도출되는 행렬의 차원은 $N \times F$, 노드갯수 * 필터갯수, 임을 알 수 있고 비선형 활성화함수($\sigma$) 연산까지 거쳐서 나온 최종 결과인 $\text{H}$ 행렬은 GCN 모델에서의 feature map이자 single convolution layer의 Output이 된다. 
 
-> 왜 self-loop를 포함한 버전의 degree matrix 와 adjacency matrix를 쓰냐라고 묻는다면, 다시 spectral convolution 수식 얘기부터 근사 및 치환까지의 과정을 얘기해야 한다. 다만 간단하게만 말하자면, 수식-근사 및 치환으로 결정된 수식 이후에 등장하는 Kipf의 **renormalization trick**에서 self-loop degree & adjacency matrix가 등장하게 된다. 그리고 이 renormalization trick을 사용하는 이유는 **최종 수식의 결과값**을 [0, 1]으로 bound시키기 위함이고, 더 근본적인 이유로는 exploding/vanshing gradients 문제를 완화시킴으로써 계산의 안정성을 도모하기 위함이다.
+> 왜 self-loop를 포함한 버전의 degree matrix 와 adjacency matrix를 쓰냐라고 묻는다면, 다시 Spectral convolution 수식 얘기부터 근사 및 치환까지의 과정을 얘기해야 한다. 다만 간단하게만 말하자면, 수식-근사 및 치환으로 결정된 수식 이후에 등장하는 Kipf의 **renormalization trick**에서 self-loop degree & adjacency matrix가 등장하게 된다. 그리고 이 renormalization trick을 사용하는 이유는 **최종 수식의 결과값**을 [0, 1]으로 bound시키기 위함이고, 더 근본적인 이유로는 exploding/vanshing gradients 문제를 완화시킴으로써 계산의 안정성을 도모하기 위함이다.
 {: .prompt-info }
 
 이제 위 수식을 통해 그래프의 구조 및 특성을 propagation 하는 convolution network을 아래 그림처럼 설계할 수 있게 되었다. 이 그림에는 기본적인 Neural Network(NN) 내에서 전파하는 연산 방식과 Kipf의 Graph Convolutional Network(GCN) 내에서 전파하는 연산 방식이 잘 표현되어 있다.  
