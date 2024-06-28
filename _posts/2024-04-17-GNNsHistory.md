@@ -157,7 +157,7 @@ $$
 \end{equation}
 $$
 
-결과적으로, 위 식에 따르면, 마지막에 출력되는 $Z$의 차원은 그래프에 존재하는 총 노드갯수 $N$와 최종 convolution layer에서의 가중치 행렬 $W^{(1)}$이 지닌 차원에 따라 결정된다. 즉, 만약 $W^{(1)}$의 column dimension이 $F$라고 한다면, $F$ 크기(최종 가중치 행렬의 필터 갯수)가 분류(예측)하고자 하는 **클래스의 수**가 되는 것이다. 
+결과적으로, 위 식에 따르면, 마지막에 출력되는 $Z$의 차원은 그래프에 존재하는 총 노드갯수 $N$와 최종 Convolution layer에서의 가중치 행렬 $W^{(1)}$이 지닌 차원에 따라 결정된다. 즉, 만약 $W^{(1)}$의 column dimension이 $F$라고 한다면, $F$ 크기(최종 가중치 행렬의 필터 갯수)가 분류(예측)하고자 하는 **클래스의 수**가 되는 것이다. 
 
 > 위 Node classification 문제의 example 은 Kipf의 GCN 논문 [Kipf, T. N., & Welling, M. (2016)](https://arxiv.org/abs/1609.02907){:target="_blank"}에서 다룬 예시를 가져온 것이다.
 {: .prompt-info }
