@@ -60,7 +60,7 @@ $$
 \end{equation}
 $$
 
-이 때, $S_{t}$는 시점 $t$에서의 어떤 상태($S$), 예시에서 '비'나 '해',를 의미한다. 이 조건부 확률의 내용을 요약하자면, **내일 비가 올 확률**을 $P(비|비비비비...)$, $P(비|비해비비비...)$, $P(비|해비비비해...), ...$ 뭐 이런 경우들을 전부 따져서 예상하는게 옳지 않냐는 것이다. 충분히 타당한 주장이지만, 여기서 Markov Model의 **핵심**이 그냥 그런 것일 뿐이다. 즉 **다음 미래 상태의 확률은 현재 상태에만 의존한다**고 가정하는 것. 이러한 과감한 가정 및 속성을 **Markov Assumption**(또는 **Markov Property**, 또는 **Memorylessness**, 또는 **absence of memory**)라고 표현하고, 이러한 가정을 지닌 일련의 확률형 모델 프로세스를 **Markov Process**라고 한다.
+이 때, $S_{t}$는 시점 $t$에서의 어떤 상태($S$), 예시에서 '비'나 '해',를 의미한다. 이 조건부 확률의 내용을 요약하자면, **내일 비가 올 확률**을 P(비|비비비비...), P(비|비해비비비...), P(비|해비비비해...), ... 뭐 이런 경우들을 전부 따져서 예상하는게 옳지 않냐는 것이다. 충분히 타당한 주장이지만, 여기서 Markov Model의 **핵심**이 그냥 그런 것일 뿐이다. 즉 **다음 미래 상태의 확률은 현재 상태에만 의존한다**고 가정하는 것. 이러한 과감한 가정 및 속성을 **Markov Assumption**(또는 **Markov Property**, 또는 **Memorylessness**, 또는 **absence of memory**)라고 표현하고, 이러한 가정을 지닌 일련의 확률형 모델 프로세스를 **Markov Process**라고 한다.
 
 $$
 \begin{equation}
@@ -197,7 +197,11 @@ $$
 
 여기서 첫 번째 $\prod$ 텀이 Emission probability(특정 hidden state에서 특정 observable state가 나올 확률)에 관한 연산이고, 두 번째 $\prod$ 텀이 (Hidden state) Transition probability에 관한 연산이다. 각각 $T$회, $T-1$회 연산을 수행하므로, 총 $2T-1$ operations이 수행된다. 여기까지가
 
-$P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|비,비,비\right)$
+$$
+\begin{equation}
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|rainy,rainy,rainy\right)
+\end{equation}
+$$
 
 와 같은, 특정 hidden state sequence 하나에 대한 총 연산 횟수라 보면 된다.
 
