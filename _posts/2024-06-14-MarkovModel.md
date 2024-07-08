@@ -131,49 +131,49 @@ Evaluation 파트에서 던질 수 있는 질문은 다음과 같다.
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|비,비,비\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|rainy,rainy,rainy\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|비,비,해\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|rainy,rainy,sunny\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|비,해,비\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|rainy,sunny,rainy\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|해,비,비\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|sunny,rainy,rainy\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|해,해,비\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|sunny,sunny,rainy\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|해,비,해\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|sunny,rainy,sunny\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|비,해,해\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|rainy,sunny,sunny\right)
 \end{equation}
 $$
 
 $$
 \begin{equation}
-  P\left(o_{1}=연구, o_{2}=데이트, o_{3}=연구|해,해,해\right)
+  P\left(o_{1}=research, o_{2}=dating, o_{3}=research|sunny,sunny,sunny\right)
 \end{equation}
 $$
 
