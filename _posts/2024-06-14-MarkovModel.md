@@ -107,12 +107,12 @@ HMM 모델을 활용할 수 있는 방식은 크게 2가지로 보고, 각 유�
 
 ![png](/assets/img/post/markov_model/HMM_basic_setup.png)*A Hidden Markov Model with trainable parameters, $\theta = \left(A, B, \pi \right)$*
 
-참고로 당연히 위 3가지 파라미터들($A, B, \pi $)의 값을 알기 위해서는 별도의 learning step이, 문제를 풀기전, 사전적으로 필요하다. 이 과정에서 초기 임의로 할당된 파라미터값들에서 시작해서(Initialization 단계) **forward/backward probability** 계산을 통해 주어진 training dataset인 observable state sequences에 대한 optimal한 emission/transition/initial probability로 도달하도록 학습이 이뤄진다. 이러한 일련의 과정을 HMM 모델에 적용하게끔 나온 알고리즘이 Expectation-Maximization(EM) 알고리즘을 모사한 Baum-Welch Algorithm인데, 이 글에선 이에 대해 더 자세히 설명하지 않도록 하겠다.
+참고로 당연히 위 3가지 파라미터들($A, B, \pi $)의 값을 알기 위해서는 별도의 learning step이, 문제를 풀기전, 사전적으로 필요하다. 이 과정에서 초기 임의로 할당된 파라미터값들에서 시작해서 **forward/backward probability** 계산을 통해 주어진 training dataset인 observable state sequences에 대한 optimal한 emission/transition/initial probability로 도달하도록 학습이 이뤄진다. 이러한 일련의 과정을 HMM 모델에 적용하게끔 나온 알고리즘이 Expectation-Maximization(EM) 알고리즘을 모사한 Baum-Welch Algorithm인데, 이 글에선 이에 대해 더 자세히 설명하지 않도록 하겠다.
 
 > Forward/Backward Probability 개념은 Evaluation 챕터의 Forward Algorithm 파트에서 소개한다.
 {: .prompt-tip }
 
-대신, HMM 모델을 공부하면서 둘러본 여러 블로그 및 사이트들 중에서 Baum-Welch algorithm을 매우 잘 설명해두신 분들의 글들을 링크로 남겨 둔다.
+대신, HMM 모델을 공부하면서 둘러본 여러 블로그 및 사이트들 중에서 Baum-Welch algorithm을 매우 훌륭하게 설명해두신 분들의 글들을 링크로 남겨 둔다.
 
 1. [ratsgo's SPEECH BOOK](https://ratsgo.github.io/speechbook/docs/am/baumwelch){:target="_blank"}
 2. [볼록티님 블로그: 머신러닝 'Expectation Maximization'](https://data-science-hi.tistory.com/158){:target="_blank"}
