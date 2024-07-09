@@ -66,7 +66,7 @@ $H^{(l)}$은 $N \times F$ 크기의 node들의 feature vector들이 담긴 행�
 
 이제 그럼 $H^{(l)}W^{(l)}$를 통해 완성된 Message를 이웃노드들에게 전달할 것인데, 이 때 그래프(네트워크)의 연결구조를 알 수 있는 Adjacency matrix($A$)를 사용한다. 하지만, 일반적으로 (셀프 루프가 없는) Adjacency matrix $A$는 diagonal elements들이 모두 0이고, 이럴 경우 자기 자신(노드)의 message는 유지할 수 없기 때문에, Adjancency matrix $A$에 단위행렬 Identity matrix $I$를 더한 $\hat{A}=A+I$를 GCN propagation model에서 사용하는 것이다. 이제 마지막으로, 이렇게 각 노드에 모인 message들(위 그림의 오른쪽 상태)을 어떻게 결합시켜서 활용할 지에 대한 질문이 남았다. 단순히 **더해서** 활용해도 좋고, 이들의 **평균**만 활용해도 무관하다. 위 식에서 $\hat{D}^{-1/2}\hat{A}\hat{D}^{-1/2}$는 **message들의 평균**을 활용하라는 의미와 같다. $D$는 diagonal elements만 값이 존재하는 diagonal matrix고, $D_{ii}$ 값에는 $i$번째 노드가 지닌 이웃노드의 수인  차수(degree)가 쓰인다. 그리고 마지막으로 $\sigma\left(-\right)$는 임의의 활성화 함수로서 수식처럼 꼭 sigmoid($\sigma$) 함수를 사용할 필요는 없고, 보통 $\text{ReLU}$-based activation function을 활용하는 것이 일반적이다.
 
-이렇게 주변 노드들로부터 그들의 message들을 passing 받고, message 정보들을 평균(혹은 sum)낸 후 활성화 함수에 이르는 일련의 과정이 하나의 single GCN layer에서 벌어지는 일들이고, 이렇게 나온 output이 다음 GCN layer의 새로운 message 재료이자 각 노드들의 새로운 feature vector들이 된다.
+이렇게 주변 노드들로부터 그들의 message들을 passing 받고, message 정보들을 평균(혹은 sum)낸 후 활성화 함수에 이르는 일련의 과정이 하나의(single) GCN layer에서 벌어지는 일들이고, 이렇게 나온 output이 다음 GCN layer의 새로운 message 재료이자 각 노드들의 새로운 feature vector들이 된다.
 
 # GCN Implementation
 
