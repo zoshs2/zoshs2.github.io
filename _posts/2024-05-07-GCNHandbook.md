@@ -79,7 +79,7 @@ $H^{(l)}$은 $N \times F$ 크기의 node들의 feature vector들이 담긴 행�
 > 앞선 Message Passing 그림 예시에서는, 각 노드가 3개의 node feature를 지녔다고 볼 수 있다.
 {: .prompt-tip }
 
-4개의 노드들이 지닌 각 node feature들(총 8개)은 단순하게 0부터 7까지 부여하도록 하고, 위 그래프 구조의 adjacency-identity matrix 는 아래와 같이 표현할 수 있다.
+4개의 노드들이 지닌 각 node feature들(총 8개)은 단순하게 0부터 7까지 부여하도록 하고, 위 그래프 구조의 Adjacency-identity matrix 는 아래와 같이 표현할 수 있다.
 
 
 ```python
