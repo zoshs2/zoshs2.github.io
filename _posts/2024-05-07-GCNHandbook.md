@@ -59,7 +59,7 @@ $$
 
 $H^{(l)}$은 $N \times F$ 크기의 node들의 feature vector들이 담긴 행렬이다. 위 그림을 예시로 들자면, 총 4개의 노드들이 모두 3개의 요소를 지닌 feature vector들로 표현되어 있으므로, $H^{(l)}$ 행렬의 크기는 $4 \times 3$인 것이다.
 
-> 실제 적용 문제에서는 해당 Node만의 말그대로 특성을 나타낼 수 있는 clustering coeff. 나 각종 centrality 값들을 모델 입력 데이터의 node feature로 사용한다고 한다.
+> 실제 적용 문제에서는 해당 Node만의 말그대로 특성을 나타낼 수 있는 Clustering Coeff. 나 각종 centrality 값들을 모델 입력 데이터의 node feature로 사용한다고 한다.
 {: .prompt-tip }
 
 그리고 $W^(l)$은 학습 파라미터를 담은 행렬이고, $H^{(l)}W^{(l)}$ 연산으로 input (node) features들을 실제 이웃노드들에게 전달할 Message로 변환시키는 역할을 수행한다. (앞서 각 노드가 지닌 feature vector들은 message의 **재료**라고 표현한 이유가 여기에 있다.)
