@@ -28,7 +28,7 @@ $$
 \end{equation}
 $$
 
-CNN의 핵심 아이디어는 **Filter** 라는 학습 가중치 매개변수들이 담긴 특정 크기의 window(또는 patch라고도 표현하기도 함)를 이미지 전체에 대해 Scanning하여, 이미지의 각 국소적 영역들의 정보를 함축해 특징이라고 여길 만한 feature들을 뽑아내는 과정이다. 그래서 이 과정을 통해 나온 출력 대상을 **feature map**이라고 말한다. 그리고 여기서 한 가지 더 중요한 포인트는 **Filter라는 학습 매개변수 세트가 이미지의 모든 부분에서 동일하게 쓰인다**는 점이다.
+CNN의 핵심 아이디어는 **Filter** 라는 학습 가중치 매개변수들이 담긴 특정 크기의 window(또는 patch라고도 표현)를 이미지 전체에 대해 Scanning하여, 이미지의 각 국소적 영역들의 정보를 함축해 특징이라고 여길 만한 feature들을 뽑아내는 과정이다. 그래서 이 과정을 통해 나온 출력 대상을 **feature map**이라고 말한다. 그리고 여기서 한 가지 더 중요한 포인트는 **Filter라는 학습 매개변수 세트가 이미지의 모든 부분에서 동일하게 쓰인다**는 점이다.
 
 ![png](/assets/img/post/gcn_implement/KernelOperation.png)*Kernel(Filter) Operation, Source: [Understanding the Convolutional Filter Operation in CNN’s](https://medium.com/advanced-deep-learning/cnn-operation-with-2-kernels-resulting-in-2-feature-mapsunderstanding-the-convolutional-filter-c4aad26cf32){:target="_blank"}*
 
