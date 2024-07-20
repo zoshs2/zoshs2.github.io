@@ -397,8 +397,12 @@ for epoch in range(num_epochs):
 
 $$
 \begin{equation}
-  Model = XW + B \\
-  \\
+  Model = XW + B
+\end{equation}
+$$
+
+$$
+\begin{equation}
   Cost_{MSE} = \frac{1}{n}\sum(y_{model} - y_{true})^2
 \end{equation}
 $$
