@@ -1534,7 +1534,7 @@ for city in cities:
 
 ## Take-Home Messages and Conclusion
 * Uber Movement에서 공개 배포 중인 Travel Time 데이터 정보를 바탕으로, Parking Density & Traffic Activity 값을 추산한 데이터를 살펴 보았다.
-  * Uber Movement 팀은 Travel Time 말고도, 현재 (도로 단위별) Speed 데이터와 New Mobility Heatmap 데이터도 공개하고 있다.
+  * Uber Movement 팀은 Travel Time 말고도, 현재 (도로 단위별) Speed 데이터와 New Mobility Heatmap 데이터도 공개하고 있다. (!! 2023년 11월 기준, 데이터 비공개됨ㅜ)
 * 본 연구팀에서 raw data로 활용한 Uber Travel Time 데이터는 어떤 형식과 내용을 지녔는지만 살짝 확인해봤다.
 * 본 연구팀 모델의 주요 아웃풋이라 할 수 있는 Parking Density 데이터를 중점적으로 살펴 보았고, 해외 6개 주요 도시에 대해 Circadian rhythms of Parking Density 를 시각화해봤다. 
 
